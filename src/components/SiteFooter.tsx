@@ -12,27 +12,26 @@ export function SiteFooter() {
     <footer className="border-t border-border/60 mt-32">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <p className="eyebrow mb-4">Studio</p>
+          <p className="eyebrow mb-4">Portfolio</p>
           <p className="font-display text-3xl leading-tight">
-            Halden<span className="text-copper">.</span>
+            Marco Halden<span className="text-copper">.</span>
           </p>
           <p className="text-muted-foreground text-sm mt-3 max-w-xs">
-            Independent automotive design studio. Concept, surfacing and brand
-            language for forward-thinking marques.
+            Independent automotive designer. Concept work, exterior surfacing
+            and visual research.
           </p>
         </div>
 
         <div>
-          <p className="eyebrow mb-4">Located</p>
+          <p className="eyebrow mb-4">Based in</p>
           <p className="text-sm leading-relaxed">
-            Studio 04, Carrer del Disseny<br />
-            08019 Barcelona<br />
-            <span className="text-muted-foreground">By appointment</span>
+            Barcelona, Spain<br />
+            <span className="text-muted-foreground">Available for projects worldwide</span>
           </p>
         </div>
 
         <div>
-          <p className="eyebrow mb-4">Connect</p>
+          <p className="eyebrow mb-4">Elsewhere</p>
           <ul className="space-y-2 text-sm">
             {socials.map((s) => (
               <li key={s.label}>
@@ -52,10 +51,10 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-6 flex flex-wrap items-center justify-between gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          <span>© {new Date().getFullYear()} Halden Studio</span>
+          <span>© {new Date().getFullYear()} Marco Halden</span>
           <span>
             <Link to="/contact" className="hover:text-foreground transition-colors">
-              Start a project →
+              Get in touch →
             </Link>
           </span>
         </div>

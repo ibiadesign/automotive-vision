@@ -98,7 +98,7 @@ function ProjectPage() {
           <p className="font-display text-2xl md:text-3xl leading-snug">
             {project.summary}
           </p>
-          {project.body.map((para, i) => (
+          {project.body.map((para: string, i: number) => (
             <p key={i} className="text-muted-foreground leading-relaxed text-lg">
               {para}
             </p>
@@ -108,7 +108,7 @@ function ProjectPage() {
 
       {/* GALLERY */}
       <section className="space-y-px">
-        {project.gallery.map((src, i) => (
+        {project.gallery.map((src: string, i: number) => (
           <div key={i} className="w-full">
             <img
               src={src}

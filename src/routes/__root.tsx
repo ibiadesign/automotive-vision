@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Halden — Automotive Design Studio" },
-      { name: "description", content: "Independent automotive design studio. Concept, surfacing and brand language for forward-thinking marques." },
+      { title: "Guillermina Valdicia Cantero — Automotive Designer" },
+      { name: "description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
       { name: "author", content: "Halden Studio" },
-      { property: "og:title", content: "Halden — Automotive Design Studio" },
-      { property: "og:description", content: "Concept cars, exterior surfacing and design direction." },
+      { property: "og:title", content: "Guillermina Valdicia Cantero — Automotive Designer" },
+      { property: "og:description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Guillermina Valdicia Cantero — Automotive Designer" },
+      { name: "twitter:description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/caa35e9d-7724-4e73-b2ef-f750be226446/id-preview-0fa65099--31d1d5a5-109e-4877-8b7a-ce6c9a04ca29.lovable.app-1778953405438.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/caa35e9d-7724-4e73-b2ef-f750be226446/id-preview-0fa65099--31d1d5a5-109e-4877-8b7a-ce6c9a04ca29.lovable.app-1778953405438.png" },
     ],
     links: [
       {

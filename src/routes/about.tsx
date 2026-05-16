@@ -6,28 +6,28 @@ import aboutImg from "@/assets/about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Studio — Halden Automotive Design" },
+      { title: "About — Marco Halden" },
       {
         name: "description",
         content:
-          "Halden is an independent automotive design studio working on concept vehicles, exterior surfacing and brand language.",
+          "Marco Halden is an independent automotive designer based in Barcelona, working on concept vehicles, exterior surfacing and visual research.",
       },
     ],
   }),
   component: About,
 });
 
-const credits = [
-  ["Polestar", "Exterior consulting · 2024"],
-  ["Confidential OEM", "Saloon programme · 2023"],
-  ["Pininfarina", "Surfacing study · 2022"],
-  ["RCA, London", "Guest lectures · 2021–"],
+const experience = [
+  ["2024 — Now", "Independent Designer", "Concept & exterior commissions"],
+  ["2022 — 2024", "Pininfarina", "Exterior Designer"],
+  ["2020 — 2022", "Volkswagen Group", "Junior Exterior Designer"],
+  ["2018 — 2020", "Royal College of Art", "MA Vehicle Design, London"],
 ];
 
-const services = [
-  ["Concept Design", "Vision projects, show cars, brand-defining studies."],
-  ["Exterior Surfacing", "Class-A surface direction and production support."],
-  ["Design Language", "Brand DNA, line-up cohesion, signature definition."],
+const recognition = [
+  ["Car Design Award", "Concept · 2024"],
+  ["Wallpaper* Design Awards", "Shortlist · 2023"],
+  ["Pforzheim Design Prize", "Honourable Mention · 2021"],
 ];
 
 function About() {
@@ -36,18 +36,18 @@ function About() {
       <SiteHeader />
 
       <section className="pt-40 md:pt-48 pb-24 mx-auto max-w-[1600px] px-6 md:px-12">
-        <p className="eyebrow mb-8">The Studio</p>
+        <p className="eyebrow mb-8">About</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          A small studio, working at the
-          <em className="not-italic text-copper"> intersection </em>
-          of design, engineering and restraint.
+          I'm Marco, an
+          <em className="not-italic text-copper"> automotive designer </em>
+          working between Barcelona and the rest of the world.
         </h1>
       </section>
 
       <section className="relative h-[70vh] w-full overflow-hidden">
         <img
           src={aboutImg}
-          alt="Designer sketching a concept car on a tablet"
+          alt="Marco Halden sketching a concept car on a tablet"
           loading="lazy"
           width={1600}
           height={1200}
@@ -58,36 +58,42 @@ function About() {
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">
-          <p className="eyebrow">Approach</p>
+          <p className="eyebrow">About me</p>
         </div>
         <div className="md:col-span-8 space-y-6 text-lg leading-relaxed max-w-3xl">
           <p>
-            Halden was founded on the belief that the next generation of
-            vehicles should be quieter — not only in sound, but in form. We
-            design exteriors and brand languages for marques that value
-            longevity over novelty.
+            I've spent the last six years designing exteriors — first inside
+            two large European studios, and since 2024 on my own. My focus is
+            simple: vehicles that feel calm, considered, and built to age well.
           </p>
           <p className="text-muted-foreground">
-            Our process is deliberate. We sketch on paper, build in clay, and
-            refine in digital surfaces. Each project is led by a single
-            designer, supported by a tight network of CMF, engineering and
-            visualisation collaborators.
+            I draw on paper, model in clay when I can, and finish in digital
+            surfacing. I take on a small number of projects each year so every
+            line is the right one. Most of the work shown here is personal
+            research; some is commissioned and shared with the client's blessing.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">
-          <p className="eyebrow">Services</p>
+          <p className="eyebrow">Experience</p>
         </div>
         <div className="md:col-span-8 divide-y divide-border">
-          {services.map(([title, desc]) => (
+          {experience.map(([when, role, detail]) => (
             <div
-              key={title}
-              className="py-8 grid md:grid-cols-3 gap-6 items-baseline"
+              key={role}
+              className="py-6 grid md:grid-cols-12 gap-3 items-baseline"
             >
-              <h3 className="font-display text-2xl md:text-3xl">{title}</h3>
-              <p className="md:col-span-2 text-muted-foreground">{desc}</p>
+              <span className="md:col-span-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                {when}
+              </span>
+              <span className="md:col-span-4 font-display text-xl md:text-2xl">
+                {role}
+              </span>
+              <span className="md:col-span-5 text-muted-foreground">
+                {detail}
+              </span>
             </div>
           ))}
         </div>
@@ -95,10 +101,10 @@ function About() {
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-32 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">
-          <p className="eyebrow">Selected Collaborators</p>
+          <p className="eyebrow">Recognition</p>
         </div>
         <div className="md:col-span-8 divide-y divide-border">
-          {credits.map(([name, detail]) => (
+          {recognition.map(([name, detail]) => (
             <div
               key={name}
               className="py-6 flex items-baseline justify-between gap-6"
@@ -118,7 +124,7 @@ function About() {
           className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em]"
         >
           <span className="w-10 h-px bg-foreground group-hover:w-16 group-hover:bg-copper transition-all duration-500" />
-          Begin a conversation
+          Say hello
         </Link>
       </section>
 

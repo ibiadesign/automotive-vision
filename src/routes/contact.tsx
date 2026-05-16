@@ -6,11 +6,11 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Halden Automotive Design" },
+      { title: "Contact — Marco Halden" },
       {
         name: "description",
         content:
-          "Start a conversation with Halden — concept design, exterior surfacing and brand language.",
+          "Get in touch with Marco Halden for concept work, exterior design and visual research collaborations.",
       },
     ],
   }),
@@ -27,9 +27,9 @@ function Contact() {
       <section className="pt-40 md:pt-48 pb-12 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">Contact</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          Have a brief, a concept,
+          I'd love to hear about
           <br />
-          or simply a <em className="not-italic text-copper">curiosity</em>?
+          your <em className="not-italic text-copper">project</em>.
         </h1>
       </section>
 
@@ -38,23 +38,20 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Direct</p>
             <a
-              href="mailto:studio@halden.design"
+              href="mailto:hello@marcohalden.com"
               className="font-display text-3xl md:text-4xl hover:text-copper transition-colors"
             >
-              studio@halden.design
+              hello@marcohalden.com
             </a>
           </div>
           <div>
-            <p className="eyebrow mb-3">Phone</p>
-            <p className="font-display text-2xl">+34 932 000 000</p>
-          </div>
-          <div>
-            <p className="eyebrow mb-3">Studio</p>
+            <p className="eyebrow mb-3">Based in</p>
             <p className="leading-relaxed">
-              Studio 04, Carrer del Disseny<br />
-              08019 Barcelona, Spain
+              Barcelona, Spain
             </p>
-            <p className="text-muted-foreground text-sm mt-2">By appointment</p>
+            <p className="text-muted-foreground text-sm mt-2">
+              Available for commissions and collaborations worldwide
+            </p>
           </div>
           <div>
             <p className="eyebrow mb-4">Elsewhere</p>
@@ -88,16 +85,16 @@ function Contact() {
                 Your message is on its way.
               </p>
               <p className="text-muted-foreground mt-3">
-                We respond to every enquiry within two working days.
+                I reply to every message personally, usually within two days.
               </p>
             </div>
           ) : (
             <>
               <Field label="Name" name="name" required />
               <Field label="Email" name="email" type="email" required />
-              <Field label="Company / Marque" name="company" />
+              <Field label="Company / Studio (optional)" name="company" />
               <Field
-                label="Tell us about the project"
+                label="Tell me about the project"
                 name="message"
                 textarea
                 required
@@ -108,7 +105,7 @@ function Contact() {
                 className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em] pt-4"
               >
                 <span className="w-10 h-px bg-foreground group-hover:w-16 group-hover:bg-copper transition-all duration-500" />
-                Send enquiry
+                Send message
               </button>
             </>
           )}

@@ -7,11 +7,11 @@ import { projects } from "@/lib/projects";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Halden — Automotive Design Studio" },
+      { title: "Marco Halden — Automotive Designer" },
       {
         name: "description",
         content:
-          "Concept cars, exterior surfacing and brand language by Halden — an independent automotive design studio based in Barcelona.",
+          "Portfolio of Marco Halden, an independent automotive designer based in Barcelona. Concept cars, exterior surfacing and visual research.",
       },
     ],
   }),
@@ -38,10 +38,11 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
 
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
-          <p className="eyebrow mb-6">Halden — Vol. 04 / 2026</p>
+          <p className="eyebrow mb-6">Marco Halden — Selected Work, 2026</p>
           <h1 className="font-display text-[14vw] md:text-[8vw] leading-[0.9] tracking-tight max-w-5xl">
-            Shaping <em className="not-italic text-copper">stillness</em> at
-            <br /> two hundred kilometres per hour.
+            Automotive design,
+            <br />
+            shaped with <em className="not-italic text-copper">intention</em>.
           </h1>
           <div className="mt-10 flex items-center gap-10">
             <Link
@@ -55,7 +56,7 @@ function Index() {
               to="/about"
               className="text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-foreground transition-colors"
             >
-              About the studio
+              About me
             </Link>
           </div>
         </div>
@@ -67,18 +68,18 @@ function Index() {
 
       {/* INTRO */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 md:py-48 grid md:grid-cols-12 gap-10">
-        <p className="eyebrow md:col-span-3">Manifesto</p>
+        <p className="eyebrow md:col-span-3">A short note</p>
         <div className="md:col-span-9 max-w-4xl">
           <p className="font-display text-3xl md:text-5xl leading-tight">
-            We design vehicles the way a sculptor approaches stone — patiently,
-            with restraint, and with respect for the silence that surrounds the
-            finished form.
+            I'm an independent automotive designer working between concept,
+            surfacing and visual research — drawn to proportion, restraint, and
+            the quiet confidence of a well-resolved line.
           </p>
           <div className="hairline mt-12 mb-8 max-w-md" />
           <p className="text-muted-foreground max-w-xl">
-            From the first sketch to the final surface, every project at Halden
-            is an essay in proportion, light and material. We work with marques
-            who believe that what is removed matters as much as what remains.
+            This is a selection of personal and commissioned work from the last
+            three years. Each project is an attempt to answer the same question:
+            what does a vehicle look like when nothing is added for its own sake?
           </p>
         </div>
       </section>

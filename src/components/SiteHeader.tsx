@@ -11,12 +11,12 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = [
+  const links: { to: "/" | "/projects" | "/about" | "/contact"; label: string; exact?: boolean }[] = [
     { to: "/", label: "Index", exact: true },
     { to: "/projects", label: "Work" },
     { to: "/about", label: "Studio" },
     { to: "/contact", label: "Contact" },
-  ] as const;
+  ];
 
   return (
     <header

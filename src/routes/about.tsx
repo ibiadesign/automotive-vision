@@ -44,7 +44,7 @@ function About() {
         </h1>
       </section>
 
-      <section className="relative h-[70vh] w-full overflow-hidden">
+      <section className="relative h-[55vh] w-full overflow-hidden">
         <img
           src={aboutImg}
           alt="Guillermina Valdivia sketching a concept car on a tablet"

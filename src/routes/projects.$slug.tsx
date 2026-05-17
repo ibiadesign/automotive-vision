@@ -107,7 +107,7 @@ function ProjectPage() {
       </section>
 
       {/* GALLERY */}
-      <section className="space-y-px">
+      <section className="space-y-6">
         {project.gallery.map((src: string, i: number) => (
           <div key={i} className="w-full">
             <img

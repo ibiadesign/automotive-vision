@@ -28,7 +28,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-5 flex items-center justify-between">
         <Link to="/" className="flex items-baseline gap-3 group">
-          <span className="font-display text-xl tracking-tight">Marco Halden</span>
+          <span className="font-display text-xl tracking-tight">Guillermina Valdivia</span>
           <span className="eyebrow text-[0.6rem] hidden sm:inline">
             Automotive Designer
           </span>

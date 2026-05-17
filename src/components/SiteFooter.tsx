@@ -14,7 +14,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow mb-4">Portfolio</p>
           <p className="font-display text-3xl leading-tight">
-            Marco Halden<span className="text-copper">.</span>
+            Guillermina Valdivia<span className="text-copper">.</span>
           </p>
           <p className="text-muted-foreground text-sm mt-3 max-w-xs">
             Independent automotive designer. Concept work, exterior surfacing
@@ -51,7 +51,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-6 flex flex-wrap items-center justify-between gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          <span>© {new Date().getFullYear()} Marco Halden</span>
+          <span>© {new Date().getFullYear()} Guillermina Valdivia</span>
           <span>
             <Link to="/contact" className="hover:text-foreground transition-colors">
               Get in touch →

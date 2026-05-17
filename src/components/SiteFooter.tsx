@@ -25,7 +25,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow mb-4">Based in</p>
           <p className="text-sm leading-relaxed">
-            Barcelona, Spain<br />
+            Granada, Spain<br />
             <span className="text-muted-foreground">Available for projects worldwide</span>
           </p>
         </div>

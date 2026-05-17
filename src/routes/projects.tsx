@@ -43,7 +43,7 @@ function ProjectsIndex() {
               loading="lazy"
               width={1600}
               height={1280}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.04]"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.02]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
             <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">

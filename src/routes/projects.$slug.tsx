@@ -65,7 +65,7 @@ function ProjectPage() {
           <p className="eyebrow mb-6">
             {project.category} · {project.year}
           </p>
-          <h1 className="font-display text-[12vw] md:text-[7vw] leading-[0.9] tracking-tight">
+          <h1 className="font-display text-[9.5vw] md:text-[5.5vw] leading-[1.05] tracking-tight">
             {project.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-foreground/80">

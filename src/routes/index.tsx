@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Guillermina Valdivia, an independent automotive designer based in Barcelona. Concept cars, exterior surfacing and visual research.",
+          "Portfolio of Guillermina Valdivia, an independent automotive designer based in Granada. Concept cars, exterior surfacing and visual research.",
       },
     ],
   }),
@@ -34,12 +34,12 @@ function Index() {
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/10 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
 
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
           <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work, 2026</p>
-          <h1 className="font-display text-[14vw] md:text-[8vw] leading-[0.9] tracking-tight max-w-5xl">
+          <h1 className="font-display text-[11vw] md:text-[6.5vw] leading-[1.05] tracking-tight max-w-5xl">
             Automotive design,
             <br />
             shaped with <em className="not-italic text-copper">intention</em>.
@@ -100,7 +100,7 @@ function Index() {
           </Link>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-40">
           {featured.map((p, i) => (
             <Link
               key={p.slug}
@@ -117,7 +117,7 @@ function Index() {
                   loading="lazy"
                   width={1600}
                   height={1000}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.03]"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
               </div>

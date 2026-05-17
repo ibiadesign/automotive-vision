@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Guillermina Valdivia is an independent automotive designer based in Barcelona, working on concept vehicles, exterior surfacing and visual research.",
+          "Guillermina Valdivia is an independent automotive designer based in Granada, working on concept vehicles, exterior surfacing and visual research.",
       },
     ],
   }),
@@ -40,11 +40,11 @@ function About() {
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
           I'm Guillermina, an
           <em className="not-italic text-copper"> automotive designer </em>
-          working between Barcelona and the rest of the world.
+          working between Granada and the rest of the world.
         </h1>
       </section>
 
-      <section className="relative h-[70vh] w-full overflow-hidden">
+      <section className="relative h-[55vh] w-full overflow-hidden">
         <img
           src={aboutImg}
           alt="Guillermina Valdivia sketching a concept car on a tablet"

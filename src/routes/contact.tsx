@@ -47,7 +47,7 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Based in</p>
             <p className="leading-relaxed">
-              Barcelona, Spain
+              Granada, Spain
             </p>
             <p className="text-muted-foreground text-sm mt-2">
               Available for commissions and collaborations worldwide

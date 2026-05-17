@@ -29,13 +29,13 @@ function ProjectsIndex() {
         </h1>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-32 grid gap-px bg-border md:grid-cols-2">
+      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40 grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
           <Link
             key={p.slug}
             to="/projects/$slug"
             params={{ slug: p.slug }}
-            className="group relative bg-background overflow-hidden aspect-[5/4]"
+            className="group relative bg-background overflow-hidden aspect-[4/3] rounded-sm"
           >
             <img
               src={p.cover}
@@ -43,7 +43,7 @@ function ProjectsIndex() {
               loading="lazy"
               width={1600}
               height={1280}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.04]"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.02]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
             <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">

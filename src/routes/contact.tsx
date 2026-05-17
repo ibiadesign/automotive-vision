@@ -6,11 +6,11 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Marco Halden" },
+      { title: "Contact — Guillermina Valdivia" },
       {
         name: "description",
         content:
-          "Get in touch with Marco Halden for concept work, exterior design and visual research collaborations.",
+          "Get in touch with Guillermina Valdivia for concept work, exterior design and visual research collaborations.",
       },
     ],
   }),
@@ -38,10 +38,10 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Direct</p>
             <a
-              href="mailto:hello@marcohalden.com"
+              href="mailto:hello@guillerminavaldivia.com"
               className="font-display text-3xl md:text-4xl hover:text-copper transition-colors"
             >
-              hello@marcohalden.com
+              hello@guillerminavaldivia.com
             </a>
           </div>
           <div>

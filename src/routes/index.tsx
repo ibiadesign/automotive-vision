@@ -7,11 +7,11 @@ import { projects } from "@/lib/projects";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Marco Halden — Automotive Designer" },
+      { title: "Guillermina Valdivia — Automotive Designer" },
       {
         name: "description",
         content:
-          "Portfolio of Marco Halden, an independent automotive designer based in Barcelona. Concept cars, exterior surfacing and visual research.",
+          "Portfolio of Guillermina Valdivia, an independent automotive designer based in Barcelona. Concept cars, exterior surfacing and visual research.",
       },
     ],
   }),
@@ -38,7 +38,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
 
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
-          <p className="eyebrow mb-6">Marco Halden — Selected Work, 2026</p>
+          <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work, 2026</p>
           <h1 className="font-display text-[14vw] md:text-[8vw] leading-[0.9] tracking-tight max-w-5xl">
             Automotive design,
             <br />

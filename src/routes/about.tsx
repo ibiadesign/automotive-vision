@@ -6,11 +6,11 @@ import aboutImg from "@/assets/about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Marco Halden" },
+      { title: "About — Guillermina Valdivia" },
       {
         name: "description",
         content:
-          "Marco Halden is an independent automotive designer based in Barcelona, working on concept vehicles, exterior surfacing and visual research.",
+          "Guillermina Valdivia is an independent automotive designer based in Barcelona, working on concept vehicles, exterior surfacing and visual research.",
       },
     ],
   }),
@@ -38,7 +38,7 @@ function About() {
       <section className="pt-40 md:pt-48 pb-24 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">About</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          I'm Marco, an
+          I'm Guillermina, an
           <em className="not-italic text-copper"> automotive designer </em>
           working between Barcelona and the rest of the world.
         </h1>
@@ -47,7 +47,7 @@ function About() {
       <section className="relative h-[70vh] w-full overflow-hidden">
         <img
           src={aboutImg}
-          alt="Marco Halden sketching a concept car on a tablet"
+          alt="Guillermina Valdivia sketching a concept car on a tablet"
           loading="lazy"
           width={1600}
           height={1200}

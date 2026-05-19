@@ -102,10 +102,10 @@ function Contact() {
             <div className="border border-copper/40 p-10 text-center">
               <p className="eyebrow mb-4">Thank you</p>
               <p className="font-display text-3xl">
-                Your message is on its way.
+                Your message is sent.
               </p>
               <p className="text-muted-foreground mt-3">
-                I reply to every message personally, usually within two days.
+                Thank you for taking the time to connect, I´ll reply personally whenever possible.
               </p>
             </div>
           ) : (

@@ -36,16 +36,16 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Direct</p>
             <a
-              href="mailto:hello@guillerminavaldivia.com"
+              href="mailto:guiyedesign@gmail.com"
               className="font-display text-3xl md:text-4xl hover:text-copper transition-colors"
             >
-              hello@guillerminavaldivia.com
+              guiyedesign@gmail.com
             </a>
           </div>
           <div>
             <p className="eyebrow mb-3">Based in</p>
             <p className="leading-relaxed">
-              Andalusia
+              Andalusia, Spain
             </p>
             <p className="text-muted-foreground text-sm mt-2">
               Automotive & industrial design projects, visual development and creative collaborations worldwide

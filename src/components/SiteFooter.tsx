@@ -15,7 +15,7 @@ export function SiteFooter() {
             Guillermina Valdivia<span className="text-copper">.</span>
           </p>
           <p className="text-muted-foreground text-sm mt-1">
-            Andalusia
+            Andalusia, Spain
           </p>
         </div>
         <ul className="flex items-center gap-8 text-sm text-muted-foreground">

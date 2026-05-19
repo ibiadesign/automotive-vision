@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Guillermina Valdivia, an independent automotive designer based in Granada. Concept cars, exterior surfacing and visual research.",
+          "Portfolio of Guillermina Valdivia, an independent automotive designer based in Andalusia. Concept cars, exterior surfacing and visual research.",
       },
     ],
   }),

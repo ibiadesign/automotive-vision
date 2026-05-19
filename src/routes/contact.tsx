@@ -27,7 +27,7 @@ function Contact() {
       <section className="pt-40 md:pt-48 pb-12 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">Contact</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl text-current">
-          Automotive & industrial design projects, visual development and creative collaborations worldwide.
+          Let's start a <span className="text-copper">conversation</span>.
         </h1>
       </section>
 
@@ -45,26 +45,48 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Based in</p>
             <p className="leading-relaxed">
-              Granada, Spain
+              Andalusia
             </p>
             <p className="text-muted-foreground text-sm mt-2">
-              Available for commissions and collaborations worldwide
+              Automotive & industrial design projects, visual development and creative collaborations worldwide
             </p>
           </div>
           <div>
             <p className="eyebrow mb-4">Elsewhere</p>
             <ul className="space-y-2 text-sm">
-              {["Instagram", "Behance", "LinkedIn", "Vimeo"].map((s) => (
-                <li key={s}>
-                  <a
-                    href="#"
-                    className="group inline-flex items-center gap-3 hover:text-copper transition-colors"
-                  >
-                    <span className="w-6 h-px bg-border group-hover:bg-copper transition-colors" />
-                    {s}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 hover:text-copper transition-colors"
+                >
+                  <span className="w-6 h-px bg-border group-hover:bg-copper transition-colors" />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.behance.net/guillerminavaldivia"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 hover:text-copper transition-colors"
+                >
+                  <span className="w-6 h-px bg-border group-hover:bg-copper transition-colors" />
+                  Behance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/guillerminavaldivia/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 hover:text-copper transition-colors"
+                >
+                  <span className="w-6 h-px bg-border group-hover:bg-copper transition-colors" />
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </div>
         </div>

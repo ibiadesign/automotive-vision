@@ -26,10 +26,8 @@ function Contact() {
 
       <section className="pt-40 md:pt-48 pb-12 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">Contact</p>
-        <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          I'd love to hear about
-          <br />
-          your <em className="not-italic text-copper">project</em>.
+        <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl text-current">
+          Automotive & industrial design projects, visual development and creative collaborations worldwide.
         </h1>
       </section>
 

@@ -40,7 +40,7 @@ function About() {
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
           I'm Guillermina, an
           <em className="not-italic text-copper"> automotive designer </em>
-          working between Granada and the rest of the world.
+          working between Andalusia and the rest of the world.
         </h1>
       </section>
 

@@ -36,10 +36,10 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Direct</p>
             <a
-              href="mailto:hello@guillerminavaldivia.com"
+              href="mailto:guiyedesign@gmail.com"
               className="font-display text-3xl md:text-4xl hover:text-copper transition-colors"
             >
-              hello@guillerminavaldivia.com
+              guiyedesign@gmail.com
             </a>
           </div>
           <div>

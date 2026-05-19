@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Guillermina Valdivia is an independent automotive designer based in Granada, working on concept vehicles, exterior surfacing and visual research.",
+          "Guillermina Valdivia is an independent automotive designer based in Andalusia, working on concept vehicles, exterior surfacing and visual research.",
       },
     ],
   }),

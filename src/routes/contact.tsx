@@ -45,7 +45,7 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Based in</p>
             <p className="leading-relaxed">
-              Andalusia
+              Andalusia, Spain
             </p>
             <p className="text-muted-foreground text-sm mt-2">
               Automotive & industrial design projects, visual development and creative collaborations worldwide

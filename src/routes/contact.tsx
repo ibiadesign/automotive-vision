@@ -45,10 +45,10 @@ function Contact() {
           <div>
             <p className="eyebrow mb-3">Based in</p>
             <p className="leading-relaxed">
-              Granada, Spain
+              Andalusia
             </p>
             <p className="text-muted-foreground text-sm mt-2">
-              Available for commissions and collaborations worldwide
+              Automotive & industrial design projects, visual development and creative collaborations worldwide
             </p>
           </div>
           <div>

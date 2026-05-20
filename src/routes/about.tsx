@@ -18,10 +18,15 @@ export const Route = createFileRoute("/about")({
 });
 
 const experience = [
-  ["2024 — Now", "Independent Designer", "Concept & exterior commissions"],
-  ["2022 — 2024", "Pininfarina", "Exterior Designer"],
-  ["2020 — 2022", "Volkswagen Group", "Junior Exterior Designer"],
-  ["2018 — 2020", "Royal College of Art", "MA Vehicle Design, London"],
+  ["2026 — Now", "Independent Designer", "Transportation Design Intern – Public Service Vehicles"],
+  ["2025", "CUPRA", "Collaboration project with UPV"],
+  ["2024 — 2025", "Genesis Europe", "Collaboration project with UPV"],
+];
+
+const studies = [
+  ["2023 — 2026", "MA Car Design", "Valencia"],
+  ["2016 — 2018", "MA Industrial Design", "Madrid"],
+  ["2009 — 2013", "Degree at Fine Arts", "Granada"],
 ];
 
 const recognition: Array<{ key: string; name: React.ReactNode; detail: React.ReactNode }> = [
@@ -55,17 +60,17 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "women",
-    name: (
+    name: <span className="text-foreground">Interview</span>,
+    detail: (
       <a
         href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
         target="_blank"
         rel="noreferrer"
         className="text-copper hover:underline"
       >
-        Interview
+        Women in Automotive Design
       </a>
     ),
-    detail: <span className="text-foreground">Women in Automotive Design.</span>,
   },
   {
     key: "f1",
@@ -150,6 +155,32 @@ function About() {
           ))}
         </div>
       </section>
+
+      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid md:grid-cols-12 gap-10">
+        <div className="md:col-span-4">
+          <p className="eyebrow">Studies</p>
+        </div>
+        <div className="md:col-span-8 divide-y divide-border">
+          {studies.map(([when, role, detail]) => (
+            <div
+              key={role}
+              className="py-6 grid md:grid-cols-12 gap-3 items-baseline"
+            >
+              <span className="md:col-span-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                {when}
+              </span>
+              <span className="md:col-span-4 font-display text-xl md:text-2xl">
+                {role}
+              </span>
+              <span className="md:col-span-5 text-muted-foreground">
+                {detail}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-32 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">

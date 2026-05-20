@@ -55,8 +55,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "women",
-    name: "Women in Automotive Design.",
-    detail: (
+    name: (
       <a
         href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
         target="_blank"
@@ -66,11 +65,11 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         Interview
       </a>
     ),
+    detail: <span className="text-foreground">Women in Automotive Design.</span>,
   },
   {
     key: "f1",
-    name: "Future F1 Design",
-    detail: (
+    name: (
       <a
         href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
         target="_blank"
@@ -80,6 +79,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         Ferrari F1 MS Tribute
       </a>
     ),
+    detail: <span className="text-foreground">Future F1 Design</span>,
   },
 ];
 

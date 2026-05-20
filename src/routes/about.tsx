@@ -62,10 +62,24 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         rel="noreferrer"
         className="text-copper hover:underline"
       >
-        Women in Automotive Design.
+        Interview
       </a>
     ),
-    detail: "",
+    detail: <span className="text-foreground">Women in Automotive Design.</span>,
+  },
+  {
+    key: "f1",
+    name: (
+      <a
+        href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
+        target="_blank"
+        rel="noreferrer"
+        className="text-copper hover:underline"
+      >
+        Ferrari F1 MS Tribute
+      </a>
+    ),
+    detail: <span className="text-foreground">Future F1 Design</span>,
   },
 ];
 
@@ -81,7 +95,7 @@ function About() {
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
           I design vehicles with
           <em className="not-italic text-copper"> emotion, clarity </em>
-          and purpose.
+          and <em className="not-italic text-copper">purpose</em>.
         </h1>
 
       </section>

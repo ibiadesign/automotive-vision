@@ -24,11 +24,52 @@ const experience = [
   ["2018 — 2020", "Royal College of Art", "MA Vehicle Design, London"],
 ];
 
-const recognition = [
-  ["Car Design Award", "Concept · 2024"],
-  ["Wallpaper* Design Awards", "Shortlist · 2023"],
-  ["Pforzheim Design Prize", "Honourable Mention · 2021"],
+const recognition: Array<{ key: string; name: React.ReactNode; detail: React.ReactNode }> = [
+  {
+    key: "kia",
+    name: "Car Design Award",
+    detail: (
+      <a
+        href="https://www.autobild.es/noticias/estos-son-los-ganadores-concurso-kia-auto-bild-276305?utm_source=twitterfeed&utm_medium=twitter"
+        target="_blank"
+        rel="noreferrer"
+        className="text-copper hover:underline"
+      >
+        KIA Glare
+      </a>
+    ),
+  },
+  {
+    key: "nissan",
+    name: "Car Design Finalist Top10 Spain / Top 41 at international level",
+    detail: (
+      <a
+        href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
+        target="_blank"
+        rel="noreferrer"
+        className="text-copper hover:underline"
+      >
+        Nissan Defy
+      </a>
+    ),
+  },
+  {
+    key: "women",
+    name: (
+      <a
+        href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
+        target="_blank"
+        rel="noreferrer"
+        className="text-copper hover:underline"
+      >
+        Women in Automotive Design.
+      </a>
+    ),
+    detail: "",
+  },
 ];
+
+
 
 function About() {
   return (
@@ -38,10 +79,11 @@ function About() {
       <section className="pt-40 md:pt-48 pb-24 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">About</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          I'm Guillermina, an
-          <em className="not-italic text-copper"> automotive designer </em>
-          working between Andalusia and the rest of the world.
+          I design vehicles with
+          <em className="not-italic text-copper"> emotion, clarity </em>
+          and purpose.
         </h1>
+
       </section>
 
       <section className="relative h-[55vh] w-full overflow-hidden">
@@ -61,12 +103,8 @@ function About() {
           <p className="eyebrow">About me</p>
         </div>
         <div className="md:col-span-8 space-y-6 text-lg leading-relaxed max-w-3xl">
-          <p>
-            I've spent the last six years designing exteriors — first inside
-            two large European studios, and since 2024 on my own. My focus is
-            simple: vehicles that feel calm, considered, and built to age well.
-          </p>
           <p className="text-muted-foreground">
+
             I draw on paper, model in clay when I can, and finish in digital
             surfacing. I take on a small number of projects each year so every
             line is the right one. Most of the work shown here is personal
@@ -104,9 +142,9 @@ function About() {
           <p className="eyebrow">Recognition</p>
         </div>
         <div className="md:col-span-8 divide-y divide-border">
-          {recognition.map(([name, detail]) => (
+          {recognition.map(({ key, name, detail }) => (
             <div
-              key={name}
+              key={key}
               className="py-6 flex items-baseline justify-between gap-6"
             >
               <span className="font-display text-xl md:text-2xl">{name}</span>
@@ -115,6 +153,7 @@ function About() {
               </span>
             </div>
           ))}
+
         </div>
       </section>
 
@@ -124,7 +163,7 @@ function About() {
           className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em]"
         >
           <span className="w-10 h-px bg-foreground group-hover:w-16 group-hover:bg-copper transition-all duration-500" />
-          Say hello
+          Let's talk
         </Link>
       </section>
 

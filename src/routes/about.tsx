@@ -103,12 +103,8 @@ function About() {
           <p className="eyebrow">About me</p>
         </div>
         <div className="md:col-span-8 space-y-6 text-lg leading-relaxed max-w-3xl">
-          <p>
-            I've spent the last six years designing exteriors — first inside
-            two large European studios, and since 2024 on my own. My focus is
-            simple: vehicles that feel calm, considered, and built to age well.
-          </p>
           <p className="text-muted-foreground">
+
             I draw on paper, model in clay when I can, and finish in digital
             surfacing. I take on a small number of projects each year so every
             line is the right one. Most of the work shown here is personal

@@ -79,10 +79,11 @@ function About() {
       <section className="pt-40 md:pt-48 pb-24 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">About</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          I'm Guillermina, an
-          <em className="not-italic text-copper"> automotive designer </em>
-          working between Andalusia and the rest of the world.
+          I design vehicles with
+          <em className="not-italic text-copper"> emotion, clarity </em>
+          and purpose.
         </h1>
+
       </section>
 
       <section className="relative h-[55vh] w-full overflow-hidden">

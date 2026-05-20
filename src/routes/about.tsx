@@ -18,10 +18,15 @@ export const Route = createFileRoute("/about")({
 });
 
 const experience = [
-  ["2024 — Now", "Independent Designer", "Concept & exterior commissions"],
-  ["2022 — 2024", "Pininfarina", "Exterior Designer"],
-  ["2020 — 2022", "Volkswagen Group", "Junior Exterior Designer"],
-  ["2018 — 2020", "Royal College of Art", "MA Vehicle Design, London"],
+  ["2026 — Now", "Independent Designer", "Transportation Design Intern – Public Service Vehicles"],
+  ["2025", "CUPRA", "Collaboration project with UPV"],
+  ["2024 — 2025", "Genesis Europe", "Collaboration project with UPV"],
+];
+
+const studies = [
+  ["2023 — 2026", "MA Car Design", "Valencia"],
+  ["2016 — 2018", "MA Industrial Design", "Madrid"],
+  ["2009 — 2013", "Degree at Fine Arts", "Granada"],
 ];
 
 const recognition: Array<{ key: string; name: React.ReactNode; detail: React.ReactNode }> = [
@@ -55,17 +60,17 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "women",
-    name: (
+    name: <span className="text-foreground">Interview</span>,
+    detail: (
       <a
         href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
         target="_blank"
         rel="noreferrer"
         className="text-copper hover:underline"
       >
-        Interview
+        Women in Automotive Design
       </a>
     ),
-    detail: <span className="text-foreground">Women in Automotive Design.</span>,
   },
   {
     key: "f1",

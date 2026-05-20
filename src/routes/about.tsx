@@ -95,7 +95,7 @@ function About() {
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
           I design vehicles with
           <em className="not-italic text-copper"> emotion, clarity </em>
-          and purpose.
+          and <em className="not-italic text-copper">purpose</em>.
         </h1>
 
       </section>

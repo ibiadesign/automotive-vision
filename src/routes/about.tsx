@@ -146,9 +146,9 @@ function About() {
           <p className="eyebrow">Recognition</p>
         </div>
         <div className="md:col-span-8 divide-y divide-border">
-          {recognition.map(([name, detail]) => (
+          {recognition.map(({ key, name, detail }) => (
             <div
-              key={name}
+              key={key}
               className="py-6 flex items-baseline justify-between gap-6"
             >
               <span className="font-display text-xl md:text-2xl">{name}</span>
@@ -157,6 +157,7 @@ function About() {
               </span>
             </div>
           ))}
+
         </div>
       </section>
 

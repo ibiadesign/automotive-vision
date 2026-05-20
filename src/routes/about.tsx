@@ -24,11 +24,43 @@ const experience = [
   ["2018 — 2020", "Royal College of Art", "MA Vehicle Design, London"],
 ];
 
-const recognition = [
-  ["Car Design Award", "Concept · 2024"],
-  ["Wallpaper* Design Awards", "Shortlist · 2023"],
-  ["Pforzheim Design Prize", "Honourable Mention · 2021"],
+const recognition: Array<[string, React.ReactNode, string?]> = [
+  [
+    "Car Design Award",
+    <a
+      href="https://www.autobild.es/noticias/estos-son-los-ganadores-concurso-kia-auto-bild-276305?utm_source=twitterfeed&utm_medium=twitter"
+      target="_blank"
+      rel="noreferrer"
+      className="text-copper hover:underline"
+    >
+      KIA Glare
+    </a>,
+  ],
+  [
+    "Car Design Finalist Top10 Spain / Top 41 at international level",
+    <a
+      href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
+      target="_blank"
+      rel="noreferrer"
+      className="text-copper hover:underline"
+    >
+      Nissan Defy
+    </a>,
+  ],
+  [
+    "",
+    <a
+      href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
+      target="_blank"
+      rel="noreferrer"
+      className="text-copper hover:underline"
+    >
+      Women in Automotive Design.
+    </a>,
+    "Women in Automotive Design.",
+  ],
 ];
+
 
 function About() {
   return (

@@ -163,7 +163,7 @@ function About() {
           className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em]"
         >
           <span className="w-10 h-px bg-foreground group-hover:w-16 group-hover:bg-copper transition-all duration-500" />
-          Say hello
+          Let's talk
         </Link>
       </section>
 

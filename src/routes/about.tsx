@@ -123,11 +123,11 @@ function About() {
         </div>
         <div className="md:col-span-8 space-y-6 text-lg leading-relaxed max-w-3xl">
           <p className="text-muted-foreground">
-
-            I draw on paper, model in clay when I can, and finish in digital
-            surfacing. I take on a small number of projects each year so every
-            line is the right one. Most of the work shown here is personal
-            research; some is commissioned and shared with the client's blessing.
+            I've always been drawn to vehicles with presence — forms that
+            communicate emotion, character and intention without needing
+            explanation. Today, I explore that through transportation design,
+            blending artistic intuition with digital development and visual
+            storytelling.
           </p>
         </div>
       </section>

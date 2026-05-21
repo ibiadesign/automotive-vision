@@ -46,7 +46,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "nissan",
-    name: "Car Design Finalist Top10 Spain / Top 41 at international level",
+    name: "Car Design Finalist — Top 10 Spain / Top 41 Worldwide",
     detail: (
       <a
         href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"

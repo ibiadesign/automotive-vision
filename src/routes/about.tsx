@@ -99,7 +99,7 @@ function About() {
         <p className="eyebrow mb-8">About</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
           I design vehicles with
-          <em className="not-italic text-copper"> emotion, clarity </em>
+          <em className="not-italic text-copper"> emotion </em>
           and <em className="not-italic text-copper">purpose</em>.
         </h1>
 

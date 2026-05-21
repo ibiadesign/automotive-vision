@@ -74,7 +74,8 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "f1",
-    name: (
+    name: <span className="text-foreground">Future F1 Design</span>,
+    detail: (
       <a
         href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
         target="_blank"
@@ -84,7 +85,6 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         Ferrari F1 MS Tribute
       </a>
     ),
-    detail: <span className="text-foreground">Future F1 Design</span>,
   },
 ];
 

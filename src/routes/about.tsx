@@ -18,15 +18,15 @@ export const Route = createFileRoute("/about")({
 });
 
 const experience = [
-  ["2026 — Now", "Independent Designer", "Transportation Design Intern – Public Service Vehicles"],
+  ["2026 — Now", "Public Service Vehicle Development", "Transportation Design Intern"],
   ["2025", "CUPRA", "Collaboration project with UPV"],
   ["2024 — 2025", "Genesis Europe", "Collaboration project with UPV"],
 ];
 
 const studies = [
-  ["2023 — 2026", "MA Car Design", "Valencia"],
-  ["2016 — 2018", "MA Industrial Design", "Madrid"],
-  ["2009 — 2013", "Degree at Fine Arts", "Granada"],
+  ["2023 — 2026", "MA in Transportation Design", "UPV, Valencia"],
+  ["2016 — 2018", "MA in Industrial Design", "Nebrija University, Madrid"],
+  ["2009 — 2013", "Bachelor’s Degree in Fine Arts", "UGR, Granada"],
 ];
 
 const recognition: Array<{ key: string; name: React.ReactNode; detail: React.ReactNode }> = [
@@ -46,7 +46,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "nissan",
-    name: "Car Design Finalist Top10 Spain / Top 41 at international level",
+    name: "Car Design Finalist — Top 10 Spain / Top 41 Worldwide",
     detail: (
       <a
         href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
@@ -74,7 +74,8 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "f1",
-    name: (
+    name: <span className="text-foreground">Future F1 Design</span>,
+    detail: (
       <a
         href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
         target="_blank"
@@ -84,7 +85,6 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         Ferrari F1 MS Tribute
       </a>
     ),
-    detail: <span className="text-foreground">Future F1 Design</span>,
   },
 ];
 
@@ -99,7 +99,7 @@ function About() {
         <p className="eyebrow mb-8">About</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
           I design vehicles with
-          <em className="not-italic text-copper"> emotion, clarity </em>
+          <em className="not-italic text-copper"> emotion </em>
           and <em className="not-italic text-copper">purpose</em>.
         </h1>
 
@@ -123,11 +123,11 @@ function About() {
         </div>
         <div className="md:col-span-8 space-y-6 text-lg leading-relaxed max-w-3xl">
           <p className="text-muted-foreground">
-
-            I draw on paper, model in clay when I can, and finish in digital
-            surfacing. I take on a small number of projects each year so every
-            line is the right one. Most of the work shown here is personal
-            research; some is commissioned and shared with the client's blessing.
+            I've always been drawn to vehicles with presence — forms that
+            communicate emotion, character and intention without needing
+            explanation. Today, I explore that through transportation design,
+            blending artistic intuition with digital development and visual
+            storytelling.
           </p>
         </div>
       </section>

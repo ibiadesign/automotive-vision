@@ -18,15 +18,15 @@ export const Route = createFileRoute("/about")({
 });
 
 const experience = [
-  ["2026 — Now", "Independent Designer", "Transportation Design Intern – Public Service Vehicles"],
+  ["2026 — Now", "Public Service Vehicle Development", "Transportation Design Intern"],
   ["2025", "CUPRA", "Collaboration project with UPV"],
   ["2024 — 2025", "Genesis Europe", "Collaboration project with UPV"],
 ];
 
 const studies = [
-  ["2023 — 2026", "MA Car Design", "Valencia"],
-  ["2016 — 2018", "MA Industrial Design", "Madrid"],
-  ["2009 — 2013", "Degree at Fine Arts", "Granada"],
+  ["2023 — 2026", "MA in Transportation Design", "UPV, Valencia"],
+  ["2016 — 2018", "MA in Industrial Design", "Nebrija University, Madrid"],
+  ["2009 — 2013", "Bachelor’s Degree in Fine Arts", "UGR, Granada"],
 ];
 
 const recognition: Array<{ key: string; name: React.ReactNode; detail: React.ReactNode }> = [

@@ -63,7 +63,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
 
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
-          <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work, 2026</p>
+          <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work</p>
           <h1 className="font-display text-[11vw] md:text-[6.5vw] leading-[1.05] tracking-tight max-w-5xl">
             Automotive design,
             <br />

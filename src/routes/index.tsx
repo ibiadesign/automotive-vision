@@ -96,15 +96,15 @@ function Index() {
         <p className="eyebrow md:col-span-3">A short note</p>
         <div className="md:col-span-9 max-w-4xl">
           <p className="font-display text-3xl md:text-5xl leading-tight">
-            I'm an independent automotive designer working between concept,
-            surfacing and visual research — drawn to proportion, restraint, and
-            the quiet confidence of a well-resolved line.
+            Automotive designer working between concept development and visual
+            research.
           </p>
           <div className="hairline mt-12 mb-8 max-w-md" />
           <p className="text-muted-foreground max-w-xl">
-            This is a selection of personal and commissioned work from the last
-            three years. Each project is an attempt to answer the same question:
-            what does a vehicle look like when nothing is added for its own sake?
+            These projects explore different ways of understanding mobility
+            through emotion and proportion. From hypercars to emergency
+            vehicles, each concept begins with a question, a feeling, or a
+            world worth designing for.
           </p>
         </div>
       </section>

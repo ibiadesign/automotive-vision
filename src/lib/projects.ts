@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     slug: "azura-saloon",
     title: "Zion CUV",
-    subtitle: "Don´t follow paths, leave them behind",
+    subtitle: "Don’t follow paths, leave them behind",
     year: "2025",
     category: "Collaboration Project with CUPRA",
     client: "Confidential OEM",

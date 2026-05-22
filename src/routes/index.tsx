@@ -128,9 +128,8 @@ function Index() {
         <div className="space-y-40">
           {featured.map((p, i) => (
             <Link
-              key={p.slug}
-              to="/projects/$slug"
-              params={{ slug: p.slug }}
+              key={p.title}
+              to={p.href}
               className={`group grid md:grid-cols-12 gap-8 items-center ${
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
@@ -147,9 +146,7 @@ function Index() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
               </div>
               <div className="md:col-span-4 md:px-6">
-                <p className="eyebrow mb-4">
-                  {String(i + 1).padStart(2, "0")} · {p.year}
-                </p>
+                <p className="eyebrow mb-4">{p.eyebrow}</p>
                 <h3 className="font-display text-4xl md:text-5xl leading-tight group-hover:text-copper transition-colors duration-500">
                   {p.title}
                 </h3>

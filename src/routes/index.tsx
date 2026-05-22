@@ -23,19 +23,23 @@ function Index() {
   const featured = [
     {
       ...projects[0],
+      eyebrow: `01 · ${projects[0].year}`,
+      href: `/projects/${projects[0].slug}`,
       summary:
         "X-treme Hypercar explores the emotional connection between motorcycles and high-performance cars. Sharp tension, exposed volume and mechanical purity come together in a concept shaped around movement, precision and adrenaline.",
     },
     {
       ...projects[1],
+      eyebrow: `02 · ${projects[1].year}`,
+      href: `/projects/${projects[1].slug}`,
       summary:
         "Zion CUV is an off-road electric concept developed with CUPRA, inspired by exploration beyond conventional roads. Bold proportions, geometric surfaces and elevated capability define a vehicle designed for freedom and discovery.",
     },
     {
       ...projects[2],
-      slug: "sketchbook",
       title: "Sketchbook",
-      year: "Process Archive",
+      eyebrow: "Process Archive",
+      href: "/projects",
       cover: sketchbookCover,
       summary:
         "A selection of sketches, ideation studies and development work exploring proportion, surfacing and visual storytelling. From quick silhouettes to refined themes, this section reveals the thinking behind each project.",

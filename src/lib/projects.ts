@@ -74,7 +74,7 @@ export const projects: Project[] = [
     title: "Urban ResQore",
     subtitle: "Emergency care designed around animal wellbeing",
     year: "2024",
-    category: "First MA´s project",
+    category: "Master Thesis Project",
     client: "Personal Research",
     role: "Concept & surfacing",
     cover: p4,

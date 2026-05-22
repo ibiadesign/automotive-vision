@@ -63,7 +63,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
 
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
-          <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work, 2026</p>
+          <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work</p>
           <h1 className="font-display text-[11vw] md:text-[6.5vw] leading-[1.05] tracking-tight max-w-5xl">
             Automotive design,
             <br />
@@ -87,7 +87,7 @@ function Index() {
         </div>
 
         <div className="absolute bottom-6 right-6 md:right-12 z-10 text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground">
-          Lumen GT · Concept · 2025
+          X-treme Hypercar · 2024
         </div>
       </section>
 
@@ -96,15 +96,15 @@ function Index() {
         <p className="eyebrow md:col-span-3">A short note</p>
         <div className="md:col-span-9 max-w-4xl">
           <p className="font-display text-3xl md:text-5xl leading-tight">
-            I'm an independent automotive designer working between concept,
-            surfacing and visual research — drawn to proportion, restraint, and
-            the quiet confidence of a well-resolved line.
+            Automotive designer working between concept development and visual
+            research.
           </p>
           <div className="hairline mt-12 mb-8 max-w-md" />
           <p className="text-muted-foreground max-w-xl">
-            This is a selection of personal and commissioned work from the last
-            three years. Each project is an attempt to answer the same question:
-            what does a vehicle look like when nothing is added for its own sake?
+            These projects explore different ways of understanding mobility
+            through emotion and proportion. From hypercars to emergency
+            vehicles, each concept begins with a question, a feeling, or a
+            world worth designing for.
           </p>
         </div>
       </section>

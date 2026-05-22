@@ -25,7 +25,7 @@ function ProjectsIndex() {
       <section className="pt-40 md:pt-48 pb-20 mx-auto max-w-[1600px] px-6 md:px-12">
         <p className="eyebrow mb-8">Index · {projects.length} Projects</p>
         <h1 className="font-display text-5xl md:text-8xl leading-[0.95] max-w-5xl">
-          2024
+          Selected work, 2023 — 2026.
         </h1>
       </section>
 

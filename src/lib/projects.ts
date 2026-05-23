@@ -13,6 +13,7 @@ export type Project = {
   role: string;
   cover: string;
   summary: string;
+  inspiration: string;
   body: string[];
   gallery: string[];
 };
@@ -24,14 +25,17 @@ export const projects: Project[] = [
     subtitle: "Motorcycle emotion, translated into four wheels",
     year: "2024 - 2025",
     category: "Collaboration Project with Genesis",
-    client: "Personal Research",
+    client: "Genesis",
     role: "Concept, exterior, surfacing",
     cover: p1,
     summary:
-      "Lumen GT is a personal study of how electrification could free proportion. A continuous light signature wraps the front, finished with restrained copper accents.",
+      "A hypercar shaped around the raw, exposed sensations of riding a motorbike — wind, tension, mechanical honesty — translated into four wheels.",
+    inspiration:
+      "Inspired by the emotions and feelings of a motorbike: the exposure, the lean, the intimacy with the road.",
     body: [
-      "The project started as a sketch on a long flight — a way of asking what a grand tourer could look like when the engine no longer dictates the architecture. With the powertrain compressed into the floor, the cabin moves forward, the hood lowers, and the wheels move to the corners.",
-      "I wanted a single, uninterrupted light signature wrapping the front fascia — one luminous gesture, day or night. Copper inlays mark the active aerodynamic edges, a quiet reminder that every line still carries function.",
+      "X-treme Hypercar began as a question: what would a car feel like if it inherited the soul of a motorcycle? Not the geometry, but the emotion — the wind pressure, the visual lightness, the sense of being mechanically connected to the asphalt.",
+      "The volumes are stretched and lean, with exposed structural elements and a cockpit that sits forward like a rider's stance. Aerodynamic surfaces wrap with tension rather than ornament, and the rear opens up to reveal the powertrain like the frame of a sportbike.",
+      "Developed in collaboration with Genesis, the project explores how a luxury brand can embrace adrenaline without losing its refinement — precision, restraint, and pure forward motion.",
     ],
     gallery: [p1, p2],
   },
@@ -41,14 +45,17 @@ export const projects: Project[] = [
     subtitle: "Don’t follow paths, leave them behind",
     year: "2025",
     category: "Collaboration Project with CUPRA",
-    client: "Confidential OEM",
+    client: "CUPRA",
     role: "Lead exterior designer",
     cover: p2,
     summary:
-      "An executive saloon stripped of ornament. Deep cobalt paint, a single character line, and a cabin shaped around stillness and silence.",
+      "An off-road electric CUV designed to retrace the Pony Express trail across the American West — feeling the landscape, the silence and the slow rhythm of the journey.",
+    inspiration:
+      "Inspired by the Pony Express trail in the United States — repeating the route in a CUPRA, letting the landscape and the act of driving shape the emotion.",
     body: [
-      "Azura was a commission for a European marque rethinking its flagship saloon. I led the exterior from initial sketch through to digital surfacing review.",
-      "The body is defined by a single shoulder line that rises subtly toward the rear haunch, catching light without demanding it. Inside, two materials dominate: brushed aluminium and an undyed wool. Controls retreat into the architecture, surfacing only when needed.",
+      "Zion CUV imagines a modern CUPRA built to retrace one of America's most mythical routes. The Pony Express trail becomes the brief: long horizons, shifting terrain, and the meditative loneliness of crossing a continent.",
+      "Geometric surfaces and raised proportions give the vehicle the confidence to leave paved roads behind, while a wide greenhouse opens the cabin to the landscape. Lighting graphics reference the desert sun and the cold blue of mountain dawns.",
+      "The result is a vehicle that does not just move through territory — it listens to it.",
     ],
     gallery: [p2, p1],
   },
@@ -57,15 +64,18 @@ export const projects: Project[] = [
     title: "Atelier Saloon",
     subtitle: "Crafted around unforgettable journeys",
     year: "2023",
-    category: "Personal · Exterior",
+    category: "Personal · Exterior & Interior",
     client: "Personal Research",
     role: "Concept & surfacing",
     cover: p3,
     summary:
-      "A compact utility study to prove that capability and elegance are not opposites. Vanta is monolithic, calm, and unmistakably modern.",
+      "A grand saloon imagined as the companion of a couple after marriage — the honeymoon car. Intimate, slow, and built around shared memory.",
+    inspiration:
+      "Inspired by the honeymoon: the first long journey of a married couple, where the car becomes a third presence in the story.",
     body: [
-      "I started Vanta as a reaction to the visual noise common to its segment — fake vents, aggressive cladding, surfaces fighting each other. I wanted to see what was left when all of that was removed.",
-      "Copper-finished wheels and underbody accents are the only chromatic gesture, anchoring the silhouette to the road. The greenhouse is intentionally small, the body intentionally quiet.",
+      "Atelier Saloon was conceived as the honeymoon car — the silent companion of a couple beginning a life together. Its proportions are calm and generous, the cabin tailored more like a small atelier than a vehicle.",
+      "Natural materials, soft ambient light and a continuous belt line evoke the warmth of shared time. The exterior avoids drama in favour of permanence; this is a car meant to be remembered, not noticed.",
+      "Every surface has been resolved to feel hand-finished, anchoring the project in craft and emotional duration rather than novelty.",
     ],
     gallery: [p3, p4],
   },
@@ -76,13 +86,16 @@ export const projects: Project[] = [
     year: "2024",
     category: "Master Thesis Project",
     client: "Personal Research",
-    role: "Concept & surfacing",
+    role: "Concept, exterior & interior",
     cover: p4,
     summary:
-      "Atlas is a rolling sculpture engineered for speed and presence. A full-width cobalt light bar anchors the rear, framed by structural copper diffusers.",
+      "An urban emergency vehicle conceived as an ambulance for animals — equipped, calm, and designed entirely around the wellbeing of its non-human passengers.",
+    inspiration:
+      "Inspired by the absence of a real emergency vehicle for animals in distress in our cities.",
     body: [
-      "Atlas is the project I keep returning to. It started during my final year at RCA and has been refined since. Every panel earns its place — the rear deck slopes into a venturi tunnel that doubles as the car's defining graphic.",
-      "The signature taillight is a single continuous strip — a cobalt horizon line that signals presence without aggression. It's the most personal piece of work I've made.",
+      "Urban ResQore began with a simple observation: cities have ambulances for humans, but almost nothing for the animals that share those same streets. The project proposes a dedicated vehicle for animal emergency response — small enough for dense urban fabric, equipped for veterinary intervention on the move.",
+      "The interior is organised around a stress-reducing transport bay: soft lighting, acoustic isolation, modular restraint and quick-access medical equipment. Visibility, ventilation and surface temperature were treated as primary design parameters.",
+      "The exterior language is calm and recognisable rather than aggressive — a public service vehicle that signals help, not alarm.",
     ],
     gallery: [p4, p1],
   },

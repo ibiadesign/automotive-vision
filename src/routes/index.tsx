@@ -39,7 +39,7 @@ function Index() {
       ...projects[2],
       title: "Sketchbook",
       eyebrow: "Process Archive",
-      href: "/projects",
+      href: "/sketchbook",
       cover: sketchbookCover,
       summary:
         "A selection of sketches, ideation studies and development work exploring proportion, surfacing and visual storytelling. From quick silhouettes to refined themes, this section reveals the thinking behind each project.",

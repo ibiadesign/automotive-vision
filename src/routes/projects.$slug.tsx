@@ -106,20 +106,87 @@ function ProjectPage() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section className="space-y-6">
-        {project.gallery.map((src: string, i: number) => (
-          <div key={i} className="w-full">
-            <img
-              src={src}
-              alt={`${project.title} — image ${i + 1}`}
-              loading="lazy"
-              width={1600}
-              height={1200}
-              className="w-full h-auto object-cover"
-            />
+      {/* INSPIRATION */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32 grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <p className="eyebrow">Inspiration</p>
           </div>
-        ))}
+          <div className="md:col-span-8 max-w-3xl">
+            <p className="font-display text-3xl md:text-4xl leading-snug text-copper">
+              “{project.inspiration}”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* RENDERS */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-24">
+          <p className="eyebrow mb-10">Renders</p>
+        </div>
+        <div className="space-y-6">
+          {project.gallery.map((src: string, i: number) => (
+            <div key={i} className="w-full">
+              <img
+                src={src}
+                alt={`${project.title} — render ${i + 1}`}
+                loading="lazy"
+                width={1600}
+                height={1200}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SKETCHES */}
+      <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+        <div className="grid md:grid-cols-12 gap-10 mb-12">
+          <div className="md:col-span-4">
+            <p className="eyebrow">Sketches & Process</p>
+          </div>
+          <div className="md:col-span-8 max-w-2xl">
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Early ideation, silhouette studies and surfacing explorations that
+              shaped the final direction of {project.title}.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[0, 1, 2, 3, 4, 5].map((i) => (
+            <div
+              key={i}
+              className="aspect-[4/3] bg-card border border-border flex items-center justify-center text-xs uppercase tracking-[0.3em] text-muted-foreground"
+            >
+              Sketch {String(i + 1).padStart(2, "0")}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* VIDEO ANIMATION */}
+      <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+        <div className="grid md:grid-cols-12 gap-10 mb-12">
+          <div className="md:col-span-4">
+            <p className="eyebrow">Animation</p>
+          </div>
+          <div className="md:col-span-8 max-w-2xl">
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              A short film capturing the motion, light and atmosphere of the
+              project.
+            </p>
+          </div>
+        </div>
+        <div className="relative aspect-video w-full bg-card border border-border overflow-hidden flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-20 h-20 mx-auto mb-4 rounded-full border border-copper flex items-center justify-center">
+              <div className="w-0 h-0 border-y-[10px] border-y-transparent border-l-[16px] border-l-copper ml-1" />
+            </div>
+            <p className="eyebrow">Video coming soon</p>
+          </div>
+        </div>
       </section>
 
       {/* NEXT */}

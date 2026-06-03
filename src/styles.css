@@ -4,9 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Editorial automotive typography */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&display=swap");
-
 @theme inline {
   --radius-sm: 2px;
   --radius-md: 3px;

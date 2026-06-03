@@ -172,7 +172,7 @@ function LearnPage() {
           <div className="hairline my-10" />
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <p className="font-display text-2xl">From 45 € / session</p>
+            <p className="font-display text-2xl">From 75 € / session</p>
             <a
               href="https://calendar.app.google/4VwiDpoQiiv7oASM6"
               target="_blank"

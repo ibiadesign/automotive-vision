@@ -11,9 +11,10 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links: { to: "/" | "/projects" | "/about" | "/contact"; label: string; exact?: boolean }[] = [
+  const links: { to: "/" | "/projects" | "/learn" | "/about" | "/contact"; label: string; exact?: boolean }[] = [
     { to: "/", label: "Index", exact: true },
     { to: "/projects", label: "Work" },
+    { to: "/learn", label: "Learn" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];

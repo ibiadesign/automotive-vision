@@ -31,7 +31,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-display: "Fraunces", Georgia, serif;
+  --font-display: "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 
   --tracking-widest: 0.35em;

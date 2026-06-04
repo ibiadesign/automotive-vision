@@ -80,7 +80,7 @@ export const projects: Project[] = [
     gallery: [p3, p4],
   },
   {
-    slug: "atlas-hyper",
+    slug: "citroen-urban-resqore",
     title: "Urban ResQore",
     subtitle: "Emergency care designed around animal wellbeing",
     year: "2024",

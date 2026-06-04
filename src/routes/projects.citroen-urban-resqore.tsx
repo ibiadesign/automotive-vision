@@ -88,12 +88,12 @@ function UrbanResQorePage() {
             to the realities of modern cities.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            The project rethinks emergency mobility through the lens of animal
-            wellbeing: acoustic isolation, soft lighting, modular restraint and
-            quick-access medical equipment shape an interior built around
-            non-human passengers. Outside, the language is reassuring rather
-            than aggressive — a public service vehicle that signals help, not
-            alarm.
+            Developed as a Master Thesis project for Citroën, Urban ResQore
+            rethinks emergency mobility through autonomy, electrification and
+            animal-centred design. The project investigates how future urban
+            services could provide specialised veterinary assistance with the
+            same efficiency and availability expected from human emergency
+            systems.
           </p>
         </div>
 

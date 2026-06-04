@@ -104,8 +104,8 @@ function UrbanResQorePage() {
               ["Brand", "Citroën"],
               ["Project Type", "Master Thesis"],
               ["Discipline", "Transportation Design"],
-              ["Duration", "9 months · 2024"],
-              ["Software Used", "Gravity Sketch · Blender · Keyshot · Photoshop"],
+              ["Duration", "2 months · 2024"],
+              ["Software Used", "Photoshop · Vizcom"],
             ].map(([k, v]) => (
               <div key={k} className="grid grid-cols-12 gap-4">
                 <dt className="col-span-5 eyebrow self-start pt-1">{k}</dt>

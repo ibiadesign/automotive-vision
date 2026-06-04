@@ -74,19 +74,26 @@ function UrbanResQorePage() {
         <div className="md:col-span-7 max-w-2xl space-y-6">
           <p className="eyebrow">Overview</p>
           <p className="font-display text-2xl md:text-3xl leading-snug">
-            Cities have ambulances for people, but almost nothing for the
-            animals that share their streets. Urban ResQore proposes a
-            dedicated emergency vehicle for animal care — small enough for
-            dense urban fabric, calm enough to reduce stress, equipped for
-            real veterinary intervention on the move.
+            Cities are built around human mobility, yet emergency care for
+            animals often remains slow, fragmented and dependent on
+            conventional transport. Urban ResQore explores a new approach: an
+            autonomous electric ambulance designed specifically for small and
+            medium-sized animals in urban environments.
+
+            Compact, quiet and purpose-built for veterinary intervention, the
+            vehicle combines autonomous navigation with dedicated medical
+            equipment, allowing faster response times while reducing stress
+            during transport. Its architecture prioritises accessibility,
+            safety and animal wellbeing, creating a mobile care unit adapted
+            to the realities of modern cities.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            The project rethinks emergency mobility through the lens of animal
-            wellbeing: acoustic isolation, soft lighting, modular restraint and
-            quick-access medical equipment shape an interior built around
-            non-human passengers. Outside, the language is reassuring rather
-            than aggressive — a public service vehicle that signals help, not
-            alarm.
+            Developed as a Master Thesis project for Citroën, Urban ResQore
+            rethinks emergency mobility through autonomy, electrification and
+            animal-centred design. The project investigates how future urban
+            services could provide specialised veterinary assistance with the
+            same efficiency and availability expected from human emergency
+            systems.
           </p>
         </div>
 
@@ -97,8 +104,8 @@ function UrbanResQorePage() {
               ["Brand", "Citroën"],
               ["Project Type", "Master Thesis"],
               ["Discipline", "Transportation Design"],
-              ["Duration", "9 months · 2024"],
-              ["Software Used", "Gravity Sketch · Blender · Keyshot · Photoshop"],
+              ["Duration", "2 months · 2024"],
+              ["Software Used", "Photoshop · Vizcom"],
             ].map(([k, v]) => (
               <div key={k} className="grid grid-cols-12 gap-4">
                 <dt className="col-span-5 eyebrow self-start pt-1">{k}</dt>

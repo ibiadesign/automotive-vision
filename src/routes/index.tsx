@@ -64,7 +64,10 @@ function Index() {
 
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24 md:pb-32">
           <p className="eyebrow mb-6">Guillermina Valdivia — Selected Work</p>
-          <h1 className="font-display text-[11vw] md:text-[6.5vw] leading-[1.05] tracking-tight max-w-5xl">
+          <h1
+            className="font-display leading-[1.05] tracking-tight max-w-3xl"
+            style={{ fontSize: "clamp(2.25rem, 5.2vw, 4.5rem)" }}
+          >
             Automotive design,
             <br />
             shaped with <em className="not-italic text-copper">intention</em>.

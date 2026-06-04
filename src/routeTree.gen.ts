@@ -15,6 +15,7 @@ import { Route as LearnRouteImport } from './routes/learn'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsCitroenUrbanResqoreRouteImport } from './routes/projects.citroen-urban-resqore'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 
 const SketchbookRoute = SketchbookRouteImport.update({
@@ -47,6 +48,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsCitroenUrbanResqoreRoute =
+  ProjectsCitroenUrbanResqoreRouteImport.update({
+    id: '/citroen-urban-resqore',
+    path: '/citroen-urban-resqore',
+    getParentRoute: () => ProjectsRoute,
+  } as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -61,6 +68,7 @@ export interface FileRoutesByFullPath {
   '/projects': typeof ProjectsRouteWithChildren
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +78,7 @@ export interface FileRoutesByTo {
   '/projects': typeof ProjectsRouteWithChildren
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +89,7 @@ export interface FileRoutesById {
   '/projects': typeof ProjectsRouteWithChildren
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +101,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/sketchbook'
     | '/projects/$slug'
+    | '/projects/citroen-urban-resqore'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +111,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/sketchbook'
     | '/projects/$slug'
+    | '/projects/citroen-urban-resqore'
   id:
     | '__root__'
     | '/'
@@ -109,6 +121,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/sketchbook'
     | '/projects/$slug'
+    | '/projects/citroen-urban-resqore'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -164,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/citroen-urban-resqore': {
+      id: '/projects/citroen-urban-resqore'
+      path: '/citroen-urban-resqore'
+      fullPath: '/projects/citroen-urban-resqore'
+      preLoaderRoute: typeof ProjectsCitroenUrbanResqoreRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/$slug'
@@ -176,10 +196,12 @@ declare module '@tanstack/react-router' {
 
 interface ProjectsRouteChildren {
   ProjectsSlugRoute: typeof ProjectsSlugRoute
+  ProjectsCitroenUrbanResqoreRoute: typeof ProjectsCitroenUrbanResqoreRoute
 }
 
 const ProjectsRouteChildren: ProjectsRouteChildren = {
   ProjectsSlugRoute: ProjectsSlugRoute,
+  ProjectsCitroenUrbanResqoreRoute: ProjectsCitroenUrbanResqoreRoute,
 }
 
 const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
@@ -197,3 +219,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

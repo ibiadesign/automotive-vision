@@ -10,22 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SketchbookRouteImport } from './routes/sketchbook'
-import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsCitroenUrbanResqoreRouteImport } from './routes/projects.citroen-urban-resqore'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 
 const SketchbookRoute = SketchbookRouteImport.update({
   id: '/sketchbook',
   path: '/sketchbook',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LearnRoute = LearnRouteImport.update({
@@ -48,6 +43,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/projects/',
+  path: '/projects/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsCitroenUrbanResqoreRoute =
   ProjectsCitroenUrbanResqoreRouteImport.update({
     id: '/citroen-urban-resqore',
@@ -65,20 +65,20 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/learn': typeof LearnRoute
-  '/projects': typeof ProjectsRouteWithChildren
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/learn': typeof LearnRoute
-  '/projects': typeof ProjectsRouteWithChildren
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
+  '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -86,10 +86,10 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/learn': typeof LearnRoute
-  '/projects': typeof ProjectsRouteWithChildren
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -98,30 +98,30 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/learn'
-    | '/projects'
     | '/sketchbook'
     | '/projects/$slug'
     | '/projects/citroen-urban-resqore'
+    | '/projects/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
     | '/learn'
-    | '/projects'
     | '/sketchbook'
     | '/projects/$slug'
     | '/projects/citroen-urban-resqore'
+    | '/projects'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
     | '/learn'
-    | '/projects'
     | '/sketchbook'
     | '/projects/$slug'
     | '/projects/citroen-urban-resqore'
+    | '/projects/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -129,8 +129,8 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   LearnRoute: typeof LearnRoute
-  ProjectsRoute: typeof ProjectsRouteWithChildren
   SketchbookRoute: typeof SketchbookRoute
+  ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -140,13 +140,6 @@ declare module '@tanstack/react-router' {
       path: '/sketchbook'
       fullPath: '/sketchbook'
       preLoaderRoute: typeof SketchbookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn': {
@@ -177,6 +170,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/': {
+      id: '/projects/'
+      path: '/projects'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/citroen-urban-resqore': {
       id: '/projects/citroen-urban-resqore'
       path: '/citroen-urban-resqore'
@@ -194,27 +194,13 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface ProjectsRouteChildren {
-  ProjectsSlugRoute: typeof ProjectsSlugRoute
-  ProjectsCitroenUrbanResqoreRoute: typeof ProjectsCitroenUrbanResqoreRoute
-}
-
-const ProjectsRouteChildren: ProjectsRouteChildren = {
-  ProjectsSlugRoute: ProjectsSlugRoute,
-  ProjectsCitroenUrbanResqoreRoute: ProjectsCitroenUrbanResqoreRoute,
-}
-
-const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
-  ProjectsRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   LearnRoute: LearnRoute,
-  ProjectsRoute: ProjectsRouteWithChildren,
   SketchbookRoute: SketchbookRoute,
+  ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

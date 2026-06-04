@@ -50,14 +50,14 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
 } as any)
 const ProjectsCitroenUrbanResqoreRoute =
   ProjectsCitroenUrbanResqoreRouteImport.update({
-    id: '/citroen-urban-resqore',
-    path: '/citroen-urban-resqore',
-    getParentRoute: () => ProjectsRoute,
+    id: '/projects/citroen-urban-resqore',
+    path: '/projects/citroen-urban-resqore',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ProjectsRoute,
+  id: '/projects/$slug',
+  path: '/projects/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -130,6 +130,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   LearnRoute: typeof LearnRoute
   SketchbookRoute: typeof SketchbookRoute
+  ProjectsSlugRoute: typeof ProjectsSlugRoute
+  ProjectsCitroenUrbanResqoreRoute: typeof ProjectsCitroenUrbanResqoreRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
@@ -179,17 +181,17 @@ declare module '@tanstack/react-router' {
     }
     '/projects/citroen-urban-resqore': {
       id: '/projects/citroen-urban-resqore'
-      path: '/citroen-urban-resqore'
+      path: '/projects/citroen-urban-resqore'
       fullPath: '/projects/citroen-urban-resqore'
       preLoaderRoute: typeof ProjectsCitroenUrbanResqoreRouteImport
-      parentRoute: typeof ProjectsRoute
+      parentRoute: typeof rootRouteImport
     }
     '/projects/$slug': {
       id: '/projects/$slug'
-      path: '/$slug'
+      path: '/projects/$slug'
       fullPath: '/projects/$slug'
       preLoaderRoute: typeof ProjectsSlugRouteImport
-      parentRoute: typeof ProjectsRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -200,6 +202,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   LearnRoute: LearnRoute,
   SketchbookRoute: SketchbookRoute,
+  ProjectsSlugRoute: ProjectsSlugRoute,
+  ProjectsCitroenUrbanResqoreRoute: ProjectsCitroenUrbanResqoreRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport

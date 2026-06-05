@@ -81,18 +81,10 @@ function UrbanResQorePage() {
         <div className="md:col-span-7 max-w-2xl space-y-6">
           <p className="eyebrow">Overview</p>
           <p className="font-display text-2xl md:text-3xl leading-snug">
-            Cities are built around human mobility, yet emergency care for
-            animals often remains slow, fragmented and dependent on
-            conventional transport. Urban ResQore explores a new approach: an
-            autonomous electric ambulance designed specifically for small and
-            medium-sized animals in urban environments.
-
-            Compact, quiet and purpose-built for veterinary intervention, the
-            vehicle combines autonomous navigation with dedicated medical
-            equipment, allowing faster response times while reducing stress
-            during transport. Its architecture prioritises accessibility,
-            safety and animal wellbeing, creating a mobile care unit adapted
-            to the realities of modern cities.
+            Urban ResQore reimagines emergency animal care through an
+            autonomous electric ambulance designed for urban environments.
+            Compact, accessible and equipped for veterinary intervention, it
+            offers a calmer and faster response for pets in need.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg">
             Developed as a Master Thesis project for Citroën, Urban ResQore

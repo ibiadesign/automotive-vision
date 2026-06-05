@@ -3,6 +3,13 @@ import { useRef, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getProject, projects } from "@/lib/projects";
+import layout01 from "@/assets/urban-resqore/layout-01.jpg.asset.json";
+import layout02 from "@/assets/urban-resqore/layout-02.jpg.asset.json";
+import layout03 from "@/assets/urban-resqore/layout-03.jpg.asset.json";
+import layout04 from "@/assets/urban-resqore/layout-04.jpg.asset.json";
+import layout05 from "@/assets/urban-resqore/layout-05.jpg.asset.json";
+import layout06 from "@/assets/urban-resqore/layout-06.jpg.asset.json";
+import layout07 from "@/assets/urban-resqore/layout-07.jpg.asset.json";
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
   head: () => {

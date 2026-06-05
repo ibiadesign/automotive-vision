@@ -297,12 +297,14 @@ function Placeholder({
   className = "",
   wrapperClassName,
   rounded = false,
+  src,
 }: {
   label: string;
   ratio: string;
   className?: string;
   wrapperClassName?: string;
   rounded?: boolean;
+  src?: string;
 }) {
   const base = (
     <div
@@ -310,8 +312,19 @@ function Placeholder({
         rounded ? "rounded-sm" : ""
       } ${className}`}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
-      <span className="relative eyebrow text-muted-foreground">{label}</span>
+      {src ? (
+        <img
+          src={src}
+          alt={label}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
+          <span className="relative eyebrow text-muted-foreground">{label}</span>
+        </>
+      )}
     </div>
   );
 

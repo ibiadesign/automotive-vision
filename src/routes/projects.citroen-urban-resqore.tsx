@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getProject, projects } from "@/lib/projects";
@@ -30,6 +30,26 @@ export const Route = createFileRoute("/projects/citroen-urban-resqore")({
   component: UrbanResQorePage,
 });
 
+type GalleryImage = { src: string; alt: string };
+
+const developmentImages: GalleryImage[] = [
+  { src: layout01.url, alt: "Development layout 01" },
+  { src: layout02.url, alt: "Development layout 02" },
+  { src: layout03.url, alt: "Development layout 03" },
+  { src: layout04.url, alt: "Development layout 04" },
+  { src: layout05.url, alt: "Development layout 05" },
+  { src: layout06.url, alt: "Development layout 06" },
+  { src: layout07.url, alt: "Development layout 07" },
+];
+
+const finalRenders: GalleryImage[] = [
+  { src: "", alt: "Final render 01" },
+  { src: "", alt: "Final render 02" },
+  { src: "", alt: "Final render 03" },
+  { src: "", alt: "Final render 04" },
+  { src: "", alt: "Final render 05" },
+];
+
 function UrbanResQorePage() {
   const project = getProject("citroen-urban-resqore")!;
   const currentIndex = projects.findIndex((p) => p.slug === project.slug);
@@ -37,6 +57,42 @@ function UrbanResQorePage() {
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+
+  const [lightbox, setLightbox] = useState<{
+    images: GalleryImage[];
+    index: number;
+  } | null>(null);
+
+  const openLightbox = (images: GalleryImage[], index: number) => {
+    setLightbox({ images, index });
+  };
+  const closeLightbox = useCallback(() => setLightbox(null), []);
+  const prev = useCallback(() => {
+    setLightbox((lb) =>
+      lb ? { ...lb, index: (lb.index - 1 + lb.images.length) % lb.images.length } : lb,
+    );
+  }, []);
+  const nextImg = useCallback(() => {
+    setLightbox((lb) =>
+      lb ? { ...lb, index: (lb.index + 1) % lb.images.length } : lb,
+    );
+  }, []);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") nextImg();
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [lightbox, closeLightbox, prev, nextImg]);
 
   const playVideo = () => {
     const v = videoRef.current;
@@ -76,7 +132,7 @@ function UrbanResQorePage() {
         </div>
       </section>
 
-      {/* OVERVIEW — two columns */}
+      {/* OVERVIEW */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32 grid md:grid-cols-12 gap-10 border-b border-border">
         <div className="md:col-span-7 max-w-2xl space-y-6">
           <p className="eyebrow">Overview</p>
@@ -115,9 +171,9 @@ function UrbanResQorePage() {
         </aside>
       </section>
 
-      {/* DEVELOPMENT & PACKAGING */}
+      {/* DEVELOPMENT GALLERY */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 mb-16">
+        <div className="grid md:grid-cols-12 gap-10 mb-12">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Process</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
@@ -132,22 +188,16 @@ function UrbanResQorePage() {
           </div>
         </div>
 
-        {/* Layout images — presentation pages in order */}
-        <div className="space-y-6">
-          <Placeholder label="Layout Image 01" ratio="aspect-[2/1]" src={layout01.url} />
-          <Placeholder label="Layout Image 02" ratio="aspect-[2/1]" src={layout02.url} />
-          <Placeholder label="Layout Image 03" ratio="aspect-[2/1]" src={layout03.url} />
-          <Placeholder label="Layout Image 04" ratio="aspect-[2/1]" src={layout04.url} />
-          <Placeholder label="Layout Image 05" ratio="aspect-[2/1]" src={layout05.url} />
-          <Placeholder label="Layout Image 06" ratio="aspect-[2/1]" src={layout06.url} />
-          <Placeholder label="Layout Image 07" ratio="aspect-[2/1]" src={layout07.url} />
-        </div>
+        <Gallery
+          images={developmentImages}
+          onOpen={(i) => openLightbox(developmentImages, i)}
+        />
       </section>
 
-      {/* FINAL RENDERS */}
+      {/* FINAL RENDERS GALLERY */}
       <section className="border-t border-border">
-        <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-24 md:pt-32">
-          <div className="grid md:grid-cols-12 gap-10 mb-16">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+          <div className="grid md:grid-cols-12 gap-10 mb-12">
             <div className="md:col-span-4">
               <p className="eyebrow mb-4">Showcase</p>
               <h2 className="font-display text-4xl md:text-5xl leading-tight">
@@ -161,28 +211,11 @@ function UrbanResQorePage() {
               </p>
             </div>
           </div>
-        </div>
 
-        <div className="space-y-10 md:space-y-16 pb-24 md:pb-32">
-          <Placeholder
-            label="Final Render 01"
-            ratio="aspect-[21/9]"
-            wrapperClassName="w-full"
-            rounded={false}
+          <Gallery
+            images={finalRenders}
+            onOpen={(i) => openLightbox(finalRenders, i)}
           />
-          <div className="mx-auto max-w-[1600px] px-6 md:px-12 grid md:grid-cols-2 gap-6">
-            <Placeholder label="Final Render 02" ratio="aspect-[4/5]" />
-            <Placeholder label="Final Render 03" ratio="aspect-[4/5]" />
-          </div>
-          <Placeholder
-            label="Final Render 04"
-            ratio="aspect-[16/9]"
-            wrapperClassName="w-full"
-            rounded={false}
-          />
-          <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-            <Placeholder label="Final Render 05" ratio="aspect-[21/9]" />
-          </div>
         </div>
       </section>
 
@@ -211,11 +244,7 @@ function UrbanResQorePage() {
             playsInline
             preload="metadata"
             poster={project.cover}
-          >
-            {/* Drop the MP4 here when ready */}
-            {/* <source src="/path/to/urban-resqore.mp4" type="video/mp4" /> */}
-          </video>
-
+          />
           {!playing && (
             <button
               type="button"
@@ -255,49 +284,142 @@ function UrbanResQorePage() {
       </section>
 
       <SiteFooter />
+
+      {lightbox && (
+        <Lightbox
+          image={lightbox.images[lightbox.index]}
+          onClose={closeLightbox}
+          onPrev={prev}
+          onNext={nextImg}
+          index={lightbox.index}
+          total={lightbox.images.length}
+        />
+      )}
     </div>
   );
 }
 
-function Placeholder({
-  label,
-  ratio,
-  className = "",
-  wrapperClassName,
-  rounded = false,
-  src,
+function Gallery({
+  images,
+  onOpen,
 }: {
-  label: string;
-  ratio: string;
-  className?: string;
-  wrapperClassName?: string;
-  rounded?: boolean;
-  src?: string;
+  images: GalleryImage[];
+  onOpen: (index: number) => void;
 }) {
-  const base = (
-    <div
-      className={`relative ${ratio} bg-card border border-border overflow-hidden flex items-center justify-center ${
-        rounded ? "rounded-sm" : ""
-      } ${className}`}
-    >
-      {src ? (
-        <img
-          src={src}
-          alt={label}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-      ) : (
-        <>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
-          <span className="relative eyebrow text-muted-foreground">{label}</span>
-        </>
-      )}
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+      {images.map((img, i) => (
+        <button
+          key={i}
+          type="button"
+          onClick={() => onOpen(i)}
+          className="group relative aspect-[4/3] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+          aria-label={`Open ${img.alt}`}
+        >
+          {img.src ? (
+            <img
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            />
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
+              <span className="absolute inset-0 flex items-center justify-center eyebrow text-muted-foreground">
+                {img.alt}
+              </span>
+            </>
+          )}
+          <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-500" />
+        </button>
+      ))}
     </div>
   );
+}
 
-  if (wrapperClassName) {
-    return <div className={wrapperClassName}>{base}</div>;
-  }
-  return base;
+function Lightbox({
+  image,
+  onClose,
+  onPrev,
+  onNext,
+  index,
+  total,
+}: {
+  image: GalleryImage;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
+  index: number;
+  total: number;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-sm animate-fade-in"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute top-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-border bg-card/60 hover:bg-card text-foreground transition-colors"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onPrev();
+        }}
+        aria-label="Previous image"
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-border bg-card/60 hover:bg-card transition-colors"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M15 6l-6 6 6 6" />
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onNext();
+        }}
+        aria-label="Next image"
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-border bg-card/60 hover:bg-card transition-colors"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+
+      <div
+        key={index}
+        className="relative max-w-[92vw] max-h-[88vh] animate-scale-in"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {image.src ? (
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="max-w-[92vw] max-h-[88vh] w-auto h-auto object-contain"
+          />
+        ) : (
+          <div className="w-[80vw] h-[60vh] flex items-center justify-center bg-card border border-border">
+            <span className="eyebrow text-muted-foreground">{image.alt}</span>
+          </div>
+        )}
+      </div>
+
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+        {index + 1} / {total}
+      </div>
+    </div>
+  );
 }

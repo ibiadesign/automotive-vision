@@ -3,6 +3,13 @@ import { useRef, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getProject, projects } from "@/lib/projects";
+import layout01 from "@/assets/urban-resqore/layout-01.jpg.asset.json";
+import layout02 from "@/assets/urban-resqore/layout-02.jpg.asset.json";
+import layout03 from "@/assets/urban-resqore/layout-03.jpg.asset.json";
+import layout04 from "@/assets/urban-resqore/layout-04.jpg.asset.json";
+import layout05 from "@/assets/urban-resqore/layout-05.jpg.asset.json";
+import layout06 from "@/assets/urban-resqore/layout-06.jpg.asset.json";
+import layout07 from "@/assets/urban-resqore/layout-07.jpg.asset.json";
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
   head: () => {
@@ -74,18 +81,10 @@ function UrbanResQorePage() {
         <div className="md:col-span-7 max-w-2xl space-y-6">
           <p className="eyebrow">Overview</p>
           <p className="font-display text-2xl md:text-3xl leading-snug">
-            Cities are built around human mobility, yet emergency care for
-            animals often remains slow, fragmented and dependent on
-            conventional transport. Urban ResQore explores a new approach: an
-            autonomous electric ambulance designed specifically for small and
-            medium-sized animals in urban environments.
-
-            Compact, quiet and purpose-built for veterinary intervention, the
-            vehicle combines autonomous navigation with dedicated medical
-            equipment, allowing faster response times while reducing stress
-            during transport. Its architecture prioritises accessibility,
-            safety and animal wellbeing, creating a mobile care unit adapted
-            to the realities of modern cities.
+            Urban ResQore reimagines emergency animal care through an
+            autonomous electric ambulance designed for urban environments.
+            Compact, accessible and equipped for veterinary intervention, it
+            offers a calmer and faster response for pets in need.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg">
             Developed as a Master Thesis project for Citroën, Urban ResQore
@@ -133,47 +132,15 @@ function UrbanResQorePage() {
           </div>
         </div>
 
-        {/* Editorial staggered layout */}
+        {/* Layout images — presentation pages in order */}
         <div className="space-y-6">
-          {/* Row 1 — full width */}
-          <Placeholder label="Layout Image 01" ratio="aspect-[21/9]" />
-
-          {/* Row 2 — two columns */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Placeholder label="Layout Image 02" ratio="aspect-[4/3]" />
-            <Placeholder label="Layout Image 03" ratio="aspect-[4/3]" />
-          </div>
-
-          {/* Row 3 — asymmetric 5/7 */}
-          <div className="grid md:grid-cols-12 gap-6">
-            <Placeholder
-              label="Layout Image 04"
-              ratio="aspect-[4/5]"
-              className="md:col-span-5"
-            />
-            <Placeholder
-              label="Layout Image 05"
-              ratio="aspect-[4/5] md:aspect-auto md:h-full"
-              className="md:col-span-7"
-            />
-          </div>
-
-          {/* Row 4 — single full-width */}
-          <Placeholder label="Layout Image 06" ratio="aspect-[16/9]" />
-
-          {/* Row 5 — asymmetric 7/5 with vertical offset */}
-          <div className="grid md:grid-cols-12 gap-6 items-start">
-            <Placeholder
-              label="Layout Image 07"
-              ratio="aspect-[16/10]"
-              className="md:col-span-7"
-            />
-            <Placeholder
-              label="Layout Image 08"
-              ratio="aspect-[4/5]"
-              className="md:col-span-5 md:mt-16"
-            />
-          </div>
+          <Placeholder label="Layout Image 01" ratio="aspect-[2/1]" src={layout01.url} />
+          <Placeholder label="Layout Image 02" ratio="aspect-[2/1]" src={layout02.url} />
+          <Placeholder label="Layout Image 03" ratio="aspect-[2/1]" src={layout03.url} />
+          <Placeholder label="Layout Image 04" ratio="aspect-[2/1]" src={layout04.url} />
+          <Placeholder label="Layout Image 05" ratio="aspect-[2/1]" src={layout05.url} />
+          <Placeholder label="Layout Image 06" ratio="aspect-[2/1]" src={layout06.url} />
+          <Placeholder label="Layout Image 07" ratio="aspect-[2/1]" src={layout07.url} />
         </div>
       </section>
 
@@ -298,12 +265,14 @@ function Placeholder({
   className = "",
   wrapperClassName,
   rounded = false,
+  src,
 }: {
   label: string;
   ratio: string;
   className?: string;
   wrapperClassName?: string;
   rounded?: boolean;
+  src?: string;
 }) {
   const base = (
     <div
@@ -311,8 +280,19 @@ function Placeholder({
         rounded ? "rounded-sm" : ""
       } ${className}`}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
-      <span className="relative eyebrow text-muted-foreground">{label}</span>
+      {src ? (
+        <img
+          src={src}
+          alt={label}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
+          <span className="relative eyebrow text-muted-foreground">{label}</span>
+        </>
+      )}
     </div>
   );
 

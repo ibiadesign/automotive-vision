@@ -132,47 +132,15 @@ function UrbanResQorePage() {
           </div>
         </div>
 
-        {/* Editorial staggered layout */}
+        {/* Layout images — presentation pages in order */}
         <div className="space-y-6">
-          {/* Row 1 — full width */}
-          <Placeholder label="Layout Image 01" ratio="aspect-[21/9]" />
-
-          {/* Row 2 — two columns */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Placeholder label="Layout Image 02" ratio="aspect-[4/3]" />
-            <Placeholder label="Layout Image 03" ratio="aspect-[4/3]" />
-          </div>
-
-          {/* Row 3 — asymmetric 5/7 */}
-          <div className="grid md:grid-cols-12 gap-6">
-            <Placeholder
-              label="Layout Image 04"
-              ratio="aspect-[4/5]"
-              className="md:col-span-5"
-            />
-            <Placeholder
-              label="Layout Image 05"
-              ratio="aspect-[4/5] md:aspect-auto md:h-full"
-              className="md:col-span-7"
-            />
-          </div>
-
-          {/* Row 4 — single full-width */}
-          <Placeholder label="Layout Image 06" ratio="aspect-[16/9]" />
-
-          {/* Row 5 — asymmetric 7/5 with vertical offset */}
-          <div className="grid md:grid-cols-12 gap-6 items-start">
-            <Placeholder
-              label="Layout Image 07"
-              ratio="aspect-[16/10]"
-              className="md:col-span-7"
-            />
-            <Placeholder
-              label="Layout Image 08"
-              ratio="aspect-[4/5]"
-              className="md:col-span-5 md:mt-16"
-            />
-          </div>
+          <Placeholder label="Layout Image 01" ratio="aspect-[2/1]" src={layout01.url} />
+          <Placeholder label="Layout Image 02" ratio="aspect-[2/1]" src={layout02.url} />
+          <Placeholder label="Layout Image 03" ratio="aspect-[2/1]" src={layout03.url} />
+          <Placeholder label="Layout Image 04" ratio="aspect-[2/1]" src={layout04.url} />
+          <Placeholder label="Layout Image 05" ratio="aspect-[2/1]" src={layout05.url} />
+          <Placeholder label="Layout Image 06" ratio="aspect-[2/1]" src={layout06.url} />
+          <Placeholder label="Layout Image 07" ratio="aspect-[2/1]" src={layout07.url} />
         </div>
       </section>
 

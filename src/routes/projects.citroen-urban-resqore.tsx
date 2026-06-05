@@ -10,6 +10,8 @@ import layout04 from "@/assets/urban-resqore/layout-04.jpg.asset.json";
 import layout05 from "@/assets/urban-resqore/layout-05.jpg.asset.json";
 import layout06 from "@/assets/urban-resqore/layout-06.jpg.asset.json";
 import layout07 from "@/assets/urban-resqore/layout-07.jpg.asset.json";
+import layout08 from "@/assets/urban-resqore/layout-08.gif.asset.json";
+
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
   head: () => {
@@ -40,6 +42,7 @@ const developmentImages: GalleryImage[] = [
   { src: layout05.url, alt: "Development layout 05" },
   { src: layout06.url, alt: "Development layout 06" },
   { src: layout07.url, alt: "Development layout 07" },
+  { src: layout08.url, alt: "Development layout 08" },
 ];
 
 const finalRenders: GalleryImage[] = [

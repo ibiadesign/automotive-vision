@@ -477,3 +477,63 @@ function Lightbox({
     </div>
   );
 }
+
+function VideoModal({
+  video,
+  onClose,
+}: {
+  video: MotionStudy;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-sm animate-fade-in"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute top-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-border bg-card/60 hover:bg-card text-foreground transition-colors"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+
+      <div
+        className="relative w-[92vw] max-w-[1280px] animate-scale-in"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative aspect-video w-full bg-card border border-border overflow-hidden">
+          {video.src ? (
+            <video
+              src={video.src}
+              poster={video.poster}
+              controls
+              autoPlay
+              playsInline
+              className="absolute inset-0 h-full w-full object-contain bg-black"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="eyebrow text-muted-foreground">
+                {video.title} — video coming soon
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="mt-5 max-w-2xl">
+          <p className="font-display text-xl md:text-2xl leading-tight">
+            {video.title}
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground leading-snug mt-2">
+            {video.caption}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

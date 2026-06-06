@@ -179,7 +179,7 @@ function UrbanResQorePage() {
 
       {/* DEVELOPMENT GALLERY */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 mb-12">
+        <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Process</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
@@ -203,7 +203,7 @@ function UrbanResQorePage() {
       {/* FINAL RENDERS GALLERY */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-          <div className="grid md:grid-cols-12 gap-10 mb-12">
+          <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
             <div className="md:col-span-4">
               <p className="eyebrow mb-4">Showcase</p>
               <h2 className="font-display text-4xl md:text-5xl leading-tight">
@@ -227,7 +227,7 @@ function UrbanResQorePage() {
 
       {/* ANIMATION */}
       <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 mb-12">
+        <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Motion</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">

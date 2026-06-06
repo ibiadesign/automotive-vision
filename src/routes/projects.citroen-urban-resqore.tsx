@@ -63,24 +63,24 @@ const finalRenders: GalleryImage[] = [
 
 const motionStudies: MotionStudy[] = [
   {
-    src: "",
-    title: "Urban Approach",
-    caption: "Vehicle navigating dense city streets at dusk.",
+    src: motion01.url,
+    title: "Closer look",
+    caption: "full hero shot that shows the front view",
   },
   {
-    src: "",
-    title: "Arrival & Deployment",
-    caption: "Side door opening, ramp extending for intervention.",
-  },
-  {
-    src: "",
-    title: "Interior Care",
-    caption: "Calm clinical cabin viewed during transport.",
-  },
-  {
-    src: "",
+    src: motion02.url,
     title: "Silent Departure",
-    caption: "Quiet electric exit through the urban fabric.",
+    caption: "Quiet electric exit through the concept landscape.",
+  },
+  {
+    src: motion03.url,
+    title: "Urban Approach",
+    caption: "Vehicle navigating from the animal hospital to the city streets.",
+  },
+  {
+    src: motion04.url,
+    title: "Interior Care",
+    caption: "Calm clinical cabin to small and medium animals.",
   },
 ];
 

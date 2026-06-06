@@ -123,15 +123,23 @@ function UrbanResQorePage() {
     };
   }, [lightbox, closeLightbox, prev, nextImg]);
 
-  const playVideo = () => {
-    const v = videoRef.current;
-    if (!v) {
-      setPlaying(true);
-      return;
-    }
-    v.play().catch(() => {});
-    setPlaying(true);
-  };
+  const [videoModal, setVideoModal] = useState<MotionStudy | null>(null);
+
+  useEffect(() => {
+    if (!videoModal) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setVideoModal(null);
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [videoModal]);
+
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">

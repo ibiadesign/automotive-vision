@@ -22,7 +22,7 @@ export const Route = createFileRoute("/projects/citroen-urban-resqore")({
     const p = getProject("citroen-urban-resqore");
     const title = "Urban ResQore — Citroën · Master Studio Project";
     const desc =
-      "Emergency veterinary response reimagined for future cities. A Master Thesis transportation design project in collaboration with Citroën.";
+      "Emergency veterinary response reimagined for future cities. A Master Studio transportation design project in collaboration with Citroën.";
     return {
       meta: [
         { title },

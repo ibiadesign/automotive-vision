@@ -11,14 +11,18 @@ import layout05 from "@/assets/urban-resqore/layout-05.jpg.asset.json";
 import layout06 from "@/assets/urban-resqore/layout-06.jpg.asset.json";
 import layout07 from "@/assets/urban-resqore/layout-07.jpg.asset.json";
 import layout08 from "@/assets/urban-resqore/layout-08.gif.asset.json";
+import finalRender01 from "@/assets/urban-resqore/final-render-01.jpg.asset.json";
+import finalRender02 from "@/assets/urban-resqore/final-render-02.jpg.asset.json";
+import finalRender03 from "@/assets/urban-resqore/final-render-03.jpg.asset.json";
+import finalRender04 from "@/assets/urban-resqore/final-render-04.jpg.asset.json";
 
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
   head: () => {
     const p = getProject("citroen-urban-resqore");
-    const title = "Urban ResQore — Citroën · Master Thesis";
+    const title = "Urban ResQore — Citroën · Master Studio Project";
     const desc =
-      "Emergency veterinary response reimagined for future cities. A Master Thesis transportation design project in collaboration with Citroën.";
+      "Emergency veterinary response reimagined for future cities. A Master Studio transportation design project in collaboration with Citroën.";
     return {
       meta: [
         { title },
@@ -46,11 +50,10 @@ const developmentImages: GalleryImage[] = [
 ];
 
 const finalRenders: GalleryImage[] = [
-  { src: "", alt: "Final render 01" },
-  { src: "", alt: "Final render 02" },
-  { src: "", alt: "Final render 03" },
-  { src: "", alt: "Final render 04" },
-  { src: "", alt: "Final render 05" },
+  { src: finalRender01.url, alt: "Final render 01" },
+  { src: finalRender02.url, alt: "Final render 02" },
+  { src: finalRender03.url, alt: "Final render 03" },
+  { src: finalRender04.url, alt: "Final render 04" },
 ];
 
 function UrbanResQorePage() {
@@ -122,7 +125,7 @@ function UrbanResQorePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/10 to-background" />
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24">
-          <p className="eyebrow mb-6">Master Thesis Project · 2024</p>
+          <p className="eyebrow mb-6">Master Studio Project · 2024</p>
           <h1
             className="font-display leading-[1.05] tracking-tight max-w-3xl"
             style={{ fontSize: "clamp(2.25rem, 5.2vw, 4.5rem)" }}
@@ -146,7 +149,7 @@ function UrbanResQorePage() {
             offers a calmer and faster response for pets in need.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Developed as a Master Thesis project for Citroën, Urban ResQore
+            Developed as a Master Studio project for Citroën, Urban ResQore
             rethinks emergency mobility through autonomy, electrification and
             animal-centred design. The project investigates how future urban
             services could provide specialised veterinary assistance with the
@@ -160,7 +163,7 @@ function UrbanResQorePage() {
           <dl className="space-y-6">
             {[
               ["Brand", "Citroën"],
-              ["Project Type", "Master Thesis"],
+              ["Project Type", "Master Studio Project"],
               ["Discipline", "Transportation Design"],
               ["Duration", "2 months · 2024"],
               ["Software Used", "Photoshop · Vizcom"],
@@ -176,7 +179,7 @@ function UrbanResQorePage() {
 
       {/* DEVELOPMENT GALLERY */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 mb-12">
+        <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Process</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
@@ -200,7 +203,7 @@ function UrbanResQorePage() {
       {/* FINAL RENDERS GALLERY */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-          <div className="grid md:grid-cols-12 gap-10 mb-12">
+          <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
             <div className="md:col-span-4">
               <p className="eyebrow mb-4">Showcase</p>
               <h2 className="font-display text-4xl md:text-5xl leading-tight">
@@ -224,7 +227,7 @@ function UrbanResQorePage() {
 
       {/* ANIMATION */}
       <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
-        <div className="grid md:grid-cols-12 gap-10 mb-12">
+        <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Motion</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">

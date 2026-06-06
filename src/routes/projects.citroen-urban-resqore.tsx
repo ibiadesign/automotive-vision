@@ -11,6 +11,10 @@ import layout05 from "@/assets/urban-resqore/layout-05.jpg.asset.json";
 import layout06 from "@/assets/urban-resqore/layout-06.jpg.asset.json";
 import layout07 from "@/assets/urban-resqore/layout-07.jpg.asset.json";
 import layout08 from "@/assets/urban-resqore/layout-08.gif.asset.json";
+import finalRender01 from "@/assets/urban-resqore/final-render-01.jpg.asset.json";
+import finalRender02 from "@/assets/urban-resqore/final-render-02.jpg.asset.json";
+import finalRender03 from "@/assets/urban-resqore/final-render-03.jpg.asset.json";
+import finalRender04 from "@/assets/urban-resqore/final-render-04.jpg.asset.json";
 
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({

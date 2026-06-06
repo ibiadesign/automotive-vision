@@ -50,11 +50,10 @@ const developmentImages: GalleryImage[] = [
 ];
 
 const finalRenders: GalleryImage[] = [
-  { src: "", alt: "Final render 01" },
-  { src: "", alt: "Final render 02" },
-  { src: "", alt: "Final render 03" },
-  { src: "", alt: "Final render 04" },
-  { src: "", alt: "Final render 05" },
+  { src: finalRender01.url, alt: "Final render 01" },
+  { src: finalRender02.url, alt: "Final render 02" },
+  { src: finalRender03.url, alt: "Final render 03" },
+  { src: finalRender04.url, alt: "Final render 04" },
 ];
 
 function UrbanResQorePage() {

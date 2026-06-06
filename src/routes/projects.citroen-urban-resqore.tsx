@@ -345,6 +345,10 @@ function UrbanResQorePage() {
           total={lightbox.images.length}
         />
       )}
+
+      {videoModal && (
+        <VideoModal video={videoModal} onClose={() => setVideoModal(null)} />
+      )}
     </div>
   );
 }

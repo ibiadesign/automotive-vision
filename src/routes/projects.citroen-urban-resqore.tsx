@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getProject, projects } from "@/lib/projects";
@@ -37,6 +37,7 @@ export const Route = createFileRoute("/projects/citroen-urban-resqore")({
 });
 
 type GalleryImage = { src: string; alt: string };
+type MotionStudy = { src: string; poster?: string; title: string; caption: string };
 
 const developmentImages: GalleryImage[] = [
   { src: layout01.url, alt: "Development layout 01" },
@@ -56,13 +57,35 @@ const finalRenders: GalleryImage[] = [
   { src: finalRender04.url, alt: "Final render 04" },
 ];
 
+const motionStudies: MotionStudy[] = [
+  {
+    src: "",
+    title: "Urban Approach",
+    caption: "Vehicle navigating dense city streets at dusk.",
+  },
+  {
+    src: "",
+    title: "Arrival & Deployment",
+    caption: "Side door opening, ramp extending for intervention.",
+  },
+  {
+    src: "",
+    title: "Interior Care",
+    caption: "Calm clinical cabin viewed during transport.",
+  },
+  {
+    src: "",
+    title: "Silent Departure",
+    caption: "Quiet electric exit through the urban fabric.",
+  },
+];
+
 function UrbanResQorePage() {
   const project = getProject("citroen-urban-resqore")!;
   const currentIndex = projects.findIndex((p) => p.slug === project.slug);
   const next = projects[(currentIndex + 1) % projects.length];
 
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
+
 
   const [lightbox, setLightbox] = useState<{
     images: GalleryImage[];
@@ -100,15 +123,23 @@ function UrbanResQorePage() {
     };
   }, [lightbox, closeLightbox, prev, nextImg]);
 
-  const playVideo = () => {
-    const v = videoRef.current;
-    if (!v) {
-      setPlaying(true);
-      return;
-    }
-    v.play().catch(() => {});
-    setPlaying(true);
-  };
+  const [videoModal, setVideoModal] = useState<MotionStudy | null>(null);
+
+  useEffect(() => {
+    if (!videoModal) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setVideoModal(null);
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [videoModal]);
+
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -225,49 +256,62 @@ function UrbanResQorePage() {
         </div>
       </section>
 
-      {/* ANIMATION */}
+      {/* MOTION STUDIES */}
       <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Motion</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Animation
+              Motion Studies
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 max-w-xl">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              A short film capturing the Urban ResQore in motion through the
-              city — light, sound and presence.
+              AI-generated motion studies based on rendered sketches,
+              visualising Urban ResQore beyond the static image.
             </p>
           </div>
         </div>
 
-        <div className="relative aspect-video w-full bg-card border border-border overflow-hidden">
-          <video
-            ref={videoRef}
-            className="absolute inset-0 h-full w-full object-cover"
-            controls={playing}
-            playsInline
-            preload="metadata"
-            poster={project.cover}
-          />
-          {!playing && (
-            <button
-              type="button"
-              onClick={playVideo}
-              className="absolute inset-0 flex items-center justify-center bg-background/40 hover:bg-background/30 transition-colors group"
-              aria-label="Play Urban ResQore animation"
-            >
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full border border-copper flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <div className="w-0 h-0 border-y-[10px] border-y-transparent border-l-[16px] border-l-copper ml-1" />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {motionStudies.map((m, i) => (
+            <figure key={i} className="space-y-3">
+              <button
+                type="button"
+                onClick={() => setVideoModal(m)}
+                className="group relative aspect-[4/3] w-full overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Play ${m.title}`}
+              >
+                {m.poster ? (
+                  <img
+                    src={m.poster}
+                    alt={m.title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
+                )}
+                <div className="absolute inset-0 bg-background/30 group-hover:bg-background/10 transition-colors duration-500" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full border border-copper bg-background/40 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-0 h-0 border-y-[8px] border-y-transparent border-l-[12px] border-l-copper ml-1" />
+                  </div>
                 </div>
-                <p className="eyebrow">Urban ResQore Animation</p>
-              </div>
-            </button>
-          )}
+              </button>
+              <figcaption>
+                <p className="font-display text-base md:text-lg leading-tight">
+                  {m.title}
+                </p>
+                <p className="text-sm text-muted-foreground leading-snug mt-1">
+                  {m.caption}
+                </p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
+
 
       {/* NEXT */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 border-t border-border">
@@ -300,6 +344,10 @@ function UrbanResQorePage() {
           index={lightbox.index}
           total={lightbox.images.length}
         />
+      )}
+
+      {videoModal && (
+        <VideoModal video={videoModal} onClose={() => setVideoModal(null)} />
       )}
     </div>
   );
@@ -425,6 +473,66 @@ function Lightbox({
 
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
         {index + 1} / {total}
+      </div>
+    </div>
+  );
+}
+
+function VideoModal({
+  video,
+  onClose,
+}: {
+  video: MotionStudy;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-sm animate-fade-in"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute top-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-border bg-card/60 hover:bg-card text-foreground transition-colors"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+
+      <div
+        className="relative w-[92vw] max-w-[1280px] animate-scale-in"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative aspect-video w-full bg-card border border-border overflow-hidden">
+          {video.src ? (
+            <video
+              src={video.src}
+              poster={video.poster}
+              controls
+              autoPlay
+              playsInline
+              className="absolute inset-0 h-full w-full object-contain bg-black"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="eyebrow text-muted-foreground">
+                {video.title} — video coming soon
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="mt-5 max-w-2xl">
+          <p className="font-display text-xl md:text-2xl leading-tight">
+            {video.title}
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground leading-snug mt-2">
+            {video.caption}
+          </p>
+        </div>
       </div>
     </div>
   );

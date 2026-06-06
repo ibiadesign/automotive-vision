@@ -37,6 +37,7 @@ export const Route = createFileRoute("/projects/citroen-urban-resqore")({
 });
 
 type GalleryImage = { src: string; alt: string };
+type MotionStudy = { src: string; poster?: string; title: string; caption: string };
 
 const developmentImages: GalleryImage[] = [
   { src: layout01.url, alt: "Development layout 01" },

@@ -57,13 +57,35 @@ const finalRenders: GalleryImage[] = [
   { src: finalRender04.url, alt: "Final render 04" },
 ];
 
+const motionStudies: MotionStudy[] = [
+  {
+    src: "",
+    title: "Urban Approach",
+    caption: "Vehicle navigating dense city streets at dusk.",
+  },
+  {
+    src: "",
+    title: "Arrival & Deployment",
+    caption: "Side door opening, ramp extending for intervention.",
+  },
+  {
+    src: "",
+    title: "Interior Care",
+    caption: "Calm clinical cabin viewed during transport.",
+  },
+  {
+    src: "",
+    title: "Silent Departure",
+    caption: "Quiet electric exit through the urban fabric.",
+  },
+];
+
 function UrbanResQorePage() {
   const project = getProject("citroen-urban-resqore")!;
   const currentIndex = projects.findIndex((p) => p.slug === project.slug);
   const next = projects[(currentIndex + 1) % projects.length];
 
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
+
 
   const [lightbox, setLightbox] = useState<{
     images: GalleryImage[];

@@ -256,49 +256,62 @@ function UrbanResQorePage() {
         </div>
       </section>
 
-      {/* ANIMATION */}
+      {/* MOTION STUDIES */}
       <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 mb-12 items-end">
           <div className="md:col-span-4">
             <p className="eyebrow mb-4">Motion</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Animation
+              Motion Studies
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 max-w-xl">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              A short film capturing the Urban ResQore in motion through the
-              city — light, sound and presence.
+              AI-generated motion studies based on rendered sketches,
+              visualising Urban ResQore beyond the static image.
             </p>
           </div>
         </div>
 
-        <div className="relative aspect-video w-full bg-card border border-border overflow-hidden">
-          <video
-            ref={videoRef}
-            className="absolute inset-0 h-full w-full object-cover"
-            controls={playing}
-            playsInline
-            preload="metadata"
-            poster={project.cover}
-          />
-          {!playing && (
-            <button
-              type="button"
-              onClick={playVideo}
-              className="absolute inset-0 flex items-center justify-center bg-background/40 hover:bg-background/30 transition-colors group"
-              aria-label="Play Urban ResQore animation"
-            >
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full border border-copper flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <div className="w-0 h-0 border-y-[10px] border-y-transparent border-l-[16px] border-l-copper ml-1" />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {motionStudies.map((m, i) => (
+            <figure key={i} className="space-y-3">
+              <button
+                type="button"
+                onClick={() => setVideoModal(m)}
+                className="group relative aspect-[4/3] w-full overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Play ${m.title}`}
+              >
+                {m.poster ? (
+                  <img
+                    src={m.poster}
+                    alt={m.title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.02_60/0.4),transparent_60%)]" />
+                )}
+                <div className="absolute inset-0 bg-background/30 group-hover:bg-background/10 transition-colors duration-500" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full border border-copper bg-background/40 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-0 h-0 border-y-[8px] border-y-transparent border-l-[12px] border-l-copper ml-1" />
+                  </div>
                 </div>
-                <p className="eyebrow">Urban ResQore Animation</p>
-              </div>
-            </button>
-          )}
+              </button>
+              <figcaption>
+                <p className="font-display text-base md:text-lg leading-tight">
+                  {m.title}
+                </p>
+                <p className="text-sm text-muted-foreground leading-snug mt-1">
+                  {m.caption}
+                </p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
+
 
       {/* NEXT */}
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 border-t border-border">

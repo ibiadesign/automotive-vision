@@ -123,12 +123,12 @@ function UrbanResQorePage() {
     };
   }, [lightbox, closeLightbox, prev, nextImg]);
 
-  const [videoModal, setVideoModal] = useState<MotionStudy | null>(null);
+  const [videoModal, setMotionVideoModal] = useState<MotionStudy | null>(null);
 
   useEffect(() => {
     if (!videoModal) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setVideoModal(null);
+      if (e.key === "Escape") setMotionVideoModal(null);
     };
     window.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
@@ -278,7 +278,7 @@ function UrbanResQorePage() {
             <figure key={i} className="space-y-3">
               <button
                 type="button"
-                onClick={() => setVideoModal(m)}
+                onClick={() => setMotionVideoModal(m)}
                 className="group relative aspect-[4/3] w-full overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
                 aria-label={`Play ${m.title}`}
               >
@@ -347,7 +347,7 @@ function UrbanResQorePage() {
       )}
 
       {videoModal && (
-        <VideoModal video={videoModal} onClose={() => setVideoModal(null)} />
+        <MotionVideoModal video={videoModal} onClose={() => setMotionVideoModal(null)} />
       )}
     </div>
   );
@@ -478,7 +478,7 @@ function Lightbox({
   );
 }
 
-function VideoModal({
+function MotionVideoModal({
   video,
   onClose,
 }: {

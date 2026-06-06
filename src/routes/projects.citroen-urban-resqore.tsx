@@ -20,7 +20,7 @@ import finalRender04 from "@/assets/urban-resqore/final-render-04.jpg.asset.json
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
   head: () => {
     const p = getProject("citroen-urban-resqore");
-    const title = "Urban ResQore — Citroën · Master Thesis";
+    const title = "Urban ResQore — Citroën · Master Studio Project";
     const desc =
       "Emergency veterinary response reimagined for future cities. A Master Thesis transportation design project in collaboration with Citroën.";
     return {
@@ -125,7 +125,7 @@ function UrbanResQorePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/10 to-background" />
         <div className="relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-12 flex flex-col justify-end pb-24">
-          <p className="eyebrow mb-6">Master Thesis Project · 2024</p>
+          <p className="eyebrow mb-6">Master Studio Project · 2024</p>
           <h1
             className="font-display leading-[1.05] tracking-tight max-w-3xl"
             style={{ fontSize: "clamp(2.25rem, 5.2vw, 4.5rem)" }}
@@ -149,7 +149,7 @@ function UrbanResQorePage() {
             offers a calmer and faster response for pets in need.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Developed as a Master Thesis project for Citroën, Urban ResQore
+            Developed as a Master Studio project for Citroën, Urban ResQore
             rethinks emergency mobility through autonomy, electrification and
             animal-centred design. The project investigates how future urban
             services could provide specialised veterinary assistance with the
@@ -163,7 +163,7 @@ function UrbanResQorePage() {
           <dl className="space-y-6">
             {[
               ["Brand", "Citroën"],
-              ["Project Type", "Master Thesis"],
+              ["Project Type", "Master Studio Project"],
               ["Discipline", "Transportation Design"],
               ["Duration", "2 months · 2024"],
               ["Software Used", "Photoshop · Vizcom"],

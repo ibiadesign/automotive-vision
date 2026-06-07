@@ -2,6 +2,10 @@ import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
+import atelierRender01 from "@/assets/atelier-saloon/render-01.png.asset.json";
+import atelierRender02 from "@/assets/atelier-saloon/render-02.jpg.asset.json";
+import atelierAnimation from "@/assets/atelier-saloon/animation.mp4.asset.json";
+import atelierAnimationPoster from "@/assets/atelier-saloon/animation-poster.jpg.asset.json";
 
 export type Project = {
   slug: string;

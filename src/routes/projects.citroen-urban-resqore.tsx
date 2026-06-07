@@ -19,6 +19,10 @@ import motion01 from "@/assets/urban-resqore/motion-01.mp4.asset.json";
 import motion02 from "@/assets/urban-resqore/motion-02.mp4.asset.json";
 import motion03 from "@/assets/urban-resqore/motion-03.mp4.asset.json";
 import motion04 from "@/assets/urban-resqore/motion-04.mp4.asset.json";
+import motion01Poster from "@/assets/urban-resqore/motion-01-poster.jpg.asset.json";
+import motion02Poster from "@/assets/urban-resqore/motion-02-poster.jpg.asset.json";
+import motion03Poster from "@/assets/urban-resqore/motion-03-poster.jpg.asset.json";
+import motion04Poster from "@/assets/urban-resqore/motion-04-poster.jpg.asset.json";
 
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({

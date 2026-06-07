@@ -24,6 +24,8 @@ export type Project = {
   discipline?: string;
   duration?: string;
   software?: string;
+  animation?: string;
+  animationPoster?: string;
 };
 
 export const projects: Project[] = [

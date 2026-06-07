@@ -68,21 +68,25 @@ const finalRenders: GalleryImage[] = [
 const motionStudies: MotionStudy[] = [
   {
     src: motion01.url,
+    poster: motion01Poster.url,
     title: "Closer look",
     caption: "full hero shot that shows the front view",
   },
   {
     src: motion02.url,
+    poster: motion02Poster.url,
     title: "Silent Departure",
     caption: "Quiet electric exit through the concept landscape.",
   },
   {
     src: motion03.url,
+    poster: motion03Poster.url,
     title: "Urban Approach",
     caption: "Vehicle navigating from the animal hospital to the city streets.",
   },
   {
     src: motion04.url,
+    poster: motion04Poster.url,
     title: "Interior Care",
     caption: "Calm clinical cabin to small and medium animals.",
   },

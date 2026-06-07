@@ -16,6 +16,10 @@ export type Project = {
   inspiration: string;
   body: string[];
   gallery: string[];
+  projectType?: string;
+  discipline?: string;
+  duration?: string;
+  software?: string;
 };
 
 export const projects: Project[] = [

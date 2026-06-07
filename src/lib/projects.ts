@@ -2,6 +2,10 @@ import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
+import atelierRender01 from "@/assets/atelier-saloon/render-01.png.asset.json";
+import atelierRender02 from "@/assets/atelier-saloon/render-02.jpg.asset.json";
+import atelierAnimation from "@/assets/atelier-saloon/animation.mp4.asset.json";
+import atelierAnimationPoster from "@/assets/atelier-saloon/animation-poster.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -20,6 +24,8 @@ export type Project = {
   discipline?: string;
   duration?: string;
   software?: string;
+  animation?: string;
+  animationPoster?: string;
 };
 
 export const projects: Project[] = [
@@ -89,11 +95,13 @@ export const projects: Project[] = [
       "Its proportions are calm and generous, while the interior is shaped as a warm, intimate environment. Natural materials, soft ambient light and carefully crafted details create a sense of comfort, permanence and emotional connection.",
       "Rather than pursuing visual drama, Atelier Saloon embraces timeless elegance. Every surface has been developed to express craftsmanship and longevity, creating a vehicle designed to accompany life's most meaningful moments.",
     ],
-    gallery: [],
+    gallery: [atelierRender01.url, atelierRender02.url],
     projectType: "ArtCenter Professional Car Design Program",
     discipline: "Transportation Design",
     duration: "4 weeks · 2023",
     software: "Photoshop · Vizcom",
+    animation: atelierAnimation.url,
+    animationPoster: atelierAnimationPoster.url,
   },
   {
     slug: "citroen-urban-resqore",

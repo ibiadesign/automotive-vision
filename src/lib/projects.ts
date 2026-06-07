@@ -60,7 +60,7 @@ export const projects: Project[] = [
     gallery: [p2, p1],
   },
   {
-    slug: "vanta-cuv",
+    slug: "atelier-saloon",
     title: "Atelier Saloon",
     subtitle: "Crafted around unforgettable journeys",
     year: "2023",

@@ -42,6 +42,10 @@ export const projects: Project[] = [
       "Developed in collaboration with Genesis, the project explores how a luxury brand can embrace adrenaline without losing its refinement — precision, restraint, and pure forward motion.",
     ],
     gallery: [p1, p2],
+    projectType: "Collaboration Project",
+    discipline: "Transportation Design",
+    duration: "6 months · 2024–2025",
+    software: "Photoshop · Vizcom · Blender",
   },
   {
     slug: "azura-saloon",
@@ -62,6 +66,10 @@ export const projects: Project[] = [
       "The result is a vehicle that does not just move through territory — it listens to it.",
     ],
     gallery: [p2, p1],
+    projectType: "Collaboration Project",
+    discipline: "Transportation Design",
+    duration: "3 months · 2025",
+    software: "Photoshop · Vizcom",
   },
   {
     slug: "atelier-saloon",
@@ -82,6 +90,10 @@ export const projects: Project[] = [
       "Every surface has been resolved to feel hand-finished, anchoring the project in craft and emotional duration rather than novelty.",
     ],
     gallery: [p3, p4],
+    projectType: "Personal Research",
+    discipline: "Transportation Design",
+    duration: "2 months · 2023",
+    software: "Photoshop · Blender",
   },
   {
     slug: "citroen-urban-resqore",
@@ -102,6 +114,10 @@ export const projects: Project[] = [
       "The exterior language is calm and recognisable rather than aggressive — a public service vehicle that signals help, not alarm.",
     ],
     gallery: [p4, p1],
+    projectType: "Master Studio Project",
+    discipline: "Transportation Design",
+    duration: "2 months · 2024",
+    software: "Photoshop · Vizcom",
   },
 ];
 

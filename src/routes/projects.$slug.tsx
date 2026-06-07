@@ -74,27 +74,10 @@ function ProjectPage() {
         </div>
       </section>
 
-      {/* META */}
-      <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-20 grid md:grid-cols-4 gap-8 border-b border-border">
-        {[
-          ["Client", project.client],
-          ["Role", project.role],
-          ["Year", project.year],
-          ["Discipline", project.category],
-        ].map(([k, v]) => (
-          <div key={k}>
-            <p className="eyebrow mb-3">{k}</p>
-            <p className="text-lg">{v}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* BODY */}
-      <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32 grid md:grid-cols-12 gap-10">
-        <div className="md:col-span-4">
+      {/* OVERVIEW */}
+      <section className="mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32 grid md:grid-cols-12 gap-10 border-b border-border">
+        <div className="md:col-span-7 max-w-2xl space-y-6">
           <p className="eyebrow">Overview</p>
-        </div>
-        <div className="md:col-span-8 space-y-6 max-w-3xl">
           <p className="font-display text-2xl md:text-3xl leading-snug">
             {project.summary}
           </p>
@@ -104,6 +87,24 @@ function ProjectPage() {
             </p>
           ))}
         </div>
+
+        <aside className="md:col-span-5 md:pl-10 md:border-l border-border">
+          <p className="eyebrow mb-8">Project Information</p>
+          <dl className="space-y-6">
+            {[
+              ["Brand", project.client],
+              ["Project Type", project.projectType ?? project.category],
+              ["Discipline", project.discipline ?? project.category],
+              ["Duration", project.duration ?? project.year],
+              ["Software Used", project.software ?? "—"],
+            ].map(([k, v]) => (
+              <div key={k} className="grid grid-cols-12 gap-4">
+                <dt className="col-span-5 eyebrow self-start pt-1">{k}</dt>
+                <dd className="col-span-7 text-base md:text-lg">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        </aside>
       </section>
 
       {/* INSPIRATION */}

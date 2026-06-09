@@ -135,14 +135,27 @@ function ProjectPage() {
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {Array.from({ length: 10 }).map((_, i) => (
-            <div
-              key={i}
-              className="aspect-[4/3] bg-card border border-border flex items-center justify-center text-xs uppercase tracking-[0.3em] text-muted-foreground"
-            >
-              Sketch {String(i + 1).padStart(2, "0")}
-            </div>
-          ))}
+          {(project.sketches && project.sketches.length > 0
+            ? project.sketches
+            : Array.from({ length: 10 }).map(() => null)
+          ).map((src: string | null, i: number) =>
+            src ? (
+              <img
+                key={i}
+                src={src}
+                alt={`${project.title} — sketch ${i + 1}`}
+                loading="lazy"
+                className="w-full aspect-[4/3] object-cover bg-card border border-border"
+              />
+            ) : (
+              <div
+                key={i}
+                className="aspect-[4/3] bg-card border border-border flex items-center justify-center text-xs uppercase tracking-[0.3em] text-muted-foreground"
+              >
+                Sketch {String(i + 1).padStart(2, "0")}
+              </div>
+            )
+          )}
         </div>
       </section>
 
@@ -151,15 +164,13 @@ function ProjectPage() {
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-24">
           <p className="eyebrow mb-10">Renders</p>
         </div>
-        <div className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 flex flex-col gap-6">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.gallery.map((src: string, i: number) => (
             <div key={i} className="w-full">
               <img
                 src={src}
                 alt={`${project.title} — render ${i + 1}`}
                 loading="lazy"
-                width={1600}
-                height={1200}
                 className="w-full h-auto object-cover"
               />
             </div>

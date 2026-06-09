@@ -159,18 +159,25 @@ function ProjectPage() {
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {(project.sketches && project.sketches.length > 0
-            ? project.sketches
-            : Array.from({ length: 10 }).map(() => null)
-          ).map((src: string | null, i: number) =>
+          {(sketches.length > 0
+            ? sketches
+            : (Array.from({ length: 10 }).map(() => null) as (string | null)[])
+          ).map((src, i) =>
             src ? (
-              <img
+              <button
                 key={i}
-                src={src}
-                alt={`${project.title} — sketch ${i + 1}`}
-                loading="lazy"
-                className="w-full aspect-[4/3] object-cover bg-card border border-border"
-              />
+                type="button"
+                onClick={() => openAt(sketchesOffset + i)}
+                className="group block w-full aspect-[4/3] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Open sketch ${i + 1}`}
+              >
+                <img
+                  src={src}
+                  alt={`${project.title} — sketch ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </button>
             ) : (
               <div
                 key={i}
@@ -186,18 +193,24 @@ function ProjectPage() {
       {/* RENDERS */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-24">
-          <p className="eyebrow mb-10">Renders</p>
+          <p className="eyebrow mb-10">Final Design</p>
         </div>
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {project.gallery.map((src: string, i: number) => (
-            <div key={i} className="w-full">
+          {renders.map((src: string, i: number) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => openAt(rendersOffset + i)}
+              className="group block w-full aspect-[4/3] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+              aria-label={`Open render ${i + 1}`}
+            >
               <img
                 src={src}
                 alt={`${project.title} — render ${i + 1}`}
                 loading="lazy"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
-            </div>
+            </button>
           ))}
         </div>
       </section>

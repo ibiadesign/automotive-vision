@@ -36,6 +36,7 @@ export type Project = {
   software?: string;
   animation?: string;
   animationPoster?: string;
+  sketches?: string[];
 };
 
 export const projects: Project[] = [

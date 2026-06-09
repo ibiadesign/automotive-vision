@@ -1,6 +1,8 @@
+import { useMemo, useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ImageLightbox, type LightboxImage } from "@/components/ImageLightbox";
 import { getProject, projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/projects/$slug")({

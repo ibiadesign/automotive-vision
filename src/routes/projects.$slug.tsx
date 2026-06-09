@@ -162,7 +162,7 @@ function ProjectPage() {
           {(sketches.length > 0
             ? sketches
             : (Array.from({ length: 10 }).map(() => null) as (string | null)[])
-          ).map((src, i) =>
+          ).map((src: string | null, i: number) =>
             src ? (
               <button
                 key={i}

@@ -49,6 +49,28 @@ function ProjectPage() {
   const currentIndex = projects.findIndex((p) => p.slug === project.slug);
   const next = projects[(currentIndex + 1) % projects.length];
 
+  const sketches = project.sketches ?? [];
+  const renders = project.gallery ?? [];
+
+  const allImages = useMemo<LightboxImage[]>(
+    () => [
+      ...sketches.map((src, i) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
+      ...renders.map((src, i) => ({ src, alt: `${project.title} — render ${i + 1}` })),
+    ],
+    [sketches, renders, project.title],
+  );
+  const sketchesOffset = 0;
+  const rendersOffset = sketches.length;
+
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const openAt = (i: number) => setLightboxIndex(i);
+  const closeLightbox = () => setLightboxIndex(null);
+  const prev = () =>
+    setLightboxIndex((i) => (i === null ? null : (i - 1 + allImages.length) % allImages.length));
+  const nextImg = () =>
+    setLightboxIndex((i) => (i === null ? null : (i + 1) % allImages.length));
+
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />

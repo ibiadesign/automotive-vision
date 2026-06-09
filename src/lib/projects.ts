@@ -6,6 +6,16 @@ import atelierRender01 from "@/assets/atelier-saloon/render-01.png.asset.json";
 import atelierRender02 from "@/assets/atelier-saloon/render-02.jpg.asset.json";
 import atelierAnimation from "@/assets/atelier-saloon/animation.mp4.asset.json";
 import atelierAnimationPoster from "@/assets/atelier-saloon/animation-poster.jpg.asset.json";
+import atelierSketch01 from "@/assets/atelier-saloon/sketch-01.jpg.asset.json";
+import atelierSketch02 from "@/assets/atelier-saloon/sketch-02.jpg.asset.json";
+import atelierSketch03 from "@/assets/atelier-saloon/sketch-03.jpg.asset.json";
+import atelierSketch04 from "@/assets/atelier-saloon/sketch-04.jpg.asset.json";
+import atelierSketch05 from "@/assets/atelier-saloon/sketch-05.jpg.asset.json";
+import atelierSketch06 from "@/assets/atelier-saloon/sketch-06.jpg.asset.json";
+import atelierSketch07 from "@/assets/atelier-saloon/sketch-07.jpg.asset.json";
+import atelierSketch08 from "@/assets/atelier-saloon/sketch-08.jpg.asset.json";
+import atelierSketch09 from "@/assets/atelier-saloon/sketch-09.jpg.asset.json";
+import atelierSketch10 from "@/assets/atelier-saloon/sketch-10.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -26,6 +36,7 @@ export type Project = {
   software?: string;
   animation?: string;
   animationPoster?: string;
+  sketches?: string[];
 };
 
 export const projects: Project[] = [
@@ -102,6 +113,18 @@ export const projects: Project[] = [
     software: "Photoshop · Vizcom",
     animation: atelierAnimation.url,
     animationPoster: atelierAnimationPoster.url,
+    sketches: [
+      atelierSketch01.url,
+      atelierSketch02.url,
+      atelierSketch03.url,
+      atelierSketch04.url,
+      atelierSketch05.url,
+      atelierSketch06.url,
+      atelierSketch07.url,
+      atelierSketch08.url,
+      atelierSketch09.url,
+      atelierSketch10.url,
+    ],
   },
   {
     slug: "citroen-urban-resqore",

@@ -271,6 +271,16 @@ function ProjectPage() {
         </Link>
       </section>
 
+      {lightboxIndex !== null && (
+        <ImageLightbox
+          images={allImages}
+          index={lightboxIndex}
+          onClose={closeLightbox}
+          onPrev={prev}
+          onNext={nextImg}
+        />
+      )}
+
       <SiteFooter />
     </div>
   );

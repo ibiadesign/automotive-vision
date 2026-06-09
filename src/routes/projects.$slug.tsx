@@ -54,8 +54,8 @@ function ProjectPage() {
 
   const allImages = useMemo<LightboxImage[]>(
     () => [
-      ...sketches.map((src, i) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
-      ...renders.map((src, i) => ({ src, alt: `${project.title} — render ${i + 1}` })),
+      ...sketches.map((src: string, i: number) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
+      ...renders.map((src: string, i: number) => ({ src, alt: `${project.title} — render ${i + 1}` })),
     ],
     [sketches, renders, project.title],
   );

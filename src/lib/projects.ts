@@ -113,6 +113,18 @@ export const projects: Project[] = [
     software: "Photoshop · Vizcom",
     animation: atelierAnimation.url,
     animationPoster: atelierAnimationPoster.url,
+    sketches: [
+      atelierSketch01.url,
+      atelierSketch02.url,
+      atelierSketch03.url,
+      atelierSketch04.url,
+      atelierSketch05.url,
+      atelierSketch06.url,
+      atelierSketch07.url,
+      atelierSketch08.url,
+      atelierSketch09.url,
+      atelierSketch10.url,
+    ],
   },
   {
     slug: "citroen-urban-resqore",

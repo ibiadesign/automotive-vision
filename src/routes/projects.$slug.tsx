@@ -3,6 +3,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ImageLightbox, type LightboxImage } from "@/components/ImageLightbox";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { getProject, projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
@@ -228,7 +229,9 @@ function ProjectPage() {
             </p>
           </div>
         </div>
-        {project.animation ? (
+        {project.youtubeUrl ? (
+          <YouTubeEmbed url={project.youtubeUrl} />
+        ) : project.animation ? (
           <div className="relative aspect-video w-full bg-card border border-border overflow-hidden">
             <video
               src={project.animation}

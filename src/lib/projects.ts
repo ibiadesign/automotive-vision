@@ -36,6 +36,7 @@ export type Project = {
   software?: string;
   animation?: string;
   animationPoster?: string;
+  youtubeUrl?: string;
   sketches?: string[];
 };
 
@@ -65,7 +66,7 @@ export const projects: Project[] = [
     software: "Photoshop · Vizcom · Blender",
   },
   {
-    slug: "azura-saloon",
+    slug: "zion-cuv",
     title: "Zion CUV",
     subtitle: "Don’t follow paths, leave them behind",
     year: "2025",
@@ -87,6 +88,7 @@ export const projects: Project[] = [
     discipline: "Transportation Design",
     duration: "3 months · 2025",
     software: "Photoshop · Vizcom",
+    youtubeUrl: "https://www.youtube.com/watch?v=iUHVThviA08",
   },
   {
     slug: "atelier-saloon",

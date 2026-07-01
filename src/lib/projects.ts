@@ -16,6 +16,15 @@ import atelierSketch07 from "@/assets/atelier-saloon/sketch-07.jpg.asset.json";
 import atelierSketch08 from "@/assets/atelier-saloon/sketch-08.jpg.asset.json";
 import atelierSketch09 from "@/assets/atelier-saloon/sketch-09.jpg.asset.json";
 import atelierSketch10 from "@/assets/atelier-saloon/sketch-10.jpg.asset.json";
+import zionVideoThumb from "@/assets/zion-cuv/video-thumbnail.jpg.asset.json";
+import zionSketch01 from "@/assets/zion-cuv/sketch-01.jpg.asset.json";
+import zionSketch02 from "@/assets/zion-cuv/sketch-02.jpg.asset.json";
+import zionSketch03 from "@/assets/zion-cuv/sketch-03.jpg.asset.json";
+import zionSketch04 from "@/assets/zion-cuv/sketch-04.jpg.asset.json";
+import zionSketch05 from "@/assets/zion-cuv/sketch-05.jpg.asset.json";
+import zionSketch06 from "@/assets/zion-cuv/sketch-06.jpg.asset.json";
+import zionSketch07 from "@/assets/zion-cuv/sketch-07.jpg.asset.json";
+import zionSketch08 from "@/assets/zion-cuv/sketch-08.jpg.asset.json";
 
 export type Project = {
   slug: string;

@@ -16,6 +16,15 @@ import atelierSketch07 from "@/assets/atelier-saloon/sketch-07.jpg.asset.json";
 import atelierSketch08 from "@/assets/atelier-saloon/sketch-08.jpg.asset.json";
 import atelierSketch09 from "@/assets/atelier-saloon/sketch-09.jpg.asset.json";
 import atelierSketch10 from "@/assets/atelier-saloon/sketch-10.jpg.asset.json";
+import zionVideoThumb from "@/assets/zion-cuv/video-thumbnail.jpg.asset.json";
+import zionSketch01 from "@/assets/zion-cuv/sketch-01.jpg.asset.json";
+import zionSketch02 from "@/assets/zion-cuv/sketch-02.jpg.asset.json";
+import zionSketch03 from "@/assets/zion-cuv/sketch-03.jpg.asset.json";
+import zionSketch04 from "@/assets/zion-cuv/sketch-04.jpg.asset.json";
+import zionSketch05 from "@/assets/zion-cuv/sketch-05.jpg.asset.json";
+import zionSketch06 from "@/assets/zion-cuv/sketch-06.jpg.asset.json";
+import zionSketch07 from "@/assets/zion-cuv/sketch-07.jpg.asset.json";
+import zionSketch08 from "@/assets/zion-cuv/sketch-08.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -37,6 +46,7 @@ export type Project = {
   animation?: string;
   animationPoster?: string;
   youtubeUrl?: string;
+  youtubePoster?: string;
   sketches?: string[];
 };
 
@@ -86,9 +96,20 @@ export const projects: Project[] = [
     gallery: [p2, p1],
     projectType: "Collaboration Project",
     discipline: "Transportation Design",
-    duration: "3 months · 2025",
-    software: "Photoshop · Vizcom",
+    duration: "8 months · 2025",
+    software: "Photoshop · Alias · Blender",
     youtubeUrl: "https://www.youtube.com/watch?v=iUHVThviA08",
+    youtubePoster: zionVideoThumb.url,
+    sketches: [
+      zionSketch01.url,
+      zionSketch02.url,
+      zionSketch03.url,
+      zionSketch04.url,
+      zionSketch05.url,
+      zionSketch06.url,
+      zionSketch07.url,
+      zionSketch08.url,
+    ],
   },
   {
     slug: "atelier-saloon",

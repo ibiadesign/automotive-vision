@@ -7,7 +7,7 @@ function getYouTubeId(url: string): string | null {
   return match ? match[1] : null;
 }
 
-export function YouTubeEmbed({ url }: { url: string }) {
+export function YouTubeEmbed({ url, poster }: { url: string; poster?: string }) {
   const [playing, setPlaying] = useState(false);
   const id = getYouTubeId(url);
 
@@ -38,7 +38,7 @@ export function YouTubeEmbed({ url }: { url: string }) {
           aria-label="Play video"
         >
           <img
-            src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+            src={poster ?? `https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
             alt="Video thumbnail"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"

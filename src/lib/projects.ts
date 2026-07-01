@@ -46,6 +46,7 @@ export type Project = {
   animation?: string;
   animationPoster?: string;
   youtubeUrl?: string;
+  youtubePoster?: string;
   sketches?: string[];
 };
 

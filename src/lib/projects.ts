@@ -48,6 +48,8 @@ export type Project = {
   youtubeUrl?: string;
   youtubePoster?: string;
   sketches?: string[];
+  detailSketches?: string[];
+  finalDesign?: string[];
 };
 
 export const projects: Project[] = [

@@ -25,6 +25,10 @@ import zionSketch05 from "@/assets/zion-cuv/sketch-05.jpg.asset.json";
 import zionSketch06 from "@/assets/zion-cuv/sketch-06.jpg.asset.json";
 import zionSketch07 from "@/assets/zion-cuv/sketch-07.jpg.asset.json";
 import zionSketch08 from "@/assets/zion-cuv/sketch-08.jpg.asset.json";
+import zionDetail01 from "@/assets/zion-cuv/detail-01.jpg.asset.json";
+import zionDetail02 from "@/assets/zion-cuv/detail-02.jpg.asset.json";
+import zionDetail03 from "@/assets/zion-cuv/detail-03.jpg.asset.json";
+import zionDetail04 from "@/assets/zion-cuv/detail-04.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -48,6 +52,8 @@ export type Project = {
   youtubeUrl?: string;
   youtubePoster?: string;
   sketches?: string[];
+  detailSketches?: string[];
+  finalDesign?: string[];
 };
 
 export const projects: Project[] = [
@@ -109,6 +115,18 @@ export const projects: Project[] = [
       zionSketch06.url,
       zionSketch07.url,
       zionSketch08.url,
+    ],
+    detailSketches: [
+      zionDetail01.url,
+      zionDetail02.url,
+      zionDetail03.url,
+      zionDetail04.url,
+    ],
+    finalDesign: [
+      zionDetail01.url,
+      zionDetail02.url,
+      zionDetail03.url,
+      zionDetail04.url,
     ],
   },
   {

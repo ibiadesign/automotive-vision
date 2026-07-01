@@ -51,17 +51,23 @@ function ProjectPage() {
   const next = projects[(currentIndex + 1) % projects.length];
 
   const sketches = project.sketches ?? [];
+  const detailSketches = project.detailSketches ?? [];
+  const finalDesign = project.finalDesign ?? [];
   const renders = project.gallery ?? [];
 
   const allImages = useMemo<LightboxImage[]>(
     () => [
       ...sketches.map((src: string, i: number) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
+      ...detailSketches.map((src: string, i: number) => ({ src, alt: `${project.title} — detail sketch ${i + 1}` })),
+      ...finalDesign.map((src: string, i: number) => ({ src, alt: `${project.title} — final design ${i + 1}` })),
       ...renders.map((src: string, i: number) => ({ src, alt: `${project.title} — render ${i + 1}` })),
     ],
-    [sketches, renders, project.title],
+    [sketches, detailSketches, finalDesign, renders, project.title],
   );
   const sketchesOffset = 0;
-  const rendersOffset = sketches.length;
+  const detailOffset = sketches.length;
+  const finalDesignOffset = sketches.length + detailSketches.length;
+  const rendersOffset = sketches.length + detailSketches.length + finalDesign.length;
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);
@@ -190,6 +196,78 @@ function ProjectPage() {
           )}
         </div>
       </section>
+
+      {/* DETAIL SKETCHES */}
+      {detailSketches.length > 0 && (
+        <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+          <div className="grid md:grid-cols-12 gap-10 mb-12">
+            <div className="md:col-span-4">
+              <p className="eyebrow">Detail Sketches</p>
+            </div>
+            <div className="md:col-span-8 max-w-2xl">
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Close-up studies of key details, materials and design decisions
+                that define {project.title}.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {detailSketches.map((src: string, i: number) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => openAt(detailOffset + i)}
+                className="group block w-full aspect-[16/9] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Open detail sketch ${i + 1}`}
+              >
+                <img
+                  src={src}
+                  alt={`${project.title} — detail sketch ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* FINAL DESIGN GALLERY */}
+      {finalDesign.length > 0 && (
+        <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+          <div className="grid md:grid-cols-12 gap-10 mb-12">
+            <div className="md:col-span-4">
+              <p className="eyebrow">Final Design</p>
+            </div>
+            <div className="md:col-span-8 max-w-2xl">
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                The resolved design language brought together across form,
+                surface and detail.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {finalDesign.map((src: string, i: number) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => openAt(finalDesignOffset + i)}
+                className="group block w-full aspect-[16/9] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Open final design ${i + 1}`}
+              >
+                <img
+                  src={src}
+                  alt={`${project.title} — final design ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+
 
       {/* RENDERS */}
       <section className="border-t border-border">

@@ -129,10 +129,12 @@ export const projects: Project[] = [
       zionDetail04.url,
     ],
     finalDesign: [
-      zionDetail01.url,
-      zionDetail02.url,
-      zionDetail03.url,
-      zionDetail04.url,
+      zionFinal02.url,
+      zionFinal03.url,
+      zionFinal04.url,
+      zionFinal05.url,
+      zionFinal06.url,
+      zionFinal07.url,
     ],
   },
   {

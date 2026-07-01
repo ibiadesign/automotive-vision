@@ -230,7 +230,7 @@ function ProjectPage() {
           </div>
         </div>
         {project.youtubeUrl ? (
-          <YouTubeEmbed url={project.youtubeUrl} />
+          <YouTubeEmbed url={project.youtubeUrl} poster={project.youtubePoster} />
         ) : project.animation ? (
           <div className="relative aspect-video w-full bg-card border border-border overflow-hidden">
             <video

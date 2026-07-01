@@ -38,7 +38,7 @@ export function YouTubeEmbed({ url, poster }: { url: string; poster?: string }) 
           aria-label="Play video"
         >
           <img
-            src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+            src={poster ?? `https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
             alt="Video thumbnail"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"

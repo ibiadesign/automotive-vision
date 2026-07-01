@@ -51,17 +51,23 @@ function ProjectPage() {
   const next = projects[(currentIndex + 1) % projects.length];
 
   const sketches = project.sketches ?? [];
+  const detailSketches = project.detailSketches ?? [];
+  const finalDesign = project.finalDesign ?? [];
   const renders = project.gallery ?? [];
 
   const allImages = useMemo<LightboxImage[]>(
     () => [
       ...sketches.map((src: string, i: number) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
+      ...detailSketches.map((src: string, i: number) => ({ src, alt: `${project.title} — detail sketch ${i + 1}` })),
+      ...finalDesign.map((src: string, i: number) => ({ src, alt: `${project.title} — final design ${i + 1}` })),
       ...renders.map((src: string, i: number) => ({ src, alt: `${project.title} — render ${i + 1}` })),
     ],
-    [sketches, renders, project.title],
+    [sketches, detailSketches, finalDesign, renders, project.title],
   );
   const sketchesOffset = 0;
-  const rendersOffset = sketches.length;
+  const detailOffset = sketches.length;
+  const finalDesignOffset = sketches.length + detailSketches.length;
+  const rendersOffset = sketches.length + detailSketches.length + finalDesign.length;
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);

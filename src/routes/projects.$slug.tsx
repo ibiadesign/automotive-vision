@@ -211,7 +211,7 @@ function ProjectPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 max-w-3xl mx-auto">
             {detailSketches.map((src: string, i: number) => (
               <button
                 key={i}
@@ -246,24 +246,36 @@ function ProjectPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {finalDesign.map((src: string, i: number) => (
+          {(() => {
+            const col1 = finalDesign.slice(0, 4);
+            const col2 = finalDesign.slice(4);
+            const renderItem = (src: string, i: number, offset: number) => (
               <button
-                key={i}
+                key={offset + i}
                 type="button"
-                onClick={() => openAt(finalDesignOffset + i)}
+                onClick={() => openAt(finalDesignOffset + offset + i)}
                 className="group block w-full aspect-[16/9] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
-                aria-label={`Open final design ${i + 1}`}
+                aria-label={`Open final design ${offset + i + 1}`}
               >
                 <img
                   src={src}
-                  alt={`${project.title} — final design ${i + 1}`}
+                  alt={`${project.title} — final design ${offset + i + 1}`}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </button>
-            ))}
-          </div>
+            );
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-6">
+                  {col1.map((src: string, i: number) => renderItem(src, i, 0))}
+                </div>
+                <div className="flex flex-col gap-6">
+                  {col2.map((src: string, i: number) => renderItem(src, i, 4))}
+                </div>
+              </div>
+            );
+          })()}
         </section>
       )}
 

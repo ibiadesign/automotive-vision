@@ -116,6 +116,18 @@ export const projects: Project[] = [
       zionSketch07.url,
       zionSketch08.url,
     ],
+    detailSketches: [
+      zionDetail01.url,
+      zionDetail02.url,
+      zionDetail03.url,
+      zionDetail04.url,
+    ],
+    finalDesign: [
+      zionDetail01.url,
+      zionDetail02.url,
+      zionDetail03.url,
+      zionDetail04.url,
+    ],
   },
   {
     slug: "atelier-saloon",

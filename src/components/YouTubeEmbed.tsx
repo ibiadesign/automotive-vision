@@ -7,7 +7,7 @@ function getYouTubeId(url: string): string | null {
   return match ? match[1] : null;
 }
 
-export function YouTubeEmbed({ url }: { url: string }) {
+export function YouTubeEmbed({ url, poster }: { url: string; poster?: string }) {
   const [playing, setPlaying] = useState(false);
   const id = getYouTubeId(url);
 

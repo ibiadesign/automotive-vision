@@ -268,10 +268,10 @@ function ProjectPage() {
             return (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-6">
-                  {col1.map((src, i) => renderItem(src, i, 0))}
+                  {col1.map((src: string, i: number) => renderItem(src, i, 0))}
                 </div>
                 <div className="flex flex-col gap-6">
-                  {col2.map((src, i) => renderItem(src, i, 4))}
+                  {col2.map((src: string, i: number) => renderItem(src, i, 4))}
                 </div>
               </div>
             );

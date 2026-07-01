@@ -159,7 +159,7 @@ function ProjectPage() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className={`grid grid-cols-2 gap-4 ${sketches.length === 8 ? "md:grid-cols-4" : "md:grid-cols-5"}`}>
           {(sketches.length > 0
             ? sketches
             : (Array.from({ length: 10 }).map(() => null) as (string | null)[])

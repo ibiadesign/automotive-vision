@@ -29,6 +29,12 @@ import zionDetail01 from "@/assets/zion-cuv/detail-01.jpg.asset.json";
 import zionDetail02 from "@/assets/zion-cuv/detail-02.jpg.asset.json";
 import zionDetail03 from "@/assets/zion-cuv/detail-03.jpg.asset.json";
 import zionDetail04 from "@/assets/zion-cuv/detail-04.jpg.asset.json";
+import zionFinal02 from "@/assets/zion-cuv/final-02.jpg.asset.json";
+import zionFinal03 from "@/assets/zion-cuv/final-03.jpg.asset.json";
+import zionFinal04 from "@/assets/zion-cuv/final-04.jpg.asset.json";
+import zionFinal05 from "@/assets/zion-cuv/final-05.jpg.asset.json";
+import zionFinal06 from "@/assets/zion-cuv/final-06.jpg.asset.json";
+import zionFinal07 from "@/assets/zion-cuv/final-07.jpg.asset.json";
 
 export type Project = {
   slug: string;

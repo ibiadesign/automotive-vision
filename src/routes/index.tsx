@@ -90,7 +90,7 @@ function Index() {
         </div>
 
         <div className="absolute bottom-6 right-6 md:right-12 z-10 text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground">
-          X-treme Hypercar · 2024
+          Xtreme Hypercar · 2024
         </div>
       </section>
 

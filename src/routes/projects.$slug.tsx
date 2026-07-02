@@ -211,13 +211,13 @@ function ProjectPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {detailSketches.map((src: string, i: number) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => openAt(detailOffset + i)}
-                className="group block w-full aspect-[16/9] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                className="group block w-full aspect-[4/3] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
                 aria-label={`Open detail sketch ${i + 1}`}
               >
                 <img
@@ -229,6 +229,7 @@ function ProjectPage() {
               </button>
             ))}
           </div>
+
         </section>
       )}
 

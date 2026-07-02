@@ -35,6 +35,14 @@ import zionFinal04 from "@/assets/zion-cuv/final-04.jpg.asset.json";
 import zionFinal05 from "@/assets/zion-cuv/final-05.jpg.asset.json";
 import zionFinal06 from "@/assets/zion-cuv/final-06.jpg.asset.json";
 import zionFinal07 from "@/assets/zion-cuv/final-07.jpg.asset.json";
+import xtremeSketch01 from "@/assets/xtreme-hypercar/sketch-01.jpg.asset.json";
+import xtremeSketch02 from "@/assets/xtreme-hypercar/sketch-02.jpg.asset.json";
+import xtremeSketch03 from "@/assets/xtreme-hypercar/sketch-03.jpg.asset.json";
+import xtremeSketch04 from "@/assets/xtreme-hypercar/sketch-04.jpg.asset.json";
+import xtremeSketch05 from "@/assets/xtreme-hypercar/sketch-05.jpg.asset.json";
+import xtremeSketch06 from "@/assets/xtreme-hypercar/sketch-06.jpg.asset.json";
+import xtremeSketch07 from "@/assets/xtreme-hypercar/sketch-07.jpg.asset.json";
+import xtremeSketch08 from "@/assets/xtreme-hypercar/sketch-08.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -64,8 +72,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "lumen-gt",
-    title: "X-treme Hypercar",
+    slug: "xtreme-hypercar",
+    title: "Xtreme Hypercar",
     subtitle: "Motorcycle emotion, translated into four wheels",
     year: "2024 - 2025",
     category: "Collaboration Project with Genesis",
@@ -77,7 +85,7 @@ export const projects: Project[] = [
     inspiration:
       "Inspired by the emotions and feelings of a motorbike: the exposure, the lean, the intimacy with the road.",
     body: [
-      "X-treme Hypercar began as a question: what would a car feel like if it inherited the soul of a motorcycle? Not the geometry, but the emotion — the wind pressure, the visual lightness, the sense of being mechanically connected to the asphalt.",
+      "Xtreme Hypercar began as a question: what would a car feel like if it inherited the soul of a motorcycle? Not the geometry, but the emotion — the wind pressure, the visual lightness, the sense of being mechanically connected to the asphalt.",
       "The volumes are stretched and lean, with exposed structural elements and a cockpit that sits forward like a rider's stance. Aerodynamic surfaces wrap with tension rather than ornament, and the rear opens up to reveal the powertrain like the frame of a sportbike.",
       "Developed in collaboration with Genesis, the project explores how a luxury brand can embrace adrenaline without losing its refinement — precision, restraint, and pure forward motion.",
     ],
@@ -86,6 +94,16 @@ export const projects: Project[] = [
     discipline: "Transportation Design",
     duration: "6 months · 2024–2025",
     software: "Photoshop · Vizcom · Blender",
+    sketches: [
+      xtremeSketch01.url,
+      xtremeSketch02.url,
+      xtremeSketch03.url,
+      xtremeSketch04.url,
+      xtremeSketch05.url,
+      xtremeSketch06.url,
+      xtremeSketch07.url,
+      xtremeSketch08.url,
+    ],
   },
   {
     slug: "zion-cuv",

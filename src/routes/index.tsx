@@ -26,7 +26,7 @@ function Index() {
       eyebrow: `01 · ${projects[0].year}`,
       href: `/projects/${projects[0].slug}`,
       summary:
-        "X-treme Hypercar explores the emotional connection between motorcycles and high-performance cars. Sharp tension, exposed volume and mechanical purity come together in a concept shaped around movement, precision and adrenaline.",
+        "Xtreme Hypercar explores the emotional connection between motorcycles and high-performance cars. Sharp tension, exposed volume and mechanical purity come together in a concept shaped around movement, precision and adrenaline.",
     },
     {
       ...projects[1],
@@ -90,7 +90,7 @@ function Index() {
         </div>
 
         <div className="absolute bottom-6 right-6 md:right-12 z-10 text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground">
-          X-treme Hypercar · 2024
+          Xtreme Hypercar · 2024
         </div>
       </section>
 

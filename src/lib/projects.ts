@@ -68,7 +68,13 @@ export type Project = {
   sketches?: string[];
   detailSketches?: string[];
   finalDesign?: string[];
+  sectionLabels?: {
+    sketches?: { title?: string; description?: string };
+    detailSketches?: { title?: string; description?: string };
+    finalRenders?: { title?: string; description?: string };
+  };
 };
+
 
 export const projects: Project[] = [
   {

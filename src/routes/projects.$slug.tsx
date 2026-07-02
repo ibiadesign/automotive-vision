@@ -274,7 +274,7 @@ function ProjectPage() {
       {/* RENDERS */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-24">
-          <p className="eyebrow mb-10">Final Design</p>
+          <p className="eyebrow mb-10">Final Renders</p>
         </div>
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
           {renders.map((src: string, i: number) => (

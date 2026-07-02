@@ -35,6 +35,14 @@ import zionFinal04 from "@/assets/zion-cuv/final-04.jpg.asset.json";
 import zionFinal05 from "@/assets/zion-cuv/final-05.jpg.asset.json";
 import zionFinal06 from "@/assets/zion-cuv/final-06.jpg.asset.json";
 import zionFinal07 from "@/assets/zion-cuv/final-07.jpg.asset.json";
+import xtremeSketch01 from "@/assets/xtreme-hypercar/sketch-01.jpg.asset.json";
+import xtremeSketch02 from "@/assets/xtreme-hypercar/sketch-02.jpg.asset.json";
+import xtremeSketch03 from "@/assets/xtreme-hypercar/sketch-03.jpg.asset.json";
+import xtremeSketch04 from "@/assets/xtreme-hypercar/sketch-04.jpg.asset.json";
+import xtremeSketch05 from "@/assets/xtreme-hypercar/sketch-05.jpg.asset.json";
+import xtremeSketch06 from "@/assets/xtreme-hypercar/sketch-06.jpg.asset.json";
+import xtremeSketch07 from "@/assets/xtreme-hypercar/sketch-07.jpg.asset.json";
+import xtremeSketch08 from "@/assets/xtreme-hypercar/sketch-08.jpg.asset.json";
 
 export type Project = {
   slug: string;

@@ -156,12 +156,14 @@ function ProjectPage() {
       <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-10 mb-12">
           <div className="md:col-span-4">
-            <p className="eyebrow">Sketches & Process</p>
+            <p className="eyebrow">
+              {project.sectionLabels?.sketches?.title ?? "Sketches & Process"}
+            </p>
           </div>
           <div className="md:col-span-8 max-w-2xl">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Early ideation, silhouette studies and surfacing explorations that
-              shaped the final direction of {project.title}.
+              {project.sectionLabels?.sketches?.description ??
+                `Early ideation, silhouette studies and surfacing explorations that shaped the final direction of ${project.title}.`}
             </p>
           </div>
         </div>
@@ -202,12 +204,14 @@ function ProjectPage() {
         <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
           <div className="grid md:grid-cols-12 gap-10 mb-12">
             <div className="md:col-span-4">
-              <p className="eyebrow">Detail Sketches</p>
+              <p className="eyebrow">
+                {project.sectionLabels?.detailSketches?.title ?? "Detail Sketches"}
+              </p>
             </div>
             <div className="md:col-span-8 max-w-2xl">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Close-up studies of key details, materials and design decisions
-                that define {project.title}.
+                {project.sectionLabels?.detailSketches?.description ??
+                  `Close-up studies of key details, materials and design decisions that define ${project.title}.`}
               </p>
             </div>
           </div>
@@ -232,6 +236,7 @@ function ProjectPage() {
 
         </section>
       )}
+
 
       {/* FINAL DESIGN GALLERY */}
       {finalDesign.length > 0 && (

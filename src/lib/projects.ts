@@ -43,6 +43,13 @@ import xtremeSketch05 from "@/assets/xtreme-hypercar/sketch-05.jpg.asset.json";
 import xtremeSketch06 from "@/assets/xtreme-hypercar/sketch-06.jpg.asset.json";
 import xtremeSketch07 from "@/assets/xtreme-hypercar/sketch-07.jpg.asset.json";
 import xtremeSketch08 from "@/assets/xtreme-hypercar/sketch-08.jpg.asset.json";
+import xtremeInterior01 from "@/assets/xtreme-hypercar/Interior_Design_1.jpg.asset.json";
+import xtremeInterior02 from "@/assets/xtreme-hypercar/Interior_Design_2.jpg.asset.json";
+import xtremeInterior03 from "@/assets/xtreme-hypercar/Interior_Design_3.jpg.asset.json";
+import xtremeInterior04 from "@/assets/xtreme-hypercar/Interior_Design_4.jpg.asset.json";
+import xtreme3d01 from "@/assets/xtreme-hypercar/3d_Development_1.jpg.asset.json";
+import xtreme3d02 from "@/assets/xtreme-hypercar/3d_Development_2.jpg.asset.json";
+
 
 export type Project = {
   slug: string;
@@ -68,7 +75,13 @@ export type Project = {
   sketches?: string[];
   detailSketches?: string[];
   finalDesign?: string[];
+  sectionLabels?: {
+    sketches?: { title?: string; description?: string };
+    detailSketches?: { title?: string; description?: string };
+    finalRenders?: { title?: string; description?: string };
+  };
 };
+
 
 export const projects: Project[] = [
   {
@@ -89,7 +102,7 @@ export const projects: Project[] = [
       "The volumes are stretched and lean, with exposed structural elements and a cockpit that sits forward like a rider's stance. Aerodynamic surfaces wrap with tension rather than ornament, and the rear opens up to reveal the powertrain like the frame of a sportbike.",
       "Developed in collaboration with Genesis, the project explores how a luxury brand can embrace adrenaline without losing its refinement — precision, restraint, and pure forward motion.",
     ],
-    gallery: [p1, p2],
+    gallery: [xtreme3d01.url, xtreme3d02.url],
     projectType: "Collaboration Project",
     discipline: "Transportation Design",
     duration: "6 months · 2024–2025",
@@ -104,7 +117,31 @@ export const projects: Project[] = [
       xtremeSketch07.url,
       xtremeSketch08.url,
     ],
+    detailSketches: [
+      xtremeInterior01.url,
+      xtremeInterior02.url,
+      xtremeInterior03.url,
+      xtremeInterior04.url,
+    ],
+    sectionLabels: {
+      sketches: {
+        title: "Exterior Design Process",
+        description:
+          "Early ideation, silhouette studies and surfacing explorations that shaped the exterior direction of Xtreme Hypercar.",
+      },
+      detailSketches: {
+        title: "Interior Design Process",
+        description:
+          "Package exploration, interior layout, control ergonomics and the motorcycle-inspired cockpit that define the driving experience.",
+      },
+      finalRenders: {
+        title: "3D Development",
+        description:
+          "Digital surfacing and aerodynamic studies translating the sketches into a resolved three-dimensional form.",
+      },
+    },
   },
+
   {
     slug: "zion-cuv",
     title: "Zion CUV",

@@ -279,8 +279,16 @@ function ProjectPage() {
       {/* RENDERS */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pt-24">
-          <p className="eyebrow mb-10">Final Renders</p>
+          <p className="eyebrow mb-10">
+            {project.sectionLabels?.finalRenders?.title ?? "Final Renders"}
+          </p>
+          {project.sectionLabels?.finalRenders?.description && (
+            <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mb-10 -mt-4">
+              {project.sectionLabels.finalRenders.description}
+            </p>
+          )}
         </div>
+
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
           {renders.map((src: string, i: number) => (
             <button

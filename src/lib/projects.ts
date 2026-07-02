@@ -43,6 +43,13 @@ import xtremeSketch05 from "@/assets/xtreme-hypercar/sketch-05.jpg.asset.json";
 import xtremeSketch06 from "@/assets/xtreme-hypercar/sketch-06.jpg.asset.json";
 import xtremeSketch07 from "@/assets/xtreme-hypercar/sketch-07.jpg.asset.json";
 import xtremeSketch08 from "@/assets/xtreme-hypercar/sketch-08.jpg.asset.json";
+import xtremeInterior01 from "@/assets/xtreme-hypercar/Interior_Design_1.jpg.asset.json";
+import xtremeInterior02 from "@/assets/xtreme-hypercar/Interior_Design_2.jpg.asset.json";
+import xtremeInterior03 from "@/assets/xtreme-hypercar/Interior_Design_3.jpg.asset.json";
+import xtremeInterior04 from "@/assets/xtreme-hypercar/Interior_Design_4.jpg.asset.json";
+import xtreme3d01 from "@/assets/xtreme-hypercar/3d_Development_1.jpg.asset.json";
+import xtreme3d02 from "@/assets/xtreme-hypercar/3d_Development_2.jpg.asset.json";
+
 
 export type Project = {
   slug: string;

@@ -53,6 +53,7 @@ function ProjectPage() {
   const sketches = project.sketches ?? [];
   const detailSketches = project.detailSketches ?? [];
   const finalDesign = project.finalDesign ?? [];
+  const finalRenders = project.finalRenders ?? [];
   const renders = project.gallery ?? [];
 
   const allImages = useMemo<LightboxImage[]>(
@@ -60,14 +61,16 @@ function ProjectPage() {
       ...sketches.map((src: string, i: number) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
       ...detailSketches.map((src: string, i: number) => ({ src, alt: `${project.title} — detail sketch ${i + 1}` })),
       ...finalDesign.map((src: string, i: number) => ({ src, alt: `${project.title} — final design ${i + 1}` })),
+      ...finalRenders.map((src: string, i: number) => ({ src, alt: `${project.title} — final render ${i + 1}` })),
       ...renders.map((src: string, i: number) => ({ src, alt: `${project.title} — render ${i + 1}` })),
     ],
-    [sketches, detailSketches, finalDesign, renders, project.title],
+    [sketches, detailSketches, finalDesign, finalRenders, renders, project.title],
   );
   const sketchesOffset = 0;
   const detailOffset = sketches.length;
   const finalDesignOffset = sketches.length + detailSketches.length;
-  const rendersOffset = sketches.length + detailSketches.length + finalDesign.length;
+  const finalRendersOffset = sketches.length + detailSketches.length + finalDesign.length;
+  const rendersOffset = sketches.length + detailSketches.length + finalDesign.length + finalRenders.length;
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);

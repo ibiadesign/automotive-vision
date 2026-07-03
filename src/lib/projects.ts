@@ -139,6 +139,7 @@ export const projects: Project[] = [
       xtremeFinal06.url,
     ],
     youtubeUrl: "https://youtu.be/HEid5rEzsOM",
+    youtubePoster: xtremeVideoThumb.url,
     sectionLabels: {
       sketches: {
         title: "Exterior Design Process",

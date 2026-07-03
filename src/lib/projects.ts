@@ -82,6 +82,7 @@ export type Project = {
   sketches?: string[];
   detailSketches?: string[];
   finalDesign?: string[];
+  finalRenders?: string[];
   sectionLabels?: {
     sketches?: { title?: string; description?: string };
     detailSketches?: { title?: string; description?: string };

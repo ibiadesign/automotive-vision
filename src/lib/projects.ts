@@ -49,6 +49,12 @@ import xtremeInterior03 from "@/assets/xtreme-hypercar/Interior_Design_3.jpg.ass
 import xtremeInterior04 from "@/assets/xtreme-hypercar/Interior_Design_4.jpg.asset.json";
 import xtreme3d01 from "@/assets/xtreme-hypercar/3d_Development_1.jpg.asset.json";
 import xtreme3d02 from "@/assets/xtreme-hypercar/3d_Development_2.jpg.asset.json";
+import xtremeFinal01 from "@/assets/xtreme-hypercar/final_design_1.jpg.asset.json";
+import xtremeFinal02 from "@/assets/xtreme-hypercar/final_design_2.jpg.asset.json";
+import xtremeFinal03 from "@/assets/xtreme-hypercar/final_design_3.jpg.asset.json";
+import xtremeFinal04 from "@/assets/xtreme-hypercar/final_design_4.jpg.asset.json";
+import xtremeFinal05 from "@/assets/xtreme-hypercar/final_design_5.jpg.asset.json";
+import xtremeFinal06 from "@/assets/xtreme-hypercar/final_design_6.jpg.asset.json";
 
 
 export type Project = {

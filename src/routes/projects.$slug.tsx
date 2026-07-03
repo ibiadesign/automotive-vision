@@ -53,6 +53,7 @@ function ProjectPage() {
   const sketches = project.sketches ?? [];
   const detailSketches = project.detailSketches ?? [];
   const finalDesign = project.finalDesign ?? [];
+  const finalRenders = project.finalRenders ?? [];
   const renders = project.gallery ?? [];
 
   const allImages = useMemo<LightboxImage[]>(
@@ -60,14 +61,16 @@ function ProjectPage() {
       ...sketches.map((src: string, i: number) => ({ src, alt: `${project.title} — sketch ${i + 1}` })),
       ...detailSketches.map((src: string, i: number) => ({ src, alt: `${project.title} — detail sketch ${i + 1}` })),
       ...finalDesign.map((src: string, i: number) => ({ src, alt: `${project.title} — final design ${i + 1}` })),
+      ...finalRenders.map((src: string, i: number) => ({ src, alt: `${project.title} — final render ${i + 1}` })),
       ...renders.map((src: string, i: number) => ({ src, alt: `${project.title} — render ${i + 1}` })),
     ],
-    [sketches, detailSketches, finalDesign, renders, project.title],
+    [sketches, detailSketches, finalDesign, finalRenders, renders, project.title],
   );
   const sketchesOffset = 0;
   const detailOffset = sketches.length;
   const finalDesignOffset = sketches.length + detailSketches.length;
-  const rendersOffset = sketches.length + detailSketches.length + finalDesign.length;
+  const finalRendersOffset = sketches.length + detailSketches.length + finalDesign.length;
+  const rendersOffset = sketches.length + detailSketches.length + finalDesign.length + finalRenders.length;
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);
@@ -305,6 +308,41 @@ function ProjectPage() {
           </div>
         </section>
       )}
+      {/* FINAL RENDERS GALLERY (duplicate layout) */}
+      {finalRenders.length > 0 && (
+        <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+          <div className="grid md:grid-cols-12 gap-10 mb-12">
+            <div className="md:col-span-4">
+              <p className="eyebrow">Final Renders</p>
+            </div>
+            <div className="md:col-span-8 max-w-2xl">
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Cinematic renders capturing the final design in context — light,
+                material and atmosphere.
+              </p>
+            </div>
+          </div>
+          <div className={`grid grid-cols-2 gap-4 ${finalRenders.length === 6 ? "md:grid-cols-3" : "md:grid-cols-4"}`}>
+            {finalRenders.map((src: string, i: number) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => openAt(finalRendersOffset + i)}
+                className="group block w-full aspect-[4/3] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Open final render ${i + 1}`}
+              >
+                <img
+                  src={src}
+                  alt={`${project.title} — final render ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
 
 
       {/* VIDEO ANIMATION */}

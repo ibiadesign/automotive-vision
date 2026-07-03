@@ -129,6 +129,15 @@ export const projects: Project[] = [
       xtremeInterior03.url,
       xtremeInterior04.url,
     ],
+    finalDesign: [
+      xtremeFinal01.url,
+      xtremeFinal02.url,
+      xtremeFinal03.url,
+      xtremeFinal04.url,
+      xtremeFinal05.url,
+      xtremeFinal06.url,
+    ],
+    youtubeUrl: "https://youtu.be/HEid5rEzsOM",
     sectionLabels: {
       sketches: {
         title: "Exterior Design Process",

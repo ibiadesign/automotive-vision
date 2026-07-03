@@ -55,6 +55,7 @@ import xtremeFinal03 from "@/assets/xtreme-hypercar/final_design_3.jpg.asset.jso
 import xtremeFinal04 from "@/assets/xtreme-hypercar/final_design_4.jpg.asset.json";
 import xtremeFinal05 from "@/assets/xtreme-hypercar/final_design_5.jpg.asset.json";
 import xtremeFinal06 from "@/assets/xtreme-hypercar/final_design_6.jpg.asset.json";
+import xtremeVideoThumb from "@/assets/xtreme-hypercar/video-thumbnail.jpg.asset.json";
 
 
 export type Project = {

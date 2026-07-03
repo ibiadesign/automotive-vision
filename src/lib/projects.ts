@@ -145,6 +145,14 @@ export const projects: Project[] = [
       xtremeFinal05.url,
       xtremeFinal06.url,
     ],
+    finalRenders: [
+      xtremeRender01.url,
+      xtremeRender02.url,
+      xtremeRender03.url,
+      xtremeRender04.url,
+      xtremeRender05.url,
+      xtremeRender06.url,
+    ],
     youtubeUrl: "https://youtu.be/HEid5rEzsOM",
     youtubePoster: xtremeVideoThumb.url,
     sectionLabels: {

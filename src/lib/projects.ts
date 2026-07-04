@@ -2,7 +2,8 @@ import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
-import atelierRender01 from "@/assets/atelier-saloon/render-01.png.asset.json";
+import atelierTwoCars from "@/assets/atelier-saloon/two-cars.jpg.asset.json";
+import atelierRear from "@/assets/atelier-saloon/rear.jpg.asset.json";
 import atelierRender02 from "@/assets/atelier-saloon/render-02.jpg.asset.json";
 import atelierAnimation from "@/assets/atelier-saloon/animation.mp4.asset.json";
 import atelierAnimationPoster from "@/assets/atelier-saloon/animation-poster.jpg.asset.json";
@@ -120,7 +121,7 @@ export const projects: Project[] = [
     projectType: "Collaboration Project",
     discipline: "Transportation Design",
     duration: "6 months · 2024–2025",
-    software: "Photoshop · Vizcom · Blender",
+    software: "Photoshop · Alias · Blender · ChatGPT",
     sketches: [
       xtremeSketch01.url,
       xtremeSketch02.url,
@@ -242,7 +243,7 @@ export const projects: Project[] = [
       "Its proportions are calm and generous, while the interior is shaped as a warm, intimate environment. Natural materials, soft ambient light and carefully crafted details create a sense of comfort, permanence and emotional connection.",
       "Rather than pursuing visual drama, Atelier Saloon embraces timeless elegance. Every surface has been developed to express craftsmanship and longevity, creating a vehicle designed to accompany life's most meaningful moments.",
     ],
-    gallery: [atelierRender01.url, atelierRender02.url],
+    gallery: [atelierTwoCars.url, atelierRender02.url, atelierRear.url],
     projectType: "ArtCenter Professional Car Design Program",
     discipline: "Transportation Design",
     duration: "4 weeks · 2023",

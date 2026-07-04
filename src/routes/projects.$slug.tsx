@@ -294,7 +294,7 @@ function ProjectPage() {
           )}
         </div>
 
-        <div className={`mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid grid-cols-1 gap-6 ${renders.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
+        <div className={`mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid grid-cols-1 gap-6 ${renders.length >= 8 ? "md:grid-cols-4" : renders.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
           {renders.map((src: string, i: number) => (
             <button
               key={i}

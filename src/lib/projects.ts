@@ -216,6 +216,7 @@ export const projects: Project[] = [
       zionDetail02.url,
       zionDetail03.url,
       zionDetail04.url,
+      zionPsdRenders.url,
     ],
     finalDesign: [
       zionFinal02.url,

@@ -121,7 +121,7 @@ export const projects: Project[] = [
     projectType: "Collaboration Project",
     discipline: "Transportation Design",
     duration: "6 months · 2024–2025",
-    software: "Photoshop · Vizcom · Blender",
+    software: "Photoshop · Alias · Blender · ChatGPT",
     sketches: [
       xtremeSketch01.url,
       xtremeSketch02.url,

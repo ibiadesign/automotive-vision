@@ -243,6 +243,7 @@ export const projects: Project[] = [
       zion3d02.url,
       zion3d03.url,
       zion3d04.url,
+      zion3d05.url,
     ],
     finalDesign: [
       zionFinal02.url,

@@ -35,6 +35,11 @@ import zion3d01 from "@/assets/zion-cuv/3d-development-1.jpg.asset.json";
 import zion3d02 from "@/assets/zion-cuv/3d-development-2.jpg.asset.json";
 import zion3d03 from "@/assets/zion-cuv/3d-development-3.jpg.asset.json";
 import zion3d04 from "@/assets/zion-cuv/3d-development-4.jpg.asset.json";
+import zion3d05 from "@/assets/zion-cuv/3d-development-5.jpg.asset.json";
+import zionEmotional01 from "@/assets/zion-cuv/final-render-1.jpg.asset.json";
+import zionEmotional02 from "@/assets/zion-cuv/final-render-2.jpg.asset.json";
+import zionEmotional03 from "@/assets/zion-cuv/final-render-3.jpg.asset.json";
+import zionEmotional04 from "@/assets/zion-cuv/final-render-4.jpg.asset.json";
 import zionFinal02 from "@/assets/zion-cuv/final-02.jpg.asset.json";
 import zionFinal03 from "@/assets/zion-cuv/final-03.jpg.asset.json";
 import zionFinal04 from "@/assets/zion-cuv/final-04.jpg.asset.json";
@@ -200,7 +205,16 @@ export const projects: Project[] = [
       "Geometric surfaces and raised proportions give the vehicle the confidence to leave paved roads behind, while a wide greenhouse opens the cabin to the landscape. Lighting graphics reference the desert sun and the cold blue of mountain dawns.",
       "The result is a vehicle that does not just move through territory — it listens to it.",
     ],
-    gallery: [p2, p1],
+    gallery: [
+      zionEmotional01.url,
+      zionEmotional02.url,
+      zionEmotional03.url,
+      zionEmotional04.url,
+      zionFinal02.url,
+      zionFinal03.url,
+      zionFinal04.url,
+      zionFinal05.url,
+    ],
     projectType: "Collaboration Project",
     discipline: "Transportation Design",
     duration: "8 months · 2025",
@@ -229,6 +243,7 @@ export const projects: Project[] = [
       zion3d02.url,
       zion3d03.url,
       zion3d04.url,
+      zion3d05.url,
     ],
     finalDesign: [
       zionFinal02.url,

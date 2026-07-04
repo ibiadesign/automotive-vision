@@ -91,10 +91,12 @@ export type Project = {
   detailSketches?: string[];
   finalDesign?: string[];
   finalRenders?: string[];
+  threeDDevelopment?: string[];
   sectionLabels?: {
     sketches?: { title?: string; description?: string };
     detailSketches?: { title?: string; description?: string };
     finalRenders?: { title?: string; description?: string };
+    threeDDevelopment?: { title?: string; description?: string };
   };
 };
 

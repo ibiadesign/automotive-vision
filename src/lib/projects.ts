@@ -243,7 +243,7 @@ export const projects: Project[] = [
       "Its proportions are calm and generous, while the interior is shaped as a warm, intimate environment. Natural materials, soft ambient light and carefully crafted details create a sense of comfort, permanence and emotional connection.",
       "Rather than pursuing visual drama, Atelier Saloon embraces timeless elegance. Every surface has been developed to express craftsmanship and longevity, creating a vehicle designed to accompany life's most meaningful moments.",
     ],
-    gallery: [atelierRender01.url, atelierRender02.url],
+    gallery: [atelierTwoCars.url, atelierRender02.url, atelierRear.url],
     projectType: "ArtCenter Professional Car Design Program",
     discipline: "Transportation Design",
     duration: "4 weeks · 2023",

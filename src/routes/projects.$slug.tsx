@@ -259,7 +259,7 @@ function ProjectPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className={`grid grid-cols-2 gap-4 ${threeDDevelopment.length === 5 ? "md:grid-cols-5" : "md:grid-cols-4"}`}>
             {threeDDevelopment.map((src: string, i: number) => (
               <button
                 key={i}

@@ -243,6 +243,43 @@ function ProjectPage() {
         </section>
       )}
 
+      {/* 3D DEVELOPMENT GALLERY */}
+      {threeDDevelopment.length > 0 && (
+        <section className="border-t border-border mx-auto max-w-[1600px] px-6 md:px-12 py-24 md:py-32">
+          <div className="grid md:grid-cols-12 gap-10 mb-12">
+            <div className="md:col-span-4">
+              <p className="eyebrow">
+                {project.sectionLabels?.threeDDevelopment?.title ?? "3D Development"}
+              </p>
+            </div>
+            <div className="md:col-span-8 max-w-2xl">
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                {project.sectionLabels?.threeDDevelopment?.description ??
+                  "Digital modeling and surfacing translating the design into three-dimensional form."}
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {threeDDevelopment.map((src: string, i: number) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => openAt(threeDOffset + i)}
+                className="group block w-full aspect-[4/3] overflow-hidden bg-card border border-border focus:outline-none focus:ring-2 focus:ring-copper"
+                aria-label={`Open 3D development ${i + 1}`}
+              >
+                <img
+                  src={src}
+                  alt={`${project.title} — 3D development ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
 
       {/* RENDERS */}
       <section className="border-t border-border">

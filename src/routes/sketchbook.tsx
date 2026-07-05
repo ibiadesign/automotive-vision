@@ -19,6 +19,16 @@ import ddMoto from "@/assets/sketchbook/Digital_Design_-_Motorbike_Exploration.p
 import ddShape from "@/assets/sketchbook/Digital_Design_-_Shape_Inspiration.png.asset.json";
 import ddSports from "@/assets/sketchbook/Digital_Design_-_Sports_Car_Exploration.png.asset.json";
 import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.png.asset.json";
+import spSeat1 from "@/assets/sketchbook/Short_project_SEAT_1.png.asset.json";
+import spSeat2 from "@/assets/sketchbook/Short_project_SEAT_2.png.asset.json";
+import spSeat3 from "@/assets/sketchbook/Short_project_SEAT_3.png.asset.json";
+import spSeat4 from "@/assets/sketchbook/Short_project_SEAT_4.png.asset.json";
+import spSeat5 from "@/assets/sketchbook/Short_Project_SEAT_5.png.asset.json";
+import spVw1 from "@/assets/sketchbook/Short_project_VW_1.png.asset.json";
+import spVw2 from "@/assets/sketchbook/Short_project_VW_2.png.asset.json";
+import spVw3 from "@/assets/sketchbook/Short_project_VW_3.png.asset.json";
+import spVw4 from "@/assets/sketchbook/Short_project_VW_4.jpg.asset.json";
+import spVw5 from "@/assets/sketchbook/Short_project_VW_5.jpg.asset.json";
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({
@@ -47,9 +57,15 @@ type SketchItem = {
   src: string;
 };
 
+type SketchGroup = {
+  items: SketchItem[];
+  cols: number;
+};
+
 type SketchGallery = {
   category: string;
-  items: SketchItem[];
+  items?: SketchItem[];
+  groups?: SketchGroup[];
 };
 
 const handDrawings: SketchItem[] = [
@@ -73,15 +89,39 @@ const digitalDesignPSD: SketchItem[] = [
   { category: "Digital Design, PSD", title: "Texture Exploration", src: ddTexture.url },
 ];
 
+const shortSeat: SketchItem[] = [
+  { category: "Short Projects", title: "SEAT Atarfe — 1", src: spSeat1.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 2", src: spSeat2.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 3", src: spSeat3.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 4", src: spSeat4.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 5", src: spSeat5.url },
+];
+
+const shortVw: SketchItem[] = [
+  { category: "Short Projects", title: "VW Kon-nect — 1", src: spVw1.url },
+  { category: "Short Projects", title: "VW Kon-nect — 2", src: spVw2.url },
+  { category: "Short Projects", title: "VW Kon-nect — 3", src: spVw3.url },
+  { category: "Short Projects", title: "VW Kon-nect — 4", src: spVw4.url },
+  { category: "Short Projects", title: "VW Kon-nect — 5", src: spVw5.url },
+];
+
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
   { category: "Digital Design, PSD", items: digitalDesignPSD },
+  {
+    category: "Short Projects",
+    groups: [
+      { items: shortSeat, cols: 5 },
+      { items: shortVw, cols: 5 },
+    ],
+  },
 ];
 
 function SketchbookPage() {
-  const allImages = galleries.flatMap((g) =>
-    g.items.map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` })),
-  );
+  const allImages = galleries.flatMap((g) => {
+    const items = g.items ?? g.groups?.flatMap((gr) => gr.items) ?? [];
+    return items.map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` }));
+  });
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);
   const close = () => setLightboxIndex(null);
@@ -110,41 +150,62 @@ function SketchbookPage() {
       </section>
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40 space-y-24">
-        {galleries.map((gallery) => (
-          <div key={gallery.category}>
-            <h2 className="font-display text-3xl md:text-5xl mb-10 tracking-tight">
-              <span className="text-primary">{gallery.category}</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {gallery.items.map((item) => {
-                const idx = globalIndex++;
-                return (
-                  <figure
-                    key={`${item.category}-${item.title}`}
-                    className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
-                    onClick={() => openAt(idx)}
+        {galleries.map((gallery) => {
+          const groups: SketchGroup[] = gallery.groups ?? [
+            { items: gallery.items ?? [], cols: 3 },
+          ];
+          const colsClass = (n: number) =>
+            n === 5
+              ? "md:grid-cols-5"
+              : n === 4
+                ? "md:grid-cols-4"
+                : n === 2
+                  ? "md:grid-cols-2"
+                  : "md:grid-cols-3";
+          return (
+            <div key={gallery.category}>
+              <h2 className="font-display text-3xl md:text-5xl mb-10 tracking-tight">
+                <span className="text-primary">{gallery.category}</span>
+              </h2>
+              <div className="space-y-16">
+                {groups.map((group, gi) => (
+                  <div
+                    key={gi}
+                    className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${colsClass(group.cols)}`}
                   >
-                    <img
-                      src={item.src}
-                      alt={`${item.category} — ${item.title}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                    <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/60 to-transparent">
-                      <p className="font-display text-sm md:text-base">
-                        <span className="uppercase tracking-[0.2em] text-primary">
-                          {item.category}
-                        </span>
-                        <span className="text-foreground"> — {item.title}</span>
-                      </p>
-                    </figcaption>
-                  </figure>
-                );
-              })}
+                    {group.items.map((item) => {
+                      const idx = globalIndex++;
+                      return (
+                        <figure
+                          key={`${item.category}-${item.title}`}
+                          className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
+                          onClick={() => openAt(idx)}
+                        >
+                          <img
+                            src={item.src}
+                            alt={`${item.category} — ${item.title}`}
+                            loading="lazy"
+                            className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.03]"
+                          />
+                          <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/60 to-transparent">
+                            <p className="font-display text-sm md:text-base">
+                              <span className="uppercase tracking-[0.2em] text-primary">
+                                {item.category}
+                              </span>
+                              <span className="text-foreground"> — {item.title}</span>
+                            </p>
+                          </figcaption>
+                        </figure>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
+
 
       {lightboxIndex !== null && (
         <ImageLightbox

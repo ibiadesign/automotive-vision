@@ -112,7 +112,7 @@ function SketchbookPage() {
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40 space-y-24">
         {galleries.map((gallery) => (
           <div key={gallery.category}>
-            <h2 className="font-display text-3xl md:text-5xl mb-10 uppercase tracking-tight">
+            <h2 className="font-display text-3xl md:text-5xl mb-10 tracking-tight">
               <span className="text-primary">{gallery.category}</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

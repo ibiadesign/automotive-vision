@@ -150,41 +150,62 @@ function SketchbookPage() {
       </section>
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40 space-y-24">
-        {galleries.map((gallery) => (
-          <div key={gallery.category}>
-            <h2 className="font-display text-3xl md:text-5xl mb-10 tracking-tight">
-              <span className="text-primary">{gallery.category}</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {gallery.items.map((item) => {
-                const idx = globalIndex++;
-                return (
-                  <figure
-                    key={`${item.category}-${item.title}`}
-                    className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
-                    onClick={() => openAt(idx)}
+        {galleries.map((gallery) => {
+          const groups: SketchGroup[] = gallery.groups ?? [
+            { items: gallery.items ?? [], cols: 3 },
+          ];
+          const colsClass = (n: number) =>
+            n === 5
+              ? "md:grid-cols-5"
+              : n === 4
+                ? "md:grid-cols-4"
+                : n === 2
+                  ? "md:grid-cols-2"
+                  : "md:grid-cols-3";
+          return (
+            <div key={gallery.category}>
+              <h2 className="font-display text-3xl md:text-5xl mb-10 tracking-tight">
+                <span className="text-primary">{gallery.category}</span>
+              </h2>
+              <div className="space-y-16">
+                {groups.map((group, gi) => (
+                  <div
+                    key={gi}
+                    className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${colsClass(group.cols)}`}
                   >
-                    <img
-                      src={item.src}
-                      alt={`${item.category} — ${item.title}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                    <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/60 to-transparent">
-                      <p className="font-display text-sm md:text-base">
-                        <span className="uppercase tracking-[0.2em] text-primary">
-                          {item.category}
-                        </span>
-                        <span className="text-foreground"> — {item.title}</span>
-                      </p>
-                    </figcaption>
-                  </figure>
-                );
-              })}
+                    {group.items.map((item) => {
+                      const idx = globalIndex++;
+                      return (
+                        <figure
+                          key={`${item.category}-${item.title}`}
+                          className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
+                          onClick={() => openAt(idx)}
+                        >
+                          <img
+                            src={item.src}
+                            alt={`${item.category} — ${item.title}`}
+                            loading="lazy"
+                            className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.03]"
+                          />
+                          <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/60 to-transparent">
+                            <p className="font-display text-sm md:text-base">
+                              <span className="uppercase tracking-[0.2em] text-primary">
+                                {item.category}
+                              </span>
+                              <span className="text-foreground"> — {item.title}</span>
+                            </p>
+                          </figcaption>
+                        </figure>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
+
 
       {lightboxIndex !== null && (
         <ImageLightbox

@@ -10,6 +10,15 @@ import handKiaGlare from "@/assets/sketchbook/hand-kia-glare.jpg.asset.json";
 import handKeyCarStudy from "@/assets/sketchbook/hand-key-car-study.png.asset.json";
 import handLearning from "@/assets/sketchbook/hand-learning.jpg.asset.json";
 import handExterior4 from "@/assets/sketchbook/hand-exterior-design-4.png.asset.json";
+import ddF1Past from "@/assets/sketchbook/Digital_Design_-_Future_F1_Project_from_past_to_future.png.asset.json";
+import ddF1 from "@/assets/sketchbook/Digital_Design_-_Future_F1_Project.png.asset.json";
+import ddGenesisDev from "@/assets/sketchbook/Digital_Design_-_Genesis_Development.png.asset.json";
+import ddGenesisExp from "@/assets/sketchbook/Digital_Design_-_Genesis_Exploration.png.asset.json";
+import ddLine from "@/assets/sketchbook/Digital_Design_-_Line_Exploration.png.asset.json";
+import ddMoto from "@/assets/sketchbook/Digital_Design_-_Motorbike_Exploration.png.asset.json";
+import ddShape from "@/assets/sketchbook/Digital_Design_-_Shape_Inspiration.png.asset.json";
+import ddSports from "@/assets/sketchbook/Digital_Design_-_Sports_Car_Exploration.png.asset.json";
+import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.png.asset.json";
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({
@@ -49,11 +58,24 @@ const handDrawings: SketchItem[] = [
   { category: "Hand Drawing", title: "KIA Glare Winner Contest", src: handKiaGlare.url },
   { category: "Hand Drawing", title: "Key Car Study", src: handKeyCarStudy.url },
   { category: "Hand Drawing", title: "Learning from other designers", src: handLearning.url },
-  { category: "Hand Drawing", title: "Exterior Design 4", src: handExterior4.url },
+  { category: "Hand Drawing", title: "Efebo development", src: handExterior4.url },
+];
+
+const digitalDesignPSD: SketchItem[] = [
+  { category: "Digital Design, PSD", title: "Future F1 Project from past to future", src: ddF1Past.url },
+  { category: "Digital Design, PSD", title: "Future F1 Project", src: ddF1.url },
+  { category: "Digital Design, PSD", title: "Genesis Development", src: ddGenesisDev.url },
+  { category: "Digital Design, PSD", title: "Genesis Exploration", src: ddGenesisExp.url },
+  { category: "Digital Design, PSD", title: "Line Exploration", src: ddLine.url },
+  { category: "Digital Design, PSD", title: "Motorbike Exploration", src: ddMoto.url },
+  { category: "Digital Design, PSD", title: "Shape Inspiration", src: ddShape.url },
+  { category: "Digital Design, PSD", title: "Sports Car Exploration", src: ddSports.url },
+  { category: "Digital Design, PSD", title: "Texture Exploration", src: ddTexture.url },
 ];
 
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
+  { category: "Digital Design, PSD", items: digitalDesignPSD },
 ];
 
 function SketchbookPage() {
@@ -90,7 +112,7 @@ function SketchbookPage() {
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40 space-y-24">
         {galleries.map((gallery) => (
           <div key={gallery.category}>
-            <h2 className="font-display text-3xl md:text-5xl mb-10 uppercase tracking-tight">
+            <h2 className="font-display text-3xl md:text-5xl mb-10 tracking-tight">
               <span className="text-primary">{gallery.category}</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

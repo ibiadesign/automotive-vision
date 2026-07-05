@@ -58,11 +58,24 @@ const handDrawings: SketchItem[] = [
   { category: "Hand Drawing", title: "KIA Glare Winner Contest", src: handKiaGlare.url },
   { category: "Hand Drawing", title: "Key Car Study", src: handKeyCarStudy.url },
   { category: "Hand Drawing", title: "Learning from other designers", src: handLearning.url },
-  { category: "Hand Drawing", title: "Exterior Design 4", src: handExterior4.url },
+  { category: "Hand Drawing", title: "Efebo development", src: handExterior4.url },
+];
+
+const digitalDesignPSD: SketchItem[] = [
+  { category: "Digital Design, PSD", title: "Future F1 Project from past to future", src: ddF1Past.url },
+  { category: "Digital Design, PSD", title: "Future F1 Project", src: ddF1.url },
+  { category: "Digital Design, PSD", title: "Genesis Development", src: ddGenesisDev.url },
+  { category: "Digital Design, PSD", title: "Genesis Exploration", src: ddGenesisExp.url },
+  { category: "Digital Design, PSD", title: "Line Exploration", src: ddLine.url },
+  { category: "Digital Design, PSD", title: "Motorbike Exploration", src: ddMoto.url },
+  { category: "Digital Design, PSD", title: "Shape Inspiration", src: ddShape.url },
+  { category: "Digital Design, PSD", title: "Sports Car Exploration", src: ddSports.url },
+  { category: "Digital Design, PSD", title: "Texture Exploration", src: ddTexture.url },
 ];
 
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
+  { category: "Digital Design, PSD", items: digitalDesignPSD },
 ];
 
 function SketchbookPage() {

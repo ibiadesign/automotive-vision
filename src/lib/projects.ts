@@ -43,9 +43,10 @@ import zionEmotional04 from "@/assets/zion-cuv/final-render-4.jpg.asset.json";
 import zionFinal02 from "@/assets/zion-cuv/final-02.jpg.asset.json";
 import zionFinal03 from "@/assets/zion-cuv/final-03.jpg.asset.json";
 import zionFinal04 from "@/assets/zion-cuv/final-04.jpg.asset.json";
-import zionFinal05 from "@/assets/zion-cuv/final-05.jpg.asset.json";
-import zionFinal06 from "@/assets/zion-cuv/final-06.jpg.asset.json";
-import zionFinal07 from "@/assets/zion-cuv/final-07.jpg.asset.json";
+import zionFinalRender5 from "@/assets/zion-cuv/final-render-5.jpg.asset.json";
+import zionFinalRender6 from "@/assets/zion-cuv/final-render-6.jpg.asset.json";
+import zionFinalRender7 from "@/assets/zion-cuv/final-render-7.jpg.asset.json";
+import zionFinalRender8 from "@/assets/zion-cuv/final-render-8.jpg.asset.json";
 import xtremeSketch01 from "@/assets/xtreme-hypercar/sketch-01.jpg.asset.json";
 import xtremeSketch02 from "@/assets/xtreme-hypercar/sketch-02.jpg.asset.json";
 import xtremeSketch03 from "@/assets/xtreme-hypercar/sketch-03.jpg.asset.json";
@@ -210,10 +211,10 @@ export const projects: Project[] = [
       zionEmotional02.url,
       zionEmotional03.url,
       zionEmotional04.url,
-      zionFinal02.url,
-      zionFinal03.url,
-      zionFinal04.url,
-      zionFinal05.url,
+      zionFinalRender5.url,
+      zionFinalRender6.url,
+      zionFinalRender7.url,
+      zionFinalRender8.url,
     ],
     projectType: "Collaboration Project",
     discipline: "Transportation Design",
@@ -244,14 +245,6 @@ export const projects: Project[] = [
       zion3d03.url,
       zion3d04.url,
       zion3d05.url,
-    ],
-    finalDesign: [
-      zionFinal02.url,
-      zionFinal03.url,
-      zionFinal04.url,
-      zionFinal05.url,
-      zionFinal06.url,
-      zionFinal07.url,
     ],
   },
   {

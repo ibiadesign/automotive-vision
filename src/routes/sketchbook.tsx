@@ -19,6 +19,16 @@ import ddMoto from "@/assets/sketchbook/Digital_Design_-_Motorbike_Exploration.p
 import ddShape from "@/assets/sketchbook/Digital_Design_-_Shape_Inspiration.png.asset.json";
 import ddSports from "@/assets/sketchbook/Digital_Design_-_Sports_Car_Exploration.png.asset.json";
 import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.png.asset.json";
+import spSeat1 from "@/assets/sketchbook/Short_project_SEAT_1.png.asset.json";
+import spSeat2 from "@/assets/sketchbook/Short_project_SEAT_2.png.asset.json";
+import spSeat3 from "@/assets/sketchbook/Short_project_SEAT_3.png.asset.json";
+import spSeat4 from "@/assets/sketchbook/Short_project_SEAT_4.png.asset.json";
+import spSeat5 from "@/assets/sketchbook/Short_Project_SEAT_5.png.asset.json";
+import spVw1 from "@/assets/sketchbook/Short_project_VW_1.png.asset.json";
+import spVw2 from "@/assets/sketchbook/Short_project_VW_2.png.asset.json";
+import spVw3 from "@/assets/sketchbook/Short_project_VW_3.png.asset.json";
+import spVw4 from "@/assets/sketchbook/Short_project_VW_4.jpg.asset.json";
+import spVw5 from "@/assets/sketchbook/Short_project_VW_5.jpg.asset.json";
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({

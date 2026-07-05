@@ -57,9 +57,15 @@ type SketchItem = {
   src: string;
 };
 
+type SketchGroup = {
+  items: SketchItem[];
+  cols: number;
+};
+
 type SketchGallery = {
   category: string;
-  items: SketchItem[];
+  items?: SketchItem[];
+  groups?: SketchGroup[];
 };
 
 const handDrawings: SketchItem[] = [
@@ -83,15 +89,39 @@ const digitalDesignPSD: SketchItem[] = [
   { category: "Digital Design, PSD", title: "Texture Exploration", src: ddTexture.url },
 ];
 
+const shortSeat: SketchItem[] = [
+  { category: "Short Projects", title: "SEAT Atarfe — 1", src: spSeat1.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 2", src: spSeat2.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 3", src: spSeat3.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 4", src: spSeat4.url },
+  { category: "Short Projects", title: "SEAT Atarfe — 5", src: spSeat5.url },
+];
+
+const shortVw: SketchItem[] = [
+  { category: "Short Projects", title: "VW Kon-nect — 1", src: spVw1.url },
+  { category: "Short Projects", title: "VW Kon-nect — 2", src: spVw2.url },
+  { category: "Short Projects", title: "VW Kon-nect — 3", src: spVw3.url },
+  { category: "Short Projects", title: "VW Kon-nect — 4", src: spVw4.url },
+  { category: "Short Projects", title: "VW Kon-nect — 5", src: spVw5.url },
+];
+
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
   { category: "Digital Design, PSD", items: digitalDesignPSD },
+  {
+    category: "Short Projects",
+    groups: [
+      { items: shortSeat, cols: 5 },
+      { items: shortVw, cols: 5 },
+    ],
+  },
 ];
 
 function SketchbookPage() {
-  const allImages = galleries.flatMap((g) =>
-    g.items.map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` })),
-  );
+  const allImages = galleries.flatMap((g) => {
+    const items = g.items ?? g.groups?.flatMap((gr) => gr.items) ?? [];
+    return items.map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` }));
+  });
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);
   const close = () => setLightboxIndex(null);

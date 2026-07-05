@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import sketchCover from "@/assets/project-5.jpg";
+import handEfebo from "@/assets/sketchbook/hand-efebo.jpg.asset.json";
+import handFutureF1 from "@/assets/sketchbook/hand-future-f1.jpg.asset.json";
+import handKiaGlare from "@/assets/sketchbook/hand-kia-glare.jpg.asset.json";
+import handKeyCarStudy from "@/assets/sketchbook/hand-key-car-study.png.asset.json";
+import handLearning from "@/assets/sketchbook/hand-learning.jpg.asset.json";
+import handExterior4 from "@/assets/sketchbook/hand-exterior-design-4.png.asset.json";
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({
@@ -10,13 +18,13 @@ export const Route = createFileRoute("/sketchbook")({
       {
         name: "description",
         content:
-          "A gallery of automotive sketches by Guillermina Valdivia — Photoshop studies and hand drawings exploring proportion, surfacing and ideation.",
+          "A gallery of automotive sketches by Guillermina Valdivia — hand drawings, digital sketches and studies exploring proportion, surfacing and ideation.",
       },
       { property: "og:title", content: "Sketchbook — Guillermina Valdivia" },
       {
         property: "og:description",
         content:
-          "Photoshop studies and hand-drawn ideation sketches across personal and collaborative projects.",
+          "Hand drawings, digital sketches and ideation studies across personal and collaborative projects.",
       },
       { property: "og:image", content: sketchCover },
     ],
@@ -24,28 +32,44 @@ export const Route = createFileRoute("/sketchbook")({
   component: SketchbookPage,
 });
 
-type Sketch = {
-  id: number;
-  type: "Photoshop" | "Hand drawing";
+type SketchItem = {
+  category: string;
   title: string;
+  src: string;
 };
 
-const sketches: Sketch[] = [
-  { id: 1, type: "Hand drawing", title: "Silhouette study — GT" },
-  { id: 2, type: "Photoshop", title: "Front fascia exploration" },
-  { id: 3, type: "Hand drawing", title: "Rear haunch — CUV" },
-  { id: 4, type: "Photoshop", title: "Lighting graphic studies" },
-  { id: 5, type: "Hand drawing", title: "Wheel arch detail" },
-  { id: 6, type: "Photoshop", title: "Saloon proportion sketch" },
-  { id: 7, type: "Hand drawing", title: "Hypercar lean study" },
-  { id: 8, type: "Photoshop", title: "Surface tension render" },
-  { id: 9, type: "Hand drawing", title: "Interior package thumbnail" },
-  { id: 10, type: "Photoshop", title: "Emergency vehicle livery" },
-  { id: 11, type: "Hand drawing", title: "Side profile ideation" },
-  { id: 12, type: "Photoshop", title: "Greenhouse exploration" },
+type SketchGallery = {
+  category: string;
+  items: SketchItem[];
+};
+
+const handDrawings: SketchItem[] = [
+  { category: "Hand Drawing", title: "Efebo, Thesis Project Fine Arts", src: handEfebo.url },
+  { category: "Hand Drawing", title: "Future F1 Project", src: handFutureF1.url },
+  { category: "Hand Drawing", title: "KIA Glare Winner Contest", src: handKiaGlare.url },
+  { category: "Hand Drawing", title: "Key Car Study", src: handKeyCarStudy.url },
+  { category: "Hand Drawing", title: "Learning from other designers", src: handLearning.url },
+  { category: "Hand Drawing", title: "Exterior Design 4", src: handExterior4.url },
+];
+
+const galleries: SketchGallery[] = [
+  { category: "Hand Drawing", items: handDrawings },
 ];
 
 function SketchbookPage() {
+  const allImages = galleries.flatMap((g) =>
+    g.items.map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` })),
+  );
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const openAt = (i: number) => setLightboxIndex(i);
+  const close = () => setLightboxIndex(null);
+  const prev = () =>
+    setLightboxIndex((i) => (i === null ? i : (i - 1 + allImages.length) % allImages.length));
+  const next = () =>
+    setLightboxIndex((i) => (i === null ? i : (i + 1) % allImages.length));
+
+  let globalIndex = 0;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -57,30 +81,58 @@ function SketchbookPage() {
         </h1>
         <p className="mt-10 max-w-2xl text-lg text-muted-foreground leading-relaxed">
           A selection of sketches, ideation studies and development work across
-          different projects. Both Photoshop studies and hand drawings,
-          exploring proportion, surfacing and visual storytelling — from quick
-          silhouettes to refined themes.
+          different projects. Both hand drawings and digital studies, exploring
+          proportion, surfacing and visual storytelling — from quick silhouettes
+          to refined themes.
         </p>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {sketches.map((s) => (
-            <figure
-              key={s.id}
-              className="group relative aspect-[4/5] bg-card border border-border overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                {String(s.id).padStart(2, "0")}
-              </div>
-              <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/90 to-transparent">
-                <p className="eyebrow text-[0.6rem]">{s.type}</p>
-                <p className="font-display text-base mt-1">{s.title}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-40 space-y-24">
+        {galleries.map((gallery) => (
+          <div key={gallery.category}>
+            <h2 className="font-display text-3xl md:text-5xl mb-10 uppercase tracking-tight">
+              <span className="text-primary">{gallery.category}</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {gallery.items.map((item) => {
+                const idx = globalIndex++;
+                return (
+                  <figure
+                    key={`${item.category}-${item.title}`}
+                    className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
+                    onClick={() => openAt(idx)}
+                  >
+                    <img
+                      src={item.src}
+                      alt={`${item.category} — ${item.title}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/60 to-transparent">
+                      <p className="font-display text-sm md:text-base">
+                        <span className="uppercase tracking-[0.2em] text-primary">
+                          {item.category}
+                        </span>
+                        <span className="text-foreground"> — {item.title}</span>
+                      </p>
+                    </figcaption>
+                  </figure>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </section>
+
+      {lightboxIndex !== null && (
+        <ImageLightbox
+          images={allImages}
+          index={lightboxIndex}
+          onClose={close}
+          onPrev={prev}
+          onNext={next}
+        />
+      )}
 
       <SiteFooter />
     </div>

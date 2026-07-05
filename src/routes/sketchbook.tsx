@@ -10,6 +10,15 @@ import handKiaGlare from "@/assets/sketchbook/hand-kia-glare.jpg.asset.json";
 import handKeyCarStudy from "@/assets/sketchbook/hand-key-car-study.png.asset.json";
 import handLearning from "@/assets/sketchbook/hand-learning.jpg.asset.json";
 import handExterior4 from "@/assets/sketchbook/hand-exterior-design-4.png.asset.json";
+import ddF1Past from "@/assets/sketchbook/Digital_Design_-_Future_F1_Project_from_past_to_future.png.asset.json";
+import ddF1 from "@/assets/sketchbook/Digital_Design_-_Future_F1_Project.png.asset.json";
+import ddGenesisDev from "@/assets/sketchbook/Digital_Design_-_Genesis_Development.png.asset.json";
+import ddGenesisExp from "@/assets/sketchbook/Digital_Design_-_Genesis_Exploration.png.asset.json";
+import ddLine from "@/assets/sketchbook/Digital_Design_-_Line_Exploration.png.asset.json";
+import ddMoto from "@/assets/sketchbook/Digital_Design_-_Motorbike_Exploration.png.asset.json";
+import ddShape from "@/assets/sketchbook/Digital_Design_-_Shape_Inspiration.png.asset.json";
+import ddSports from "@/assets/sketchbook/Digital_Design_-_Sports_Car_Exploration.png.asset.json";
+import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.png.asset.json";
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({

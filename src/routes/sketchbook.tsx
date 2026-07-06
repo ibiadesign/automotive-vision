@@ -19,6 +19,10 @@ import ddMoto from "@/assets/sketchbook/Digital_Design_-_Motorbike_Exploration.p
 import ddShape from "@/assets/sketchbook/Digital_Design_-_Shape_Inspiration.png.asset.json";
 import ddSports from "@/assets/sketchbook/Digital_Design_-_Sports_Car_Exploration.png.asset.json";
 import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.png.asset.json";
+import detailWheel from "@/assets/sketchbook/Exterior_Design_-_Wheel_Trim_Design.png.asset.json";
+import detailSteering from "@/assets/sketchbook/Interior_Design_-_Steering_Wheel_Genesis.png.asset.json";
+import detailHeadLight from "@/assets/sketchbook/Exterior_Design_-_Head_Light.png.asset.json";
+import detailTailHead from "@/assets/sketchbook/Exterior_Design_-_Tail_and_Head_Lights.png.asset.json";
 import spSeat1 from "@/assets/sketchbook/Short_project_SEAT_1.png.asset.json";
 import spSeat2 from "@/assets/sketchbook/Short_project_SEAT_2.png.asset.json";
 import spSeat3 from "@/assets/sketchbook/Short_project_SEAT_3.png.asset.json";
@@ -29,6 +33,9 @@ import spVw2 from "@/assets/sketchbook/Short_project_VW_2.png.asset.json";
 import spVw3 from "@/assets/sketchbook/Short_project_VW_3.png.asset.json";
 import spVw4 from "@/assets/sketchbook/Short_project_VW_4.jpg.asset.json";
 import spVw5 from "@/assets/sketchbook/Short_project_VW_5.jpg.asset.json";
+import spFerrari1 from "@/assets/sketchbook/Ferrari_Lucentenario_1.png.asset.json";
+import spFerrari2 from "@/assets/sketchbook/Ferrari_Lucentenario_2.jpg.asset.json";
+import spFerrari3 from "@/assets/sketchbook/Ferrari_Lucentenario_3.jpg.asset.json";
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({
@@ -55,6 +62,7 @@ type SketchItem = {
   category: string;
   title: string;
   src: string;
+  youtube?: string;
 };
 
 type SketchGroup = {
@@ -64,6 +72,7 @@ type SketchGroup = {
 
 type SketchGallery = {
   category: string;
+  hideCategoryInCaption?: boolean;
   items?: SketchItem[];
   groups?: SketchGroup[];
 };
@@ -89,30 +98,53 @@ const digitalDesignPSD: SketchItem[] = [
   { category: "Digital Design, PSD", title: "Texture Exploration", src: ddTexture.url },
 ];
 
+const detailDesign: SketchItem[] = [
+  { category: "Detail Design", title: "Wheel Trim Design", src: detailWheel.url },
+  { category: "Detail Design", title: "Steering Wheel Genesis", src: detailSteering.url },
+  { category: "Detail Design", title: "Head Light", src: detailHeadLight.url },
+  { category: "Detail Design", title: "Tail and Head Lights", src: detailTailHead.url },
+];
+
 const shortSeat: SketchItem[] = [
-  { category: "Short Projects", title: "SEAT Atarfe — 1", src: spSeat1.url },
-  { category: "Short Projects", title: "SEAT Atarfe — 2", src: spSeat2.url },
-  { category: "Short Projects", title: "SEAT Atarfe — 3", src: spSeat3.url },
-  { category: "Short Projects", title: "SEAT Atarfe — 4", src: spSeat4.url },
-  { category: "Short Projects", title: "SEAT Atarfe — 5", src: spSeat5.url },
+  { category: "Short Projects", title: "Seat Atarfe - 1", src: spSeat1.url },
+  { category: "Short Projects", title: "Seat Atarfe - 2", src: spSeat2.url },
+  { category: "Short Projects", title: "Seat Atarfe - 3", src: spSeat3.url },
+  { category: "Short Projects", title: "Seat Atarfe - 4", src: spSeat4.url },
+  { category: "Short Projects", title: "Seat Atarfe - 5", src: spSeat5.url },
 ];
 
 const shortVw: SketchItem[] = [
-  { category: "Short Projects", title: "VW Kon-nect — 1", src: spVw1.url },
-  { category: "Short Projects", title: "VW Kon-nect — 2", src: spVw2.url },
-  { category: "Short Projects", title: "VW Kon-nect — 3", src: spVw3.url },
-  { category: "Short Projects", title: "VW Kon-nect — 4", src: spVw4.url },
-  { category: "Short Projects", title: "VW Kon-nect — 5", src: spVw5.url },
+  { category: "Short Projects", title: "VW Kon-nect - 1", src: spVw1.url },
+  { category: "Short Projects", title: "VW Kon-nect - 2", src: spVw2.url },
+  { category: "Short Projects", title: "VW Kon-nect - 3", src: spVw3.url },
+  { category: "Short Projects", title: "VW Kon-nect - 4", src: spVw4.url },
+  { category: "Short Projects", title: "VW Kon-nect - 5", src: spVw5.url },
+];
+
+const YT_ID = "YYUo-d0sPi4";
+const shortFerrari: SketchItem[] = [
+  { category: "Short Projects", title: "Ferrari Lucentenario - 1", src: spFerrari1.url },
+  { category: "Short Projects", title: "Ferrari Lucentenario - 2", src: spFerrari2.url },
+  { category: "Short Projects", title: "Ferrari Lucentenario - 3", src: spFerrari3.url },
+  {
+    category: "Short Projects",
+    title: "Ferrari Lucentenario - Video",
+    src: `https://img.youtube.com/vi/${YT_ID}/hqdefault.jpg`,
+    youtube: `https://youtu.be/${YT_ID}`,
+  },
 ];
 
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
   { category: "Digital Design, PSD", items: digitalDesignPSD },
+  { category: "Detail Design", items: detailDesign, groups: [{ items: detailDesign, cols: 4 }] },
   {
     category: "Short Projects",
+    hideCategoryInCaption: true,
     groups: [
       { items: shortSeat, cols: 5 },
       { items: shortVw, cols: 5 },
+      { items: shortFerrari, cols: 4 },
     ],
   },
 ];
@@ -120,7 +152,9 @@ const galleries: SketchGallery[] = [
 function SketchbookPage() {
   const allImages = galleries.flatMap((g) => {
     const items = g.items ?? g.groups?.flatMap((gr) => gr.items) ?? [];
-    return items.map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` }));
+    return items
+      .filter((i) => !i.youtube)
+      .map((i) => ({ src: i.src, alt: `${i.category} — ${i.title}` }));
   });
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const openAt = (i: number) => setLightboxIndex(i);
@@ -174,27 +208,65 @@ function SketchbookPage() {
                     className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${colsClass(group.cols)}`}
                   >
                     {group.items.map((item) => {
-                      const idx = globalIndex++;
-                      return (
-                        <figure
-                          key={`${item.category}-${item.title}`}
-                          className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
-                          onClick={() => openAt(idx)}
-                        >
+                      const isYoutube = !!item.youtube;
+                      const imgIndex = isYoutube ? -1 : globalIndex++;
+                      const caption = gallery.hideCategoryInCaption ? (
+                        <p className="font-display text-sm md:text-base">
+                          <span className="text-foreground">{item.title}</span>
+                        </p>
+                      ) : (
+                        <p className="font-display text-sm md:text-base">
+                          <span className="uppercase tracking-[0.2em] text-primary">
+                            {item.category}
+                          </span>
+                          <span className="text-foreground"> — {item.title}</span>
+                        </p>
+                      );
+
+                      const inner = (
+                        <>
                           <img
                             src={item.src}
                             alt={`${item.category} — ${item.title}`}
                             loading="lazy"
                             className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.03]"
                           />
+                          {isYoutube && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-16 h-16 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-foreground ml-1">
+                                  <path d="M8 5v14l11-7z" />
+                                </svg>
+                              </div>
+                            </div>
+                          )}
                           <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/95 via-background/60 to-transparent">
-                            <p className="font-display text-sm md:text-base">
-                              <span className="uppercase tracking-[0.2em] text-primary">
-                                {item.category}
-                              </span>
-                              <span className="text-foreground"> — {item.title}</span>
-                            </p>
+                            {caption}
                           </figcaption>
+                        </>
+                      );
+
+                      if (isYoutube) {
+                        return (
+                          <a
+                            key={`${item.category}-${item.title}`}
+                            href={item.youtube}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative bg-card border border-border overflow-hidden cursor-pointer block"
+                          >
+                            {inner}
+                          </a>
+                        );
+                      }
+
+                      return (
+                        <figure
+                          key={`${item.category}-${item.title}`}
+                          className="group relative bg-card border border-border overflow-hidden cursor-zoom-in"
+                          onClick={() => openAt(imgIndex)}
+                        >
+                          {inner}
                         </figure>
                       );
                     })}

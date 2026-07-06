@@ -176,6 +176,7 @@ const galleries: SketchGallery[] = [
       { items: shortSpirit, cols: 2 },
     ],
   },
+  { category: "AI Research", items: aiResearch },
 ];
 
 

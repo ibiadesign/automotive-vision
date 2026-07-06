@@ -136,14 +136,26 @@ const shortFerrari: SketchItem[] = [
   {
     category: "Short Projects",
     title: "Ferrari Lucentenario - Video",
-    src: `https://img.youtube.com/vi/${YT_ID}/hqdefault.jpg`,
+    src: spFerrariThumb.url,
     youtube: `https://youtu.be/${YT_ID}`,
   },
+];
+
+const shortSpirit: SketchItem[] = [
+  { category: "Short Projects", title: "Spirit Rider", src: spSpiritRider.url },
+  { category: "Short Projects", title: "Animal Inspiration", src: spAnimalInspiration.url },
+];
+
+const interiorDesign: SketchItem[] = [
+  { category: "Interior Design", title: "Lifestream Project", src: intLifestream.url },
+  { category: "Interior Design", title: "Genesis Xtreme Dashboard Idea", src: intDashboard.url },
+  { category: "Interior Design", title: "Genesis Xtreme Preview", src: intPreview.url },
 ];
 
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
   { category: "Digital Design, PSD", items: digitalDesignPSD },
+  { category: "Interior Design", items: interiorDesign, groups: [{ items: interiorDesign, cols: 3 }] },
   { category: "Detail Design", items: detailDesign, groups: [{ items: detailDesign, cols: 4 }] },
   {
     category: "Short Projects",
@@ -152,9 +164,11 @@ const galleries: SketchGallery[] = [
       { items: shortSeat, cols: 5 },
       { items: shortVw, cols: 5 },
       { items: shortFerrari, cols: 4 },
+      { items: shortSpirit, cols: 2 },
     ],
   },
 ];
+
 
 function SketchbookPage() {
   const allImages = galleries.flatMap((g) => {

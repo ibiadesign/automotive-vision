@@ -42,6 +42,9 @@ import spAnimalInspiration from "@/assets/sketchbook/Animal_Inspiration.png.asse
 import intLifestream from "@/assets/sketchbook/Interior_Design_-_Lifestream_project.png.asset.json";
 import intDashboard from "@/assets/sketchbook/Interior_Design_-_Genesis_Xtreme_Dashboard_idea.png.asset.json";
 import intPreview from "@/assets/sketchbook/Interior_Design_-_Genesis_Xtreme_preview.png.asset.json";
+import aiCupra from "@/assets/sketchbook/AI_from_Cupra_Sketch.jpg.asset.json";
+import aiAudi from "@/assets/sketchbook/AI_Audi_Research_from_sketch.jpg.asset.json";
+import aiDacia from "@/assets/sketchbook/AI_exploration_from_Key_Sketch.jpg.asset.json";
 
 
 export const Route = createFileRoute("/sketchbook")({

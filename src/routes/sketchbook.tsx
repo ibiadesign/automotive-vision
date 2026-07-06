@@ -36,6 +36,13 @@ import spVw5 from "@/assets/sketchbook/Short_project_VW_5.jpg.asset.json";
 import spFerrari1 from "@/assets/sketchbook/Ferrari_Lucentenario_1.png.asset.json";
 import spFerrari2 from "@/assets/sketchbook/Ferrari_Lucentenario_2.jpg.asset.json";
 import spFerrari3 from "@/assets/sketchbook/Ferrari_Lucentenario_3.jpg.asset.json";
+import spFerrariThumb from "@/assets/sketchbook/Ferrari_Lucentenario_thumbnail.jpg.asset.json";
+import spSpiritRider from "@/assets/sketchbook/Spirit_Rider.png.asset.json";
+import spAnimalInspiration from "@/assets/sketchbook/Animal_Inspiration.png.asset.json";
+import intLifestream from "@/assets/sketchbook/Interior_Design_-_Lifestream_project.png.asset.json";
+import intDashboard from "@/assets/sketchbook/Interior_Design_-_Genesis_Xtreme_Dashboard_idea.png.asset.json";
+import intPreview from "@/assets/sketchbook/Interior_Design_-_Genesis_Xtreme_preview.png.asset.json";
+
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({
@@ -129,14 +136,26 @@ const shortFerrari: SketchItem[] = [
   {
     category: "Short Projects",
     title: "Ferrari Lucentenario - Video",
-    src: `https://img.youtube.com/vi/${YT_ID}/hqdefault.jpg`,
+    src: spFerrariThumb.url,
     youtube: `https://youtu.be/${YT_ID}`,
   },
+];
+
+const shortSpirit: SketchItem[] = [
+  { category: "Short Projects", title: "Spirit Rider", src: spSpiritRider.url },
+  { category: "Short Projects", title: "Animal Inspiration", src: spAnimalInspiration.url },
+];
+
+const interiorDesign: SketchItem[] = [
+  { category: "Interior Design", title: "Lifestream Project", src: intLifestream.url },
+  { category: "Interior Design", title: "Genesis Xtreme Dashboard Idea", src: intDashboard.url },
+  { category: "Interior Design", title: "Genesis Xtreme Preview", src: intPreview.url },
 ];
 
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
   { category: "Digital Design, PSD", items: digitalDesignPSD },
+  { category: "Interior Design", items: interiorDesign, groups: [{ items: interiorDesign, cols: 3 }] },
   { category: "Detail Design", items: detailDesign, groups: [{ items: detailDesign, cols: 4 }] },
   {
     category: "Short Projects",
@@ -145,9 +164,11 @@ const galleries: SketchGallery[] = [
       { items: shortSeat, cols: 5 },
       { items: shortVw, cols: 5 },
       { items: shortFerrari, cols: 4 },
+      { items: shortSpirit, cols: 2 },
     ],
   },
 ];
+
 
 function SketchbookPage() {
   const allImages = galleries.flatMap((g) => {

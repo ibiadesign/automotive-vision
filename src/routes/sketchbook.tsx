@@ -155,6 +155,12 @@ const interiorDesign: SketchItem[] = [
   { category: "Interior Design", title: "Genesis Xtreme Preview", src: intPreview.url },
 ];
 
+const aiResearch: SketchItem[] = [
+  { category: "AI Research", title: "Cupra Sketch Exploration", src: aiCupra.url },
+  { category: "AI Research", title: "Audi Research from Sketch", src: aiAudi.url },
+  { category: "AI Research", title: "Dacia Exploration from Key Sketch", src: aiDacia.url },
+];
+
 const galleries: SketchGallery[] = [
   { category: "Hand Drawing", items: handDrawings },
   { category: "Digital Design, PSD", items: digitalDesignPSD },

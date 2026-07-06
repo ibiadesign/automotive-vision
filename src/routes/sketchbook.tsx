@@ -36,6 +36,13 @@ import spVw5 from "@/assets/sketchbook/Short_project_VW_5.jpg.asset.json";
 import spFerrari1 from "@/assets/sketchbook/Ferrari_Lucentenario_1.png.asset.json";
 import spFerrari2 from "@/assets/sketchbook/Ferrari_Lucentenario_2.jpg.asset.json";
 import spFerrari3 from "@/assets/sketchbook/Ferrari_Lucentenario_3.jpg.asset.json";
+import spFerrariThumb from "@/assets/sketchbook/Ferrari_Lucentenario_thumbnail.jpg.asset.json";
+import spSpiritRider from "@/assets/sketchbook/Spirit_Rider.png.asset.json";
+import spAnimalInspiration from "@/assets/sketchbook/Animal_Inspiration.png.asset.json";
+import intLifestream from "@/assets/sketchbook/Interior_Design_-_Lifestream_project.png.asset.json";
+import intDashboard from "@/assets/sketchbook/Interior_Design_-_Genesis_Xtreme_Dashboard_idea.png.asset.json";
+import intPreview from "@/assets/sketchbook/Interior_Design_-_Genesis_Xtreme_preview.png.asset.json";
+
 
 export const Route = createFileRoute("/sketchbook")({
   head: () => ({

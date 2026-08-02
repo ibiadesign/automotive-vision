@@ -9,28 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SketchbookRouteImport } from './routes/sketchbook'
-import { Route as LearnRouteImport } from './routes/learn'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LearnRouteImport } from './routes/learn'
+import { Route as SketchbookRouteImport } from './routes/sketchbook'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
-import { Route as ProjectsCitroenUrbanResqoreRouteImport } from './routes/projects.citroen-urban-resqore'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as ProjectsCitroenUrbanResqoreRouteImport } from './routes/projects.citroen-urban-resqore'
 
-const SketchbookRoute = SketchbookRouteImport.update({
-  id: '/sketchbook',
-  path: '/sketchbook',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LearnRoute = LearnRouteImport.update({
-  id: '/learn',
-  path: '/learn',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -38,14 +28,29 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnRoute = LearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SketchbookRoute = SketchbookRouteImport.update({
+  id: '/sketchbook',
+  path: '/sketchbook',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   id: '/projects/',
   path: '/projects/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
+  id: '/projects/$slug',
+  path: '/projects/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsCitroenUrbanResqoreRoute =
@@ -54,11 +59,6 @@ const ProjectsCitroenUrbanResqoreRoute =
     path: '/projects/citroen-urban-resqore',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
-  id: '/projects/$slug',
-  path: '/projects/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -137,25 +137,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sketchbook': {
-      id: '/sketchbook'
-      path: '/sketchbook'
-      fullPath: '/sketchbook'
-      preLoaderRoute: typeof SketchbookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/learn': {
-      id: '/learn'
-      path: '/learn'
-      fullPath: '/learn'
-      preLoaderRoute: typeof LearnRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -165,11 +151,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn': {
+      id: '/learn'
+      path: '/learn'
+      fullPath: '/learn'
+      preLoaderRoute: typeof LearnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sketchbook': {
+      id: '/sketchbook'
+      path: '/sketchbook'
+      fullPath: '/sketchbook'
+      preLoaderRoute: typeof SketchbookRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/': {
@@ -179,18 +179,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/citroen-urban-resqore': {
-      id: '/projects/citroen-urban-resqore'
-      path: '/projects/citroen-urban-resqore'
-      fullPath: '/projects/citroen-urban-resqore'
-      preLoaderRoute: typeof ProjectsCitroenUrbanResqoreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/projects/$slug'
       fullPath: '/projects/$slug'
       preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/citroen-urban-resqore': {
+      id: '/projects/citroen-urban-resqore'
+      path: '/projects/citroen-urban-resqore'
+      fullPath: '/projects/citroen-urban-resqore'
+      preLoaderRoute: typeof ProjectsCitroenUrbanResqoreRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -209,13 +209,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

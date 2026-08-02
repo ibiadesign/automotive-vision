@@ -162,10 +162,10 @@ const aiResearch: SketchItem[] = [
 ];
 
 const galleries: SketchGallery[] = [
-  { category: "Hand Drawing", items: handDrawings },
-  { category: "Digital Design, PSD", items: digitalDesignPSD },
-  { category: "Interior Design", items: interiorDesign, groups: [{ items: interiorDesign, cols: 3 }] },
-  { category: "Detail Design", items: detailDesign, groups: [{ items: detailDesign, cols: 4 }] },
+  { category: "Hand Drawing", hideCategoryInCaption: true, items: handDrawings },
+  { category: "Digital Design, PSD", hideCategoryInCaption: true, items: digitalDesignPSD },
+  { category: "Interior Design", hideCategoryInCaption: true, items: interiorDesign, groups: [{ items: interiorDesign, cols: 3 }] },
+  { category: "Detail Design", hideCategoryInCaption: true, items: detailDesign, groups: [{ items: detailDesign, cols: 4 }] },
   {
     category: "Short Projects",
     hideCategoryInCaption: true,
@@ -176,7 +176,7 @@ const galleries: SketchGallery[] = [
       { items: shortSpirit, cols: 2 },
     ],
   },
-  { category: "AI Research", items: aiResearch },
+  { category: "AI Research", hideCategoryInCaption: true, items: aiResearch },
 ];
 
 

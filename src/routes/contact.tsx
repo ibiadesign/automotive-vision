@@ -53,7 +53,7 @@ function Contact() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/ibiadesign/"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex items-center gap-3 hover:text-copper transition-colors"

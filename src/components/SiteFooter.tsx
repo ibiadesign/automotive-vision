@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "Behance", href: "https://behance.net" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "Instagram", href: "https://www.instagram.com/ibiadesign/" },
+  { label: "Behance", href: "https://www.behance.net/guillerminavaldivia" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/guillerminavaldivia/" },
 ];
 
 export function SiteFooter() {

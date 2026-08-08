@@ -74,16 +74,33 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "f1",
-    name: <span className="text-foreground">Future F1 Design</span>,
+    name: (
+      <div className="space-y-1">
+        <span className="text-foreground block">Future F1 Design</span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Born of Future F1 Design Group from contest
+        </span>
+      </div>
+    ),
     detail: (
-      <a
-        href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
-        target="_blank"
-        rel="noreferrer"
-        className="text-copper hover:underline"
-      >
-        Ferrari F1 MS Tribute
-      </a>
+      <div className="space-y-1 text-right">
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block"
+        >
+          Ferrari F1 MS Tribute
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a38719/nace-el-grupo-de-trabajo-f1-del-futuro-de-caranddriverthef1com/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block"
+        >
+          DF Concept 2023
+        </a>
+      </div>
     ),
   },
 ];

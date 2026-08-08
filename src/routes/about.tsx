@@ -78,7 +78,6 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
     ),
   },
   {
-  {
     key: "f1",
     name: (
       <div className="space-y-1">

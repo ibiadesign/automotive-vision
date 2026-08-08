@@ -46,30 +46,35 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
   },
   {
     key: "nissan",
-    name: "Car Design Finalist — Top 10 Spain / Top 41 Worldwide",
-    detail: (
-      <a
-        href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
-        target="_blank"
-        rel="noreferrer"
-        className="text-copper hover:underline"
-      >
-        Nissan Defy
-      </a>
+    name: (
+      <div className="space-y-1">
+        <span className="text-foreground block">
+          Car Design Finalist — Top 10 Spain / Top 41 Worldwide
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Interview
+        </span>
+      </div>
     ),
-  },
-  {
-    key: "women",
-    name: <span className="text-foreground">Interview</span>,
     detail: (
-      <a
-        href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
-        target="_blank"
-        rel="noreferrer"
-        className="text-copper hover:underline"
-      >
-        Women in Automotive Design
-      </a>
+      <div className="space-y-1 text-right">
+        <a
+          href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block"
+        >
+          Nissan Defy
+        </a>
+        <a
+          href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block"
+        >
+          Women in Automotive Design
+        </a>
+      </div>
     ),
   },
   {

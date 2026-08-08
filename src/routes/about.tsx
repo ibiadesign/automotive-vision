@@ -103,6 +103,20 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
       </div>
     ),
   },
+  {
+    key: "graphic-design-intern",
+    name: "Graphic Design Intern at C&D",
+    detail: (
+      <a
+        href="https://x.com/CardriverF1/status/580465778715193344"
+        target="_blank"
+        rel="noreferrer"
+        className="text-copper hover:underline"
+      >
+        Graphic Art Illustration
+      </a>
+    ),
+  },
 ];
 
 

@@ -62,7 +62,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block font-display text-xl md:text-2xl"
         >
           Nissan Defy
         </a>
@@ -70,7 +70,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
         >
           Women in Automotive Design
         </a>

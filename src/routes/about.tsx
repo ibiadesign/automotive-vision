@@ -80,6 +80,9 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
           Born of Future F1 Design Group from contest
         </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Graphic Design Intern at C&D
+        </span>
       </div>
     ),
     detail: (
@@ -100,21 +103,15 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         >
           DF Concept 2023
         </a>
+        <a
+          href="https://x.com/CardriverF1/status/580465778715193344"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block"
+        >
+          Graphic Art Illustration
+        </a>
       </div>
-    ),
-  },
-  {
-    key: "graphic-design-intern",
-    name: "Graphic Design Intern at C&D",
-    detail: (
-      <a
-        href="https://x.com/CardriverF1/status/580465778715193344"
-        target="_blank"
-        rel="noreferrer"
-        className="text-copper hover:underline"
-      >
-        Graphic Art Illustration
-      </a>
     ),
   },
 ];

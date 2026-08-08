@@ -62,7 +62,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://www.autopista.es/concurso-de-diseno-autopista-nissan-ganadores-y-finalistas_28027_113.html"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block font-display text-xl md:text-2xl"
         >
           Nissan Defy
         </a>
@@ -70,7 +70,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://www.autopista.es/conductoras/el-diseno-de-coches-tambien-cosa-de-mujeres_137079_102.html"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
         >
           Women in Automotive Design
         </a>
@@ -96,7 +96,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block font-display text-xl md:text-2xl"
         >
           Ferrari F1 MS Tribute
         </a>
@@ -104,7 +104,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://www.caranddriver.com/es/formula-1/a38719/nace-el-grupo-de-trabajo-f1-del-futuro-de-caranddriverthef1com/"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
         >
           DF Concept 2023
         </a>
@@ -112,7 +112,7 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           href="https://x.com/CardriverF1/status/580465778715193344"
           target="_blank"
           rel="noreferrer"
-          className="text-copper hover:underline block"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
         >
           Graphic Art Illustration
         </a>

@@ -95,9 +95,6 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         <span className="text-foreground block">
           Car Design Finalist — Top 10 Spain
         </span>
-        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          &nbsp;
-        </span>
       </div>
     ),
     detail: (
@@ -110,8 +107,22 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         >
           Nissan Veron
         </a>
+      </div>
+    ),
+  },
+  {
+    key: "fiberdiode",
+    name: (
+      <div className="space-y-1">
+        <span className="text-foreground block">
+          Car Design finalist at international level
+        </span>
+      </div>
+    ),
+    detail: (
+      <div className="space-y-1 text-right">
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          &nbsp;
+          Fiberdiode
         </span>
       </div>
     ),

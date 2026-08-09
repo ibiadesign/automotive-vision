@@ -89,6 +89,34 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
     ),
   },
   {
+    key: "nissan-veron",
+    name: (
+      <div className="space-y-1">
+        <span className="text-foreground block">
+          Car Design Finalist — Top 10 Spain
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          &nbsp;
+        </span>
+      </div>
+    ),
+    detail: (
+      <div className="space-y-1 text-right">
+        <a
+          href="https://www.autopista.es/concurso-de-diseno-autopista-2015-los-finalistas_29541_113.html"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block font-display text-xl md:text-2xl"
+        >
+          Nissan Veron
+        </a>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          &nbsp;
+        </span>
+      </div>
+    ),
+  },
+  {
     key: "f1",
     name: (
       <div className="space-y-1">
@@ -103,28 +131,28 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           &nbsp;
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          First Article
+          First Steps
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Second Article
+          brainstorming
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Third Article
+          Sketching ideas
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Fourth Article
+          Rethinking ideas
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Fifth Article
+          Key Concepts
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Sixth Article
+          Aesthetic and Technical Design
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Seventh Article
+          First Sight
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
-          Eighth Article
+          Final Concepts
         </span>
       </div>
     ),

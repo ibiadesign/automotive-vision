@@ -54,6 +54,9 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
           Interview
         </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Defy as Concept Art for the next contest
+        </span>
       </div>
     ),
     detail: (
@@ -74,6 +77,14 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         >
           Women in Automotive Design
         </a>
+        <a
+          href="https://www.autopista.es/noticias-motor/las-5-dudas-mas-habituales-de-nuestro-concurso-de-diseno_136933_102.html"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Banner link
+        </a>
       </div>
     ),
   },
@@ -87,6 +98,33 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
         </span>
         <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
           Graphic Design Intern at C&D
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          &nbsp;
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          First Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Second Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Third Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Fourth Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Fifth Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Sixth Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Seventh Article
+        </span>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          Eighth Article
         </span>
       </div>
     ),
@@ -115,6 +153,73 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
           className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
         >
           Graphic Art Illustration
+        </a>
+        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+          &nbsp;
+        </span>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a39045/primeros-pasos-de-la-f1-del-futuro-en-caranddriverthef1com/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          First Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a39215/aprobadas-las-primeras-ideas-del-grupo-de-trabajo-f1-del-futuro/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Second Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a39575/el-grupo-de-trabajo-f1-del-futuro-avanza-en-sus-ideas/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Third Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a39945/nueva-vuelta-de-tuerca-a-las-ideas-del-grupo-de-trabajo-f1-del-futuro/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Fourth Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a42730/el-grupo-de-trabajo-f1-del-futuro-dibuja-las-lineas-de-los-nuevos-monoplaza/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Fifth Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a39945/nueva-vuelta-de-tuerca-a-las-ideas-del-grupo-de-trabajo-f1-del-futuro/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Sixth Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/g12111/el-grupo-de-trabajo-f1-del-futuro-maquilla-sus-ideas-en-busca-de-mas-compet/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Seventh Article
+        </a>
+        <a
+          href="https://www.caranddriver.com/es/formula-1/a43348/los-10-mejores-dibujos-que-ilustran-las-ideas-del-grupo-de-trabajo-f1-del-f/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
+          Eighth Article
         </a>
       </div>
     ),

@@ -22,7 +22,11 @@ import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.
 import detailWheel from "@/assets/sketchbook/Exterior_Design_-_Wheel_Trim_Design.png.asset.json";
 import detailSteering from "@/assets/sketchbook/Interior_Design_-_Steering_Wheel_Genesis.png.asset.json";
 import detailHeadLight from "@/assets/sketchbook/Exterior_Design_-_Head_Light.png.asset.json";
-import detailTailHead from "@/assets/sketchbook/Exterior_Design_-_Tail_and_Head_Lights.png.asset.json";
+import spFiber1 from "@/assets/sketchbook/Fiberdiode_1.jpg.asset.json";
+import spFiber2 from "@/assets/sketchbook/Fiberdiode_2.jpg.asset.json";
+import spFiber3 from "@/assets/sketchbook/Fiberdiode_3.jpg.asset.json";
+import spFiber4 from "@/assets/sketchbook/Fiberdiode_4.jpg.asset.json";
+import spFiber5 from "@/assets/sketchbook/Fiberdiode_5.jpg.asset.json";
 import spSeat1 from "@/assets/sketchbook/Short_project_SEAT_1.png.asset.json";
 import spSeat2 from "@/assets/sketchbook/Short_project_SEAT_2.png.asset.json";
 import spSeat3 from "@/assets/sketchbook/Short_project_SEAT_3.png.asset.json";
@@ -112,7 +116,14 @@ const detailDesign: SketchItem[] = [
   { category: "Detail Design", title: "Wheel Trim Design", src: detailWheel.url },
   { category: "Detail Design", title: "Steering Wheel Genesis", src: detailSteering.url },
   { category: "Detail Design", title: "Head Light", src: detailHeadLight.url },
-  { category: "Detail Design", title: "Tail and Head Lights", src: detailTailHead.url },
+];
+
+const shortFiberdiode: SketchItem[] = [
+  { category: "Short Projects", title: "Fiberdiode - 1", src: spFiber1.url },
+  { category: "Short Projects", title: "Fiberdiode - 2", src: spFiber2.url },
+  { category: "Short Projects", title: "Fiberdiode - 3", src: spFiber3.url },
+  { category: "Short Projects", title: "Fiberdiode - 4", src: spFiber4.url },
+  { category: "Short Projects", title: "Fiberdiode - 5", src: spFiber5.url },
 ];
 
 const shortSeat: SketchItem[] = [
@@ -122,6 +133,7 @@ const shortSeat: SketchItem[] = [
   { category: "Short Projects", title: "Seat Atarfe - 4", src: spSeat4.url },
   { category: "Short Projects", title: "Seat Atarfe - 5", src: spSeat5.url },
 ];
+
 
 const shortVw: SketchItem[] = [
   { category: "Short Projects", title: "VW Kon-nect - 1", src: spVw1.url },
@@ -170,6 +182,7 @@ const galleries: SketchGallery[] = [
     category: "Short Projects",
     hideCategoryInCaption: true,
     groups: [
+      { items: shortFiberdiode, cols: 5 },
       { items: shortSeat, cols: 5 },
       { items: shortVw, cols: 5 },
       { items: shortFerrari, cols: 4 },

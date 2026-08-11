@@ -22,7 +22,11 @@ import ddTexture from "@/assets/sketchbook/Digital_Design_-_Texture_Exploration.
 import detailWheel from "@/assets/sketchbook/Exterior_Design_-_Wheel_Trim_Design.png.asset.json";
 import detailSteering from "@/assets/sketchbook/Interior_Design_-_Steering_Wheel_Genesis.png.asset.json";
 import detailHeadLight from "@/assets/sketchbook/Exterior_Design_-_Head_Light.png.asset.json";
-import detailTailHead from "@/assets/sketchbook/Exterior_Design_-_Tail_and_Head_Lights.png.asset.json";
+import spFiber1 from "@/assets/sketchbook/Fiberdiode_1.jpg.asset.json";
+import spFiber2 from "@/assets/sketchbook/Fiberdiode_2.jpg.asset.json";
+import spFiber3 from "@/assets/sketchbook/Fiberdiode_3.jpg.asset.json";
+import spFiber4 from "@/assets/sketchbook/Fiberdiode_4.jpg.asset.json";
+import spFiber5 from "@/assets/sketchbook/Fiberdiode_5.jpg.asset.json";
 import spSeat1 from "@/assets/sketchbook/Short_project_SEAT_1.png.asset.json";
 import spSeat2 from "@/assets/sketchbook/Short_project_SEAT_2.png.asset.json";
 import spSeat3 from "@/assets/sketchbook/Short_project_SEAT_3.png.asset.json";

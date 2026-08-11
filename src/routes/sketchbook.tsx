@@ -112,7 +112,14 @@ const detailDesign: SketchItem[] = [
   { category: "Detail Design", title: "Wheel Trim Design", src: detailWheel.url },
   { category: "Detail Design", title: "Steering Wheel Genesis", src: detailSteering.url },
   { category: "Detail Design", title: "Head Light", src: detailHeadLight.url },
-  { category: "Detail Design", title: "Tail and Head Lights", src: detailTailHead.url },
+];
+
+const shortFiberdiode: SketchItem[] = [
+  { category: "Short Projects", title: "Fiberdiode - 1", src: spFiber1.url },
+  { category: "Short Projects", title: "Fiberdiode - 2", src: spFiber2.url },
+  { category: "Short Projects", title: "Fiberdiode - 3", src: spFiber3.url },
+  { category: "Short Projects", title: "Fiberdiode - 4", src: spFiber4.url },
+  { category: "Short Projects", title: "Fiberdiode - 5", src: spFiber5.url },
 ];
 
 const shortSeat: SketchItem[] = [
@@ -122,6 +129,7 @@ const shortSeat: SketchItem[] = [
   { category: "Short Projects", title: "Seat Atarfe - 4", src: spSeat4.url },
   { category: "Short Projects", title: "Seat Atarfe - 5", src: spSeat5.url },
 ];
+
 
 const shortVw: SketchItem[] = [
   { category: "Short Projects", title: "VW Kon-nect - 1", src: spVw1.url },

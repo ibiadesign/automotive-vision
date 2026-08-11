@@ -182,6 +182,7 @@ const galleries: SketchGallery[] = [
     category: "Short Projects",
     hideCategoryInCaption: true,
     groups: [
+      { items: shortFiberdiode, cols: 5 },
       { items: shortSeat, cols: 5 },
       { items: shortVw, cols: 5 },
       { items: shortFerrari, cols: 4 },

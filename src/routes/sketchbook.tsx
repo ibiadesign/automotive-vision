@@ -82,6 +82,7 @@ type SketchItem = {
 type SketchGroup = {
   items: SketchItem[];
   cols: number;
+  id?: string;
 };
 
 type SketchGallery = {
@@ -182,7 +183,7 @@ const galleries: SketchGallery[] = [
     category: "Short Projects",
     hideCategoryInCaption: true,
     groups: [
-      { items: shortFiberdiode, cols: 5 },
+      { items: shortFiberdiode, cols: 5, id: "fiberdiode" },
       { items: shortSeat, cols: 5 },
       { items: shortVw, cols: 5 },
       { items: shortFerrari, cols: 4 },
@@ -249,7 +250,8 @@ function SketchbookPage() {
                 {groups.map((group, gi) => (
                   <div
                     key={gi}
-                    className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${colsClass(group.cols)}`}
+                    id={group.id}
+                    className={`scroll-mt-32 grid grid-cols-1 sm:grid-cols-2 gap-6 ${colsClass(group.cols)}`}
                   >
                     {group.items.map((item) => {
                       const isYoutube = !!item.youtube;

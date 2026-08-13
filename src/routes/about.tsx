@@ -121,9 +121,13 @@ const recognition: Array<{ key: string; name: React.ReactNode; detail: React.Rea
     ),
     detail: (
       <div className="space-y-1 text-right">
-        <span className="block text-sm md:text-base font-sans text-muted-foreground normal-case tracking-normal">
+        <Link
+          to="/sketchbook"
+          hash="fiberdiode"
+          className="text-copper hover:underline block text-sm md:text-base font-sans normal-case tracking-normal"
+        >
           Fiberdiode
-        </span>
+        </Link>
       </div>
     ),
   },

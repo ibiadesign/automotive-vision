@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import ogImage from "../assets/og-preview.png.asset.json";
 
 function NotFoundComponent() {
   return (

@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import ogImage from "../assets/og-preview.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -78,12 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Guillermina Valdicia Cantero — Automotive Designer" },
       { property: "og:description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Guillermina Valdicia Cantero — Automotive Designer" },
       { name: "twitter:description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/caa35e9d-7724-4e73-b2ef-f750be226446/id-preview-0fa65099--31d1d5a5-109e-4877-8b7a-ce6c9a04ca29.lovable.app-1778953405438.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/caa35e9d-7724-4e73-b2ef-f750be226446/id-preview-0fa65099--31d1d5a5-109e-4877-8b7a-ce6c9a04ca29.lovable.app-1778953405438.png" },
+      { property: "og:image", content: `https://ibiadesign.lovable.app${ogImage.url}` },
+      { property: "og:image:width", content: "1680" },
+      { property: "og:image:height", content: "945" },
+      { name: "twitter:image", content: `https://ibiadesign.lovable.app${ogImage.url}` },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

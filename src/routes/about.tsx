@@ -383,14 +383,57 @@ function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24">
+      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 space-y-10">
         <Link
-          to="/contact"
+          to="/about"
+          hash="contact"
           className="group inline-flex items-center gap-4 text-xs uppercase tracking-[0.3em]"
         >
           <span className="w-10 h-px bg-foreground group-hover:w-16 group-hover:bg-copper transition-all duration-500" />
           Let's talk
         </Link>
+
+        <div id="contact" className="scroll-mt-32 space-y-8">
+          <a
+            href="mailto:guiyedesign@gmail.com"
+            className="font-display text-3xl md:text-4xl hover:text-copper transition-colors block"
+          >
+            guiyedesign@gmail.com
+          </a>
+
+          <ul className="flex flex-wrap items-center gap-8 text-sm text-muted-foreground">
+            <li>
+              <a
+                href="https://www.instagram.com/ibiadesign/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/guillerminavaldivia/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.behance.net/guillerminavaldivia"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                Behance
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <SiteFooter />

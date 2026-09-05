@@ -29,6 +29,27 @@ const studies = [
   ["2009 — 2013", "Bachelor’s Degree in Fine Arts", "UGR, Granada"],
 ];
 
+const courses: Array<[string, React.ReactNode, string]> = [
+  [
+    "2022 — (Oct — Nov)",
+    "Professional Car Design: The Basics (self-paced)",
+    "ArtCenter College of Design",
+  ],
+  [
+    "2023 — (Feb — Apr) & (Apr. — Jun)",
+    <>
+      <span className="block">Professional Car Design: Intermediate (personalized feedback)</span>
+      <span className="block">Professional Car Design: Intermediate (self-paced)</span>
+    </>,
+    "ArtCenter College of Design",
+  ],
+  [
+    "2023 — (Jun — Jul)",
+    "Professional Car Design: Advanced (personalized feedback)",
+    "ArtCenter College of Design",
+  ],
+];
+
 const recognition: Array<{ key: string; name: React.ReactNode; detail: React.ReactNode }> = [
   {
     key: "kia",
@@ -361,7 +382,29 @@ function About() {
         </div>
       </section>
 
-
+      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-24 grid md:grid-cols-12 gap-10">
+        <div className="md:col-span-4">
+          <p className="eyebrow">Courses</p>
+        </div>
+        <div className="md:col-span-8 divide-y divide-border">
+          {courses.map(([when, role, detail]) => (
+            <div
+              key={when}
+              className="py-6 grid md:grid-cols-12 gap-3 items-baseline"
+            >
+              <span className="md:col-span-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                {when}
+              </span>
+              <span className="md:col-span-4 font-display text-xl md:text-2xl">
+                {role}
+              </span>
+              <span className="md:col-span-5 text-muted-foreground">
+                {detail}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-12 pb-32 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">

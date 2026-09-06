@@ -32,20 +32,17 @@ const studies = [
 const courses: Array<[string, React.ReactNode, string]> = [
   [
     "2022 — (Oct — Nov)",
-    "Professional Car Design: The Basics (self-paced)",
+    "Professional Car Design: The Basics",
     "ArtCenter College of Design",
   ],
   [
     "2023 — (Feb — Apr) & (Apr. — Jun)",
-    <>
-      <span className="block">Professional Car Design: Intermediate (personalized feedback)</span>
-      <span className="block">Professional Car Design: Intermediate (self-paced)</span>
-    </>,
+    "Professional Car Design: Intermediate",
     "ArtCenter College of Design",
   ],
   [
     "2023 — (Jun — Jul)",
-    "Professional Car Design: Advanced (personalized feedback)",
+    "Professional Car Design: Advanced",
     "ArtCenter College of Design",
   ],
 ];

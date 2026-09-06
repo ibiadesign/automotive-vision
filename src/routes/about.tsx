@@ -36,7 +36,7 @@ const courses: Array<[string, React.ReactNode, string]> = [
     "ArtCenter College of Design",
   ],
   [
-    "2023 — (Feb — Apr) & (Apr. — Jun)",
+    "2023 — (Feb — Jun)",
     "Professional Car Design: Intermediate",
     "ArtCenter College of Design",
   ],

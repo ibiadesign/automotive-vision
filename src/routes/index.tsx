@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import heroCar from "@/assets/hero-car.jpg";
 import sketchbookCover from "@/assets/project-5.jpg";
+import zionCoverSnow from "@/assets/zion-cuv/zion-cover-snow.webp.asset.json";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({

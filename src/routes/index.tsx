@@ -33,6 +33,7 @@ function Index() {
       ...projects[1],
       eyebrow: `02 · ${projects[1].year}`,
       href: `/projects/${projects[1].slug}`,
+      cover: zionCoverSnow.url,
       summary:
         "Zion CUV is an off-road electric concept developed with CUPRA, inspired by exploration beyond conventional roads. Bold proportions, geometric surfaces and elevated capability define a vehicle designed for freedom and discovery.",
     },

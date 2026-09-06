@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import heroCar from "@/assets/hero-car.jpg";
 import sketchbookCover from "@/assets/project-5.jpg";
+import zionCoverSnow from "@/assets/zion-cuv/zion-cover-snow.webp.asset.json";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
@@ -32,6 +33,7 @@ function Index() {
       ...projects[1],
       eyebrow: `02 · ${projects[1].year}`,
       href: `/projects/${projects[1].slug}`,
+      cover: zionCoverSnow.url,
       summary:
         "Zion CUV is an off-road electric concept developed with CUPRA, inspired by exploration beyond conventional roads. Bold proportions, geometric surfaces and elevated capability define a vehicle designed for freedom and discovery.",
     },

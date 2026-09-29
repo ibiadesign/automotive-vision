@@ -4,15 +4,19 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/projects/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Work — Halden Automotive Design" },
+      { title: "Projects — Guillermina Valdivia, Automotive Designer" },
       {
         name: "description",
         content:
-          "A selection of concept vehicles, exterior surfacing studies and brand language work by Halden.",
+          "A selection of concept car projects by automotive designer Guillermina Valdivia: Xtreme Hypercar, Zion CUV with CUPRA, Atelier Saloon and Urban ResQore with Citroën.",
       },
+      { property: "og:title", content: "Projects — Guillermina Valdivia, Automotive Designer" },
+      { property: "og:url", content: "https://ibiadesign.lovable.app/projects" },
     ],
+    links: [{ rel: "canonical", href: "https://ibiadesign.lovable.app/projects" }],
   }),
   component: ProjectsIndex,
 });

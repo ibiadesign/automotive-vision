@@ -52,6 +52,7 @@ import aiDacia from "@/assets/sketchbook/AI_exploration_from_Key_Sketch.jpg.asse
 
 
 export const Route = createFileRoute("/sketchbook")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Sketchbook — Guillermina Valdivia" },

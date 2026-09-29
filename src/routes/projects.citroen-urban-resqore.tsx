@@ -26,6 +26,7 @@ import motion04Poster from "@/assets/urban-resqore/motion-04-poster.jpg.asset.js
 
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
+  staticData: { sitemap: true },
   head: () => {
     const p = getProject("citroen-urban-resqore");
     const title = "Urban ResQore — Citroën · Master Studio Project";

@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/learn")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Learn — Guillermina Valdivia" },

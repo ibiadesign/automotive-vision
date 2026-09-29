@@ -7,6 +7,7 @@ import zionCoverSnow from "@/assets/zion-cuv/zion-cover-snow.webp.asset.json";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Guillermina Valdivia — Automotive Designer" },

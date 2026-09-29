@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import aboutImg from "@/assets/about.jpg";
 
 export const Route = createFileRoute("/about")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "About — Guillermina Valdivia" },

@@ -7,6 +7,7 @@ import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { getProject, projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const project = getProject(params.slug);
     if (!project) throw notFound();
@@ -15,12 +16,17 @@ export const Route = createFileRoute("/projects/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.project.title} — Halden` },
+          { title: `${loaderData.project.title} — Guillermina Valdivia, Automotive Designer` },
           { name: "description", content: loaderData.project.summary },
-          { property: "og:title", content: `${loaderData.project.title} — Halden` },
+          { property: "og:title", content: `${loaderData.project.title} — Guillermina Valdivia, Automotive Designer` },
           { property: "og:description", content: loaderData.project.summary },
           { property: "og:image", content: loaderData.project.cover },
+          { property: "og:type", content: "article" },
+          { property: "og:url", content: `https://ibiadesign.lovable.app/projects/${loaderData.project.slug}` },
         ]
+      : [],
+    links: loaderData
+      ? [{ rel: "canonical", href: `https://ibiadesign.lovable.app/projects/${loaderData.project.slug}` }]
       : [],
   }),
   notFoundComponent: () => (

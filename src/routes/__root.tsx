@@ -69,19 +69,19 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Guillermina Valdicia Cantero — Automotive Designer" },
+      { title: "Guillermina Valdivia Cantero — Automotive Designer" },
       { name: "description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
-      { name: "author", content: "Halden Studio" },
-      { property: "og:title", content: "Guillermina Valdicia Cantero — Automotive Designer" },
+      { name: "author", content: "Guillermina Valdivia Cantero" },
+      { property: "og:title", content: "Guillermina Valdivia Cantero — Automotive Designer" },
       { property: "og:description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Guillermina Valdicia Cantero — Automotive Designer" },
+      { name: "twitter:title", content: "Guillermina Valdivia Cantero — Automotive Designer" },
       { name: "twitter:description", content: "Independent automotive designer. Concept, surfacing and brand language for forward-thinking marques." },
       { property: "og:image", content: `https://ibiadesign.lovable.app${ogImage.url}` },
       { property: "og:image:width", content: "1680" },
@@ -90,11 +90,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Guillermina Valdivia Cantero",
+          jobTitle: "Automotive Designer",
+          url: "https://ibiadesign.lovable.app",
+          email: "mailto:guiyedesign@gmail.com",
+          address: { "@type": "PostalAddress", addressRegion: "Andalusia", addressCountry: "ES" },
+          sameAs: [
+            "https://www.instagram.com/ibiadesign/",
+            "https://www.behance.net/guillerminavaldivia",
+            "https://www.linkedin.com/in/guillerminavaldivia/",
+          ],
+        }),
       },
     ],
   }),

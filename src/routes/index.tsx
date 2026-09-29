@@ -7,6 +7,7 @@ import zionCoverSnow from "@/assets/zion-cuv/zion-cover-snow.webp.asset.json";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Guillermina Valdivia — Automotive Designer" },
@@ -15,7 +16,10 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Guillermina Valdivia, an independent automotive designer based in Andalusia. Concept cars, exterior surfacing and visual research.",
       },
+      { property: "og:url", content: "https://ibiadesign.lovable.app/" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://ibiadesign.lovable.app/" }],
   }),
   component: Index,
 });

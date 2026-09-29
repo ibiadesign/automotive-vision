@@ -26,6 +26,7 @@ import motion04Poster from "@/assets/urban-resqore/motion-04-poster.jpg.asset.js
 
 
 export const Route = createFileRoute("/projects/citroen-urban-resqore")({
+  staticData: { sitemap: true },
   head: () => {
     const p = getProject("citroen-urban-resqore");
     const title = "Urban ResQore — Citroën · Master Studio Project";
@@ -38,7 +39,9 @@ export const Route = createFileRoute("/projects/citroen-urban-resqore")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         ...(p ? [{ property: "og:image", content: p.cover }] : []),
+        { property: "og:url", content: "https://ibiadesign.lovable.app/projects/citroen-urban-resqore" },
       ],
+      links: [{ rel: "canonical", href: "https://ibiadesign.lovable.app/projects/citroen-urban-resqore" }],
     };
   },
   component: UrbanResQorePage,

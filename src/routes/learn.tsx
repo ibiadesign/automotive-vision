@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/learn")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Learn — Guillermina Valdivia" },
@@ -11,7 +12,10 @@ export const Route = createFileRoute("/learn")({
         content:
           "Courses and mentorship for aspiring car designers. From sketching basics to advanced digital renders.",
       },
+      { property: "og:url", content: "https://ibiadesign.lovable.app/learn" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://ibiadesign.lovable.app/learn" }],
   }),
   component: LearnPage,
 });

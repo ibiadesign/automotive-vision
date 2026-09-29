@@ -16,7 +16,10 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Guillermina Valdivia, an independent automotive designer based in Andalusia. Concept cars, exterior surfacing and visual research.",
       },
+      { property: "og:url", content: "https://ibiadesign.lovable.app/" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://ibiadesign.lovable.app/" }],
   }),
   component: Index,
 });

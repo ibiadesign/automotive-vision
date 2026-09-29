@@ -68,7 +68,10 @@ export const Route = createFileRoute("/sketchbook")({
           "Hand drawings, digital sketches and ideation studies across personal and collaborative projects.",
       },
       { property: "og:image", content: sketchCover },
+      { property: "og:url", content: "https://ibiadesign.lovable.app/sketchbook" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://ibiadesign.lovable.app/sketchbook" }],
   }),
   component: SketchbookPage,
 });

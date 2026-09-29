@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LearnRouteImport } from './routes/learn'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SketchbookRouteImport } from './routes/sketchbook'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
@@ -36,6 +37,11 @@ const ContactRoute = ContactRouteImport.update({
 const LearnRoute = LearnRouteImport.update({
   id: '/learn',
   path: '/learn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SketchbookRoute = SketchbookRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/learn': typeof LearnRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/learn': typeof LearnRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/learn': typeof LearnRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sketchbook': typeof SketchbookRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/citroen-urban-resqore': typeof ProjectsCitroenUrbanResqoreRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/learn'
+    | '/sitemap.xml'
     | '/sketchbook'
     | '/projects/$slug'
     | '/projects/citroen-urban-resqore'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/learn'
+    | '/sitemap.xml'
     | '/sketchbook'
     | '/projects/$slug'
     | '/projects/citroen-urban-resqore'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/learn'
+    | '/sitemap.xml'
     | '/sketchbook'
     | '/projects/$slug'
     | '/projects/citroen-urban-resqore'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   LearnRoute: typeof LearnRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SketchbookRoute: typeof SketchbookRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
   ProjectsCitroenUrbanResqoreRoute: typeof ProjectsCitroenUrbanResqoreRoute
@@ -163,6 +176,13 @@ declare module '@tanstack/react-router' {
       path: '/learn'
       fullPath: '/learn'
       preLoaderRoute: typeof LearnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sketchbook': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   LearnRoute: LearnRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SketchbookRoute: SketchbookRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
   ProjectsCitroenUrbanResqoreRoute: ProjectsCitroenUrbanResqoreRoute,

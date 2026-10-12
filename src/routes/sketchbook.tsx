@@ -12,7 +12,6 @@ import handLearning from "@/assets/sketchbook/hand-learning.jpg.asset.json";
 import handExterior4 from "@/assets/sketchbook/hand-exterior-design-4.png.asset.json";
 import ddF1Past from "@/assets/sketchbook/Digital_Design_-_Future_F1_Project_from_past_to_future.png.asset.json";
 import ddF1 from "@/assets/sketchbook/Digital_Design_-_Future_F1_Project.png.asset.json";
-import ddGenesisDev from "@/assets/sketchbook/Digital_Design_-_Genesis_Development.png.asset.json";
 import ddGenesisExp from "@/assets/sketchbook/Digital_Design_-_Genesis_Exploration.png.asset.json";
 import ddLine from "@/assets/sketchbook/Digital_Design_-_Line_Exploration.png.asset.json";
 import ddMoto from "@/assets/sketchbook/Digital_Design_-_Motorbike_Exploration.png.asset.json";
@@ -32,11 +31,6 @@ import spSeat2 from "@/assets/sketchbook/Short_project_SEAT_2.png.asset.json";
 import spSeat3 from "@/assets/sketchbook/Short_project_SEAT_3.png.asset.json";
 import spSeat4 from "@/assets/sketchbook/Short_project_SEAT_4.png.asset.json";
 import spSeat5 from "@/assets/sketchbook/Short_Project_SEAT_5.png.asset.json";
-import spVw1 from "@/assets/sketchbook/Short_project_VW_1.png.asset.json";
-import spVw2 from "@/assets/sketchbook/Short_project_VW_2.png.asset.json";
-import spVw3 from "@/assets/sketchbook/Short_project_VW_3.png.asset.json";
-import spVw4 from "@/assets/sketchbook/Short_project_VW_4.jpg.asset.json";
-import spVw5 from "@/assets/sketchbook/Short_project_VW_5.jpg.asset.json";
 import spFerrari1 from "@/assets/sketchbook/Ferrari_Lucentenario_1.png.asset.json";
 import spFerrari2 from "@/assets/sketchbook/Ferrari_Lucentenario_2.jpg.asset.json";
 import spFerrari3 from "@/assets/sketchbook/Ferrari_Lucentenario_3.jpg.asset.json";
@@ -108,7 +102,6 @@ const handDrawings: SketchItem[] = [
 const digitalDesignPSD: SketchItem[] = [
   { category: "Digital Design, PSD", title: "Future F1 Project from past to future", src: ddF1Past.url },
   { category: "Digital Design, PSD", title: "Future F1 Project", src: ddF1.url },
-  { category: "Digital Design, PSD", title: "Genesis Development", src: ddGenesisDev.url },
   { category: "Digital Design, PSD", title: "Genesis Exploration", src: ddGenesisExp.url },
   { category: "Digital Design, PSD", title: "Line Exploration", src: ddLine.url },
   { category: "Digital Design, PSD", title: "Motorbike Exploration", src: ddMoto.url },
@@ -139,14 +132,6 @@ const shortSeat: SketchItem[] = [
   { category: "Short Projects", title: "Seat Atarfe - 5", src: spSeat5.url },
 ];
 
-
-const shortVw: SketchItem[] = [
-  { category: "Short Projects", title: "VW Kon-nect - 1", src: spVw1.url },
-  { category: "Short Projects", title: "VW Kon-nect - 2", src: spVw2.url },
-  { category: "Short Projects", title: "VW Kon-nect - 3", src: spVw3.url },
-  { category: "Short Projects", title: "VW Kon-nect - 4", src: spVw4.url },
-  { category: "Short Projects", title: "VW Kon-nect - 5", src: spVw5.url },
-];
 
 const YT_ID = "YYUo-d0sPi4";
 const shortFerrari: SketchItem[] = [
@@ -189,7 +174,6 @@ const galleries: SketchGallery[] = [
     groups: [
       { items: shortFiberdiode, cols: 5, id: "fiberdiode" },
       { items: shortSeat, cols: 5 },
-      { items: shortVw, cols: 5 },
       { items: shortFerrari, cols: 4 },
       { items: shortSpirit, cols: 2 },
     ],
